@@ -963,52 +963,50 @@
 				</div>
 				<div class="set-dev">
 					<h3>Developer Guide</h3>
-					<pre>
-						<code>class Comments extends MY_Controller {
-							function add() {
-							// check user permissions
-							$this->sma->checkPermissions();
-							// validate rules http://www.codeigniter.com/user_guide/libraries/form_validation.html#rulereference
-							$this->form_validation->set_rules('comment', lang("comment"), 'required|min_length[3]|xss_clean');
-							// Check validation
-							if ($this->form_validation->run() == true) {
-							// Validation true, perform actions, saving data in array
-							$data = array(
-							'comment' => $this->input->post('comment'),
-							'from_date' => $this->input->post('from_date') ? $this->sma->fld($this->input->post('from_date')) : NULL,
-							'till_date' => $this->input->post('to_date') ? $this->sma->fld($this->input->post('to_date')) : NULL,
-							);
-						}
-						// validate again and send data to model
-						if ($this->form_validation->run() == true && $this->commnets_model->addComment($data)) {
-						// validation was fine and model returned true so set message and redirect 
-						$this->session->set_flashdata('item', 'value');
-						redirect("welcome");
-					} else {
-					// validation failed or model returned false
-					// set input variables, most these are not set and used view files for input
-					$this->data['comment'] = array('name' => 'comment',
-					'id' => 'comment',
-					'type' => 'textarea',
-					'class' => 'form-control',
-					'required' => 'required',
-					'value' => $this->form_validation->set_value('comment'),
-					);
-					// check errors
-					$this->data['error'] = validation_errors() ? validation_errors() : $this->session->flashdata('error');
-					// set any other variable to pass to view
-					$this->data['modal_js'] = $this->site->modal_js();
+					<pre><code>class Comments extends MY_Controller {
+  function add() {
+    // check user permissions
+    $this->sma->checkPermissions();
+    // validate rules http://www.codeigniter.com/user_guide/libraries/form_validation.html#rulereference
+    $this->form_validation->set_rules('comment', lang("comment"), 'required|min_length[3]|xss_clean');
+    // Check validation
+    if ($this->form_validation->run() == true) {
+      // Validation true, perform actions, saving data in array
+      $data = array(
+        'comment' => $this->input->post('comment'),
+        'from_date' => $this->input->post('from_date') ? $this->sma->fld($this->input->post('from_date')) : NULL,
+        'till_date' => $this->input->post('to_date') ? $this->sma->fld($this->input->post('to_date')) : NULL,
+      );
+    }
+    // validate again and send data to model
+    if ($this->form_validation->run() == true && $this->commnets_model->addComment($data)) {
+      // validation was fine and model returned true so set message and redirect 
+      $this->session->set_flashdata('item', 'value');
+      redirect("welcome");
+    } else {
+    // validation failed or model returned false
+      // set input variables, most these are not set and used view files for input
+      $this->data['comment'] = array('name' => 'comment',
+        'id' => 'comment',
+        'type' => 'textarea',
+        'class' => 'form-control',
+        'required' => 'required',
+        'value' => $this->form_validation->set_value('comment'),
+      );
+      // check errors
+      $this->data['error'] = validation_errors() ? validation_errors() : $this->session->flashdata('error');
+      // set any other variable to pass to view
+      $this->data['modal_js'] = $this->site->modal_js();
 
-					// load view by calling core controller's page_construct()
-					$bc = array(array('link' => base_url(), 'page' => lang('home')), array('link' => '#', 'page' => lang('comments')));
-					$meta = array('page_title' => lang('add_comment'), 'bc' => $bc);
-					$this->page_construct('comments/add', $meta, $this->data);
-					// OR load view by calling loader's view()
-					$this->load->view($this->theme . 'comments/add', $this->data);
-				}
-			}
-		}</code>
-	</pre>
+      // load view by calling core controller's page_construct()
+      $bc = array(array('link' => base_url(), 'page' => lang('home')), array('link' => '#', 'page' => lang('comments')));
+      $meta = array('page_title' => lang('add_comment'), 'bc' => $bc);
+      $this->page_construct('comments/add', $meta, $this->data);
+      // OR load view by calling loader's view()
+      $this->load->view($this->theme . 'comments/add', $this->data);
+    }
+  }
+}</code></pre>
 </div>
 </div>
 </div>
