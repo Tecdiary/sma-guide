@@ -1,0 +1,1201 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<title>Stock Manager Advance Documentation</title>
+	<meta name="google-site-verification" content="fEfsU1FFm-C1BtX88gzsC4yMOjHzDVkD26lMwkxrQz8" />
+	<meta name="description" content="Online documentation for Stock Manager Advance - Inventory & Inoive managment solution and POS (Point of Sale) Module by Tecdiary.com">
+	<meta name="viewport" content="width=1200, maximum-scale=1" />
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="docs">
+		<div id="s-header">
+			<a href="#" class="navicon" data-transition="linear"><i class="fa fa-list"></i></a>
+			<a href="http://www.tecdiary.com" class="s-logo">SMA Docs</a>
+		</div>
+		<nav class="sidebar" id="sidebar">
+			<a href="http://www.tecdiary.com" class="logo">SMA Docs</a>
+			<div class="clear"></div>
+			<ul id="leftMenu" class="nav">
+				<li class="active">
+					<a href="#introduction">Install & Hardware</a>
+					<ul class="nav">
+						<li><a href="#introduction">A Word</a></li>
+						<li><a href="#install">Install Guide</a></li>
+						<li><a href="#update">Update Guide</a></li>
+						<li><a href="#hardware">Hardware</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#features">Feature List</a>
+					<ul class="nav">
+						<li><a href="#features">Feature List</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#demo">Demo & Support</a>
+					<ul class="nav">
+						<li><a href="#demo">Live Demo</a></li>
+						<li><a href="#support">Support</a></li>
+						<li><a href="#customization">Custom Modifications</a></li>
+						<li><a href="#request">Feature Request</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#lang">Credits</a>
+					<ul class="nav">
+						<li><a href="#lang">Languages</a></li>
+						<li><a href="#credits">Credits</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#faqs">FAQs</a>
+					<ul class="nav">
+						<li><a href="#faqs">General</a></li>
+						<li><a href="#account">Account</a></li>
+						<li><a href="#payments">Payments</a></li>
+						<li><a href="#errors">Errors</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#guide">User Guide</a>
+					<ul class="nav">
+						<li><a href="#guide">Menus</a></li>
+						<li><a href="#users">Users</a></li>
+						<li><a href="#billers">Billers</a></li>
+						<li><a href="#customers">Customers</a></li>
+						<li><a href="#suplliers">Suppliers</a></li>
+						<li><a href="#products">Products</a></li>
+						<li><a href="#purchases">Purchases</a></li>
+						<li><a href="#sales">Sales</a></li>
+						<li><a href="#quotations">Quotations</a></li>
+						<li><a href="#transfers">Transfers</a></li>
+						<li><a href="#settings">Settings</a></li>
+						<li><a href="#reports">Reports</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#developer">Developer Guide</a>
+					<ul class="nav">
+						<li><a href="#developer">General</a></li>
+						<li><a href="#language">Language</a></li>
+						<li><a href="#theme">Theme</a></li>
+						<li><a href="#removing">Removing Required</a></li>
+						<li><a href="#datatable">Sorting Tables</a></li>
+						<li><a href="#barcode">Barcodes & Labels</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div id="full-page">
+			<div id="big-wrap">
+				<div id="inner-wrap">
+					<div class="set category-head">
+						<div class="inner-set" id="introduction">
+							<div class="set-description">
+								<h3>Stock Manager Advance Documentation</h3>
+								<p>Thank you for purchasing the Stock Manager Advance</p>
+								<p>
+									First of all, I would like to apologize for delays in releasing this version 3 and would like to thank everyone who has contributed to this
+									item, including the Envato, beta testers, technical reviewers, friends, and my family members for their love and support in my work. I also thank the purchasers who have patiently been waiting for this update and who have given me lots of valuable feedback.
+								</p>
+								<div class="highlight">
+									<h2>Public Beta R1</h2>
+
+									<p>
+										Due to the large number of changes to v3 we have decided to release it as a beta to collect user feedback. Please note that during this period based on user feedback we may make some changes to improve the item.
+									</p>
+									<p>
+										This release might still have issues in many countries with compliance of taxes and we will be listening to your feedback to solve them. 
+									</p>
+									<p>
+										Update tool is not yet available and will be added to the final release.   
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="set">
+							<div class="inner-set" id="install">
+								<div class="set-description">
+									<h3>Installation Instruction</h3>
+									<ol>    
+										<li>Copy/Upload the folder and files inside '<strong>Upload</strong>' folder to your web server using cPanel or FTP</li>
+										<li>If you are installing in sub folder, please make sure there is no space in folder names</li>
+										<li>Create mysql database, database user and grant all permission to user for this database.</li>
+										<li>Open the <strong>http://yourdomain.com/pathtoupload/install/index.php</strong></li>
+										<li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
+										<li>Step2: Provide you Envato Username and Purchase Code to validate and register a free support account</li>
+										<li>Step 3: Provide the database host, database user, database password and database name to proceed to next step</li>
+										<li>Step 4: Site Config: Please Fill in you SMA SITE URL and select your timezone. You must check the site url as installer might guess it wrong</li>
+										<ul>
+											<li>Site URL for public_html or www/htdocs folder will be http://yourdomain.com/ or http://localhost/</li>
+											<li>Site URL for sub-domain will be http://subdomain.yourdomain.com/ </li>
+											<li>Site URL for sub-folder will be http://yourdomain.com/subfolder/ or http://localhost/subfolder/ </li>
+											<li>Site URL must not have space and it should end with a trailing slash</li>
+										</ul>
+									</li>
+									<li>If every thing goes smooth, You will be redirect to final page with login details.</li>
+									<li>Remove the install folder before start using the SMA.</li>
+									<li>Login using default username and password, and edit user to change login details.</li>
+									<li>SMA is ready to use, after settings. Please save system settings and POS settings before start using it.</li>
+									<li>Thank you for purchasing the SMA2, If you have any questions, please contact us at contact@tecdiary.com</li>
+								</ol>
+								<h4>After Install</h4>
+							</div>
+						</div>
+					</div>
+
+					<div class="set">
+						<div class="inner-set" id="update">
+							<div class="set-description">
+								<h3>Update Instruction</h3>
+								<ol>    
+									<li>Backup all your files and database.</li>
+									<li>Save/download database config file on your computer
+										<ul>
+											<li>sma/config/database.php</li>
+										</ul>
+									</li>
+									<li>Delete all files/folders and upload all the files/folders in upload (new downloaded files).</li>
+									<li>Once all the files are uploaded. We need to restore the above saved file (step 2) back to their location</li>
+									<li>Upload and replace the sma/config/databse.php with the locally saved copy of database config file in step 2.</li>
+									<li>LETS UPDATE, PLEASE DONT PROVIDE DATABASE SETTING WHILE UPDATING.</li>
+									<li>Open the browser and type <strong>http://yourdomain.com/pathtoupload/update/index.php</strong></li>
+									<li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
+									<li>Step 2: Provide your Envato Username and Purchase Code to validate and update your license and support account.</li>
+									<li>Step 3: Site Config: Please Fill in you <strong>SMA Base URL</strong> and select your timezone. You must check the <strong>site url</strong> as installation tool can guess it wrong.</li>
+									<li>If every thing goes smooth, You will be redirect to final page with update complete message.</li>
+									<li>Remove the install and update folder from main folder before start using the SMA.</li>
+									<li>Login using your old username and password, that will work fine.</li>
+									<li>SMA is updated and ready to use once again with new features</li>
+									<li>Thank you for updating, If you have any questions, please contact us at contact@tecdiary.com</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+
+					<div class="set">
+						<div class="inner-set" id="hardware">
+							<div class="set-description">
+								<h3>Hardware</h3>
+								<h4>1. Receipt Printers:</h4>
+								<p></p>
+								<p>
+									I have tested the update V3 with Bixolon SRP-350II (USB) with Web Browser Printing and Java Applet by adding qz printing plugin that will support these printers
+								</p>
+								<ul>
+									<li>Samsung Bixolon SRP350plus, Bixolon SRP-350II and Bixolon SRP-270.</li>
+									<li>Telly Dascom 1125 (USB) </li>
+									<li>Epson Thermal Printer (COM) </li>
+									<li>Eltron P310i </li>
+									<li>Zebra GK420, Zebra P310, Zebra LP 2844 and Zebra TLP2844 </li>
+									<li>Citizen CT-S2000 (USB) </li>
+									<li>DOS/LPT1 Printing </li>
+									<li>Print directly to file: i.e. \serverprinter </li>
+									<li>Nippon Primex </li>
+									<li>Essae PR-85j </li>
+									<li>Bematech MP200 </li>
+								</ul>
+								<p></p>
+								<p>
+									<strong>Bixolon printers will work fine however you might need to change some commands for other printers. Please be informed that we can't provide support regarding any issues with plug-in. You will need to manage it by yourself.</strong>
+								</p>
+
+								<h4>2. Barcode Scanners/Readers:</h4>
+								<p></p>
+								<p>
+									Any of the barcode scanners/readers will work fine with v3 as long as it can read accurately.
+								</p>
+								<h4>3. Magnetic Card Readers:</h4>
+								<p></p>
+								<p>
+									Most of the Magnetic Card Readers will work fine. I am testing this with <strong>Uniform MSR213 Magnetic Stripe Card Reader</strong> (USB - 3 Track Reader).
+								</p>
+								<p>
+									For tablet/mobile card readers: No such feature and recommendation yet.
+								</p>
+
+								<h4>4. Cash Drawers: </h4>
+								<p></p>
+								<p>
+									You should buy the cash drawers that can be connected to pos printer. To use cash drawers, you printer should have the port to connect cash drawer as <strong>Bixolon SRP350II</strong>.
+								</p>
+								<p><strong>For Browser Print,</strong> you might need to set your printer to open cash drawer before printing.</p>
+								<p><strong>For Java QZ Print,</strong> It will be fine as cash drawer will be opened with printing and can be opened without printing.</p>
+
+								<h4>5. For barcode and label printing: </h4>
+								<p></p>
+								<p>
+									Any desktop laser print will work fine.
+								</p>
+								<h4>V2.3</h4>
+								<p>
+									There is no recommendation for V2.3 as I didn't test any hardware with that version but users reported that Bixolon SRP350II and Star Micronics TSP143UII printer working fine. For barcode scanner, you need to purchase programmable scanner and program it to send return command after typing the code. 
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="set">
+						<div class="inner-set" id="features">
+							<div class="set-description">
+								<h3>Feature List V3</h3>
+								<p>
+									Stock Manager Advance is php-based web application that help you to manage your stock.
+									Built-in inventory and Invoicing system. All of the functionality that was in SMA v2.3 is also available through this release with the following enhancements:
+								</p>
+								<ul class="features">
+									<li> Inventory Accounting (FIFO/LIFO/AVCO)</li>
+									<li> You can add your own themes or different view files</li>
+									<li> New user interface design to ease many tasks (RTL language support is not available)</li>
+									<li> Ability to add new user groups</li>
+									<li> Ability to add new customer groups</li>
+									<li> Custom module permissions for user groups</li>
+									<li> Added gift card features</li>
+									<li> Multiple delete option for inventories, products, quotations, sales and transfers.</li>
+									<li> Notifications Module</li>
+									<li> Email protocol options (mail, sendmail and smtp)</li>
+									<li>Multiple currencies (for front-end that will be added after this release)</li>
+									<li>Products Module
+										<ul>
+											<li> Improved barcode feature and attached barcode symbology to product</li>
+											<li> Improved barcode/label printing feature</li>
+											<li> Duplicate product option</li>
+											<li> Product racks/locations</li>
+											<li> Product Image Gallery</li>
+											<li> Ability to set the images/thumbnails size</li>
+											<li> Ability to add watermark to product images</li>
+											<li> Attach tax rate with product</li>
+											<li> Tax method to add tax inclusive/exclusive to the price and cost</li>
+											<li> Attach multiple supplier to product</li>
+											<li> Option for product expiry date while purchasing the stock</li>
+											<li> Option to add/edit product quantity on add/edit product page</li>
+											<li> Product variants with quantity tacking</li>
+										</ul>
+									</li>
+									<li>Users Module
+										<ul>
+											<li> Assign users a warehouse and biller </li>
+											<li> Own sales/quotations/purchases/transfers restrictions for users</li>
+										</ul>
+									</li>
+									<li>Customers Module
+										<ul>
+											<li> Option to select customer group (to manage different selling rates)</li>
+											<li> Re-structured the module to add users to customer company (front-end that will be added after this release)</li>
+										</ul>
+									</li>
+									<li>Suppliers Module
+										<ul>
+											<li> Re-structured the module to add users to supplier company (front-end that will be added after this release)</li>
+										</ul>
+									</li>
+									<li>Sales Module
+										<ul>
+											<li> New add/edit page design</li>
+											<li> Ability to add manual product to order list</li>
+											<li> Ability to sell gift cards</li>
+											<li> Ability to edit the product price on sale page</li>
+											<li> Instant discount (add percentage or fixed discount to order and/or any product)</li>
+											<li> Option to add attachment to sale</li>
+											<li> Option to show/hide product images on invoice.</li>
+											<li> Warehouse code/name/address on invoice</li>
+											<li> Return sales and issue refunds</li>
+											<li> Record payments to sale (full/partial with any no of payments)</li>
+											<li> Add payment terms (No of pending payment days before the sale marked as due)</li>
+											<li> Sale status (pending/completed)</li>
+											<li> Payment status (pending/due/partially paid/fully paid))</li>
+											<li> Payment Buttons (Paypal and Skrill) for email</li>
+										</ul>
+									</li>
+									<li>Reports Module
+										<ul>
+											<li> Improved old reports</li>
+											<li> Added product expiry alerts</li>
+											<li> Added payments report</li>
+											<li> Added profit and loss report</li>
+											<li> Added customer report</li>
+											<li> Added supplier report</li>
+											<li> Added staff report</li>
+										</ul>
+									</li>
+									<li>Settings Module
+										<ul>
+											<li> Manage user groups and permissions</li>
+											<li> Manage customer groups</li>
+											<li> Manage currencies</li>
+											<li> Added option to upload map for warehouses</li>
+											<li> Added option to upload images for categories and sub categories</li>
+											<li> Added email templates (set email message in WYSIWYG editor)</li>
+											<li> Added option to add tax code</li>
+										</ul>
+									</li>
+									<li>POS Module
+										<ul>
+											<li> Add Item by Barcode scanner and code/name suggestion</li>
+											<li> Ability to add manual product to order list</li>
+											<li> Ability to sell gift cards</li>
+											<li> Ability to edit the product price on sale page</li>
+											<li> Instant discount (add percentage or fixed discount to order and/or any product)</li>
+											<li> Rounding to nearest 0.05</li>
+											<li> Option to add comment</li>
+											<li> Record multiple payments to sale</li>
+											<li> Payment Gateways (Paypal Pro and Stripe) for Credit Card Payment Processing</li>
+											<li> Added Qz Printing Plug-in (Java Applet) to print and open cash drawer</li>
+											<li> Added swipe credit card input</li>
+											<li> Pay by gift card</li>
+										</ul>
+									</li>
+									<li> Update v3.1
+										<ul>
+											<li> Front-end for customer/supplier to add/view orders and make payments</li>
+											<li> User Registration</li>
+											<li> Activity logger</li>
+											<li> Reward point for sales staff and customers</li>
+										</ul>
+									</li>
+									<li> Update v3.2
+										<ul>
+											<li> API Module (to integrate SMA with other third-party softwares)</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="set">
+						<div class="inner-set" id="demo">
+							<div class="set-description">
+								<h3>Live Demo For Stock Manager Advance v2.3 and v3.0</h3>
+
+								<h4>Demo Link for V3.0: <a href="http://tecdemo.com/sma3/" target="_blank">http://tecdemo.com/sma3/</a></h4>
+								<h4>Demo Link for V2.3: <a href="http://tecdemo.com/sma/" target="_blank">http://tecdemo.com/sma/</a></h4>
+
+								<h4>Login Details:</h4>
+								<div class="bigshow">
+									<table class="table table-horizontal">
+										<thead>
+											<tr>
+												<th>Role</th>
+												<th>Username</th>
+												<th>Password</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Owner</td>
+												<td>owner@tecdiary.com</td>
+												<td>12345678</td>
+											</tr>
+											<tr>
+												<td>Admin</td>
+												<td>admin@tecdiary.com</td>
+												<td>12345678</td>
+											</tr>
+											<tr>
+												<td>Purchasing staff</td>
+												<td>purchaser@tecdiary.com</td>
+												<td>12345678</td>
+											</tr>
+											<tr>
+												<td>Sales staff</td>
+												<td>salesman@tecdiary.com</td>
+												<td>12345678</td>
+											</tr>
+											<tr>
+												<td>Viewer only user</td>
+												<td>user@tecdiary.com</td>
+												<td>12345678</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="smallshow">
+									<p><pre><strong>Role:               Username                 Password</strong><br><strong>Owner:</strong>              owner@tecdiary.com       12345678<br><strong>Admin:</strong>              admin@tecdiary.com       12345678<br><strong>Purchasing staff:</strong>   purchaser@tecdiary.com   12345678<br><strong>Sales staff:</strong>        salesman@tecdiary.com    12345678<br><strong>Viewer only user:</strong>   user@tecdiary.com        12345678</pre></p>
+								</div>
+								<p><strong>In v3.0 you can add more user groups and set different permissions.</strong></p>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="set">
+						<div class="inner-set" id="support">
+							<div class="set-description">
+								<h3>No Free Support anymore</h3>
+								<h4>Officially, we are not providing Free Support anymore but only paid support. We will be updating the item time to time for</h4>
+
+								<ul>
+									<li>Fixes for bugs and reported issues with the item</li>
+									<li>Updates to ensure on going compatibility and patch security vulnerabilities</li>
+								</ul>
+								<p></p>
+
+								<h4><strong>No Free Support but only Paid</strong></h4>
+								<ul>
+									<li>Any help for customization - (We will charge for these type of question $5 per single question)</li>
+									<li>No Free Installation services - (We will be charging $10 for installation)</li>
+									<li>No Free help in resolving compatibility issues with 3rd party plug-ins, themes or items - (We will be charging $10-$50 for this type of requests)</li>
+									<li>No Free help with included 3rd party items from the 3rd party author (e.g, plug-ins and libraries used in script and theme) - (We will be charging $10-$50 for this type of requests)</li>
+									<li>No Free help with your particular web hosting/server environment - (We will be charging $10-$50 for this type of requests)</li>
+								</ul>
+
+								<h4>
+									Paid Support Hours:<br> 
+									At $5 per email/ticket and only 1 question per email/ticket<br>From 0900 &ndash; 1800 (GMT+8), Mondays &ndash; Fridays<br>(Response time: 24 &ndash; 48 Hours)<br>No responses on Saturday, Sunday and Public Holidays in Malaysia
+								</h4>
+								<p>
+									If you are having any difficulty in understanding the item functionality or you have any question. Please try to have a look at FAQs, User Guide and Developer Guide and if can't find the answer in FAQs, User Guide and Developer Guide, we encourage you to contact us by posting on support forum <a href="http://tecdiary.com/support/" target="_blank">http://tecdiary.com/support/</a>
+								</p>
+								<p></p>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="set">
+						<div class="inner-set" id="customization">
+							<div class="set-description">
+								<h3>Custom Modifications</h3>
+								<p>
+									Yes, we do provide customization services to modify/enhance the item functionality to suit your needs. We charge $18 per hour. Please email to saleem@tecdiary.com to check availability, estimated cost and time.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="set">
+						<div class="inner-set" id="request">
+							<div class="set-description">
+								<h3>Feature Request</h3>
+								<p>Yes, we would love to listen your requests/feedback. Please prepare the details with examples before emailing to saleem@tecdiary.com</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="set">
+						<div class="inner-set" id="lang">
+							<div class="set-description">
+								<h3>Languages</h3>
+								<h4>We are very thankful to these amazing people who have contributed their language files.</h4>
+								<h4>V3</h4>
+								<p></p>
+								<p>Only English available for v3.0 and other languages will be added soon.</p>
+								<h4>V2.3</h4>
+								<p></p>
+								<p>
+									Currently, the following languages are available (Fully or Partially).
+									<strong>English, French, Indonesia, Thai, Spanish, Romanian, Spanish, Brazilian Portuguese, European Portuguese and Czech.</strong>
+								</p>
+								<p>
+									A big thanks to <strong>Arismendi Dario, Philippe Gianesin, Julis Suryadi from SendawarMedia, Carlos Sanchez, Nuno Filipe, Alex from MixedIn Radio, Mateus Vitorino, Cristian Valluzzi, Saed A. Haroon and Evren COMERT</strong> for contributing the v2.3 language files.
+								</p>
+								<p>If you need to add your own language that will be very easy. Please find the instruction in developer guide.</p>
+								<p>
+									If you have translated the files and willing to contribute so that others can enjoy your generosity, please email the translated files to saleem@tecdiary.com
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="set">
+						<div class="inner-set" id="credits">
+							<div class="set-description">
+								<h3>Credits</h3>
+								<h4>Thanks to all great people who are developing open source software.</h4>
+								<ul>
+									<li><strong>CodeIgniter</strong> - PHP-Framework under <a href="http://www.codeigniter.com/userguide3/license.html">MIT License</a></li>
+									<li><strong>Ion_auth</strong> - A simple, lightweight authentication library by Ben Edmunds under  the Apache License v2</li>
+									<li><strong>mPDF</strong> - A PHP class to generate PDF under GNU General Public License version 2</li>
+									<li><strong>Bootstrap</strong> - Most popular HTML, CSS, and JS framework under MIT License</li>
+									<li><strong>jQuery</strong> - A fast, small, and feature-rich JavaScript library under MIT License</li>
+									<li><strong>Font Awesome</strong> - The iconic font and CSS toolkit under GPL License.</li>
+									<li><strong>DataTables</strong> - A plug-in for the jQuery under two licenses: GPL v2 license or a BSD (3-point) License</li>
+									<li><strong>PHPExcel</strong> - A simple PHP to Excel conversion under GNU Library General Public License (LGPLv2.1)</li>
+									<li><strong>Zend Framework 1</strong> (barcode library) - under New BSD License</li>
+									<li><strong>PHP QR Code</strong> - Generator for 2-D QR barcode under GNU Library or Lesser General Public License version 3.0 (LGPLv3)</li>
+									<li><strong>Bootstrap-datetimepicker</strong> - Date and Time picker widget based on bootstrap under Apache License V2</li>
+									<li><strong>Bootstrap 3 Lightbox</strong> - A lightbox gallery under GNU GENERAL PUBLIC LICENSE V2</li>
+									<li><strong>iCheck</strong> - Highly customizable checkboxes and radio buttons under MIT License</li>
+									<li><strong>Accounting.js</strong> -  A tiny JavaScript library for number, money and currency formatting under MIT License</li>
+									<li><strong>jQuery Cookie</strong> - A simple, lightweight jQuery plugin to manage cookies under MIT License</li>
+									<li><strong>Commercial Licenses</strong>
+										<ul>
+											<li>Highcharts</li>
+											<li>BootstrapValidator</li>
+											<li>Redactor Text Editor</li>
+										</ul>
+									</li>
+								</ul>
+								<p></p>
+								<p><strong>Thanks to all the friends for their suggestions, feedback and help.</strong></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="set">
+						<div class="inner-set" id="faqs">
+							<div class="set-description">
+								<h3>Frequently Asked Questions</h3>
+								<div class="clear"></div>
+								<div class="cd-faq">
+								<!-- <ul class="cd-faq-categories">
+									<li><a class="selected faq-menu" href="#basics">General</a></li>
+									<li><a class="faq-menu" href="#account">Account</a></li>
+									<li><a class="faq-menu" href="#payments">Payments</a></li>
+									<li><a class="faq-menu" href="#errors">Errors</a></li>
+								</ul> -->
+
+								<div class="cd-faq-items">
+									<ul id="basics" class="cd-faq-group">
+										<li class="cd-faq-title"><h4>General</h4></li>
+										<li>
+											<a class="cd-faq-trigger" href="#0">How many products can be managed with this Stock Manager?</a>
+											<div class="cd-faq-content">
+												<p>You can have any number of products ranging from 1 to 20,000 or more.</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Can I manage miltiple warehouses/stores?</a>
+											<div class="cd-faq-content">
+												<p>Yes, you can easily manage multiple warehouse/stores with same product base.</p>
+												<p>However, if you have different products in each warehouse/store, you can add all products for each warehouse/store (combine products for all warehouse) and then manage multiple warehouse/stores.<br>OR<br>You will be buy separate license and install SMA separately for each warehouse/store.</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">How can I translate into other language?</a>
+											<div class="cd-faq-content">
+												<p>You can easily add new languages to SMA. Please <a href="#language">click here</a> to jump to guide.</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Does it supports my barcode scanner/receipt printer/magnetic card reader?</a>
+											<div class="cd-faq-content">
+												<p>Please <a href="#hardware">click here</a> to jump to hardware section.</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Will I get the full source code?</a>
+											<div class="cd-faq-content">
+												<p>Yes, you will get 100% source code including php, js, html and css.</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Can I modify it as per my needs?</a>
+											<div class="cd-faq-content">
+												<p>Yes, you modify it as per your need and license.</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Are you using a PHP Framework for this item?</a>
+											<div class="cd-faq-content">
+												<p>Yes, <strong>CodeIgniter</strong> – PHP Framework created by EllisLab and is now a project of the British Columbia Institute of Technology.</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">How do SMA handle out bounds?</a>
+											<div class="cd-faq-content">
+												<p>
+													Products will be automatically subtracted from the warehouse quantity once the invoice created with completed sale status.
+													Sale with pending status will not change the quantity.
+												</p>
+
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">How do SMA handle in bounds?</a>
+											<div class="cd-faq-content">
+												<p>
+													New Purchase will automatically add/increase the product quantity in the selected warehouse.
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">I don't have stock but still can sell product. Why?</a>
+											<div class="cd-faq-content">
+												<p>Please check the overselling option in system settings, that would be enabled. You can disable overselling to stop selling products with 0 or lower stock.
+												</p>
+											</div> 
+										</li>
+									</ul> 
+
+
+									<ul id="account" class="cd-faq-group">
+										<li class="cd-faq-title"><h4>Account and Users</h4></li>
+										<li>
+											<a class="cd-faq-trigger" href="#0">What type of account are available?</a>
+											<div class="cd-faq-content">
+												<p>
+													These are the account type
+													<ol>
+														<li>Management or Staff
+															<ol>
+																<li>Owner</li>
+																<li>Admin</li>
+																<li>You can add more user groups for your settings and set permissions to any of these groups.</li>
+															</ol>
+														</li>
+														<li>Customer</li>
+														<li>Supplier</li>
+													</ol>
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">What user groups available?</a>
+											<div class="cd-faq-content">
+												<p>
+													These user groups are fixed and can't be changed.
+													<ol>
+														<li>Owner</li>
+														<li>Admin</li>
+														<li>Customer</li>
+														<li>Supplier</li>
+													</ol>
+												</p>
+												<p>
+													You can add more user groups for your settings. These all groups will be consider as staff groups and you can set permissions to any of these groups.
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">User forgot his/her password. How do I reset it?</a>
+											<div class="cd-faq-content">
+												<p>
+													For Staff: Please visit list user and edit the user to reset the password.
+													For Customer/Supplier: Please visit list customers/suppliers and then click the <i class="fa fa-users"></i> users icon to list the user for selected customer/supplier. You can edit any user to reset password. 
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">How do I delete account?</a>
+											<div class="cd-faq-content">
+												<p>
+													If you want to delete account for staff member, please visit list users sub menu under people main menu. All the account are listed on this page and you can delete any of them.
+												</p>
+
+												<p>
+													If you want to delete any account customer/supplier account, please visit list customers/suppliers sub menu under people main menu. All the customers/suppliers are listed on this page. Now click the <i class="fa fa-users"></i> users icon to list the account for the customer/supplier. On this window, you can delete any account for this customer/suppler. 
+												</p>
+
+												<p>
+													If you delete any customer/supplier, all the account attached with the customer/supplier will automatically deleted. 
+												</p>
+
+											</div> 
+										</li>
+
+									</ul> 
+
+									<ul id="payments" class="cd-faq-group">
+										<li class="cd-faq-title"><h4>Payments</h4></li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">What payment gateways are available?</a>
+											<div class="cd-faq-content">
+												<p>
+													Payment options available for customers to choose from are as following:
+													<ol>
+														<li>Paypal</li>
+														<li>Skrill</li>
+													</ol>
+												</p>
+												<p>
+													Payment options has been added to V3 that will be available to customers when you email invoice to them. Customers would be able to make payment by this gateway using link in email and from front-end (once available). 
+												</p>
+												<p>
+													<em>There is no payment option available in V2.3</em>
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Can I have recurring invoice or subscription?</a>
+											<div class="cd-faq-content">
+												<p>
+													No, currently there is no such feature available yet.
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Why did my PayPal Pro or Stripe payment take long time?</a>
+											<div class="cd-faq-content">
+												<p>
+													Normally API call to both server could take few seconds as the payment is processed with submit.
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Will you be adding more payment gateways?</a>
+											<div class="cd-faq-content">
+												<p>
+													Yes, we will be exploring the new gateways. 
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Paypal Pro and Stripe gateways are added to SMA or POS?</a>
+											<div class="cd-faq-content">
+												<p>
+													Paypal Pro and Stripe gateways are only available with POS Modules. If you have purchase SMA with POS Module. These are already included in you POS.
+												</p>
+											</div> 
+										</li>
+									</ul> 
+									
+									<ul id="errors" class="cd-faq-group">
+										<li class="cd-faq-title"><h4>Error</h4></li>
+										<li>
+											<a class="cd-faq-trigger" href="#0">Why am I getting 404/500 error page after installation?</a>
+											<div class="cd-faq-content">
+												<p>
+													Please make sure that your apache mod_rewite is enabled and the site url you checked on the site config step was correct.
+													If you are using godaddy, please visit the codeigniter official guide <a href="https://github.com/bcit-ci/CodeIgniter/wiki/Godaddy-Installation-Tips" target="_blank">here</a>. You might need to check and modify you .htaccess files too.
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Why I can't download the pdf?</a>
+											<div class="cd-faq-content">
+												<p>We have used mPDF library to generate pdf files. We have tested mPDF library on 5 different servers. Yes, it is a bit lower but do the amazing job to convert html to pdf. You can check with your host about this and if you need requirement, please <a href="http://www.mpdf1.com/mpdf/index.php?page=Requirements" target="_blank">click here</a></p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Why I can't send emails?</a>
+											<div class="cd-faq-content">
+												<p>We have tested the email function on 5 different hosting servers. Please check with your host about this and if you need to check the code that will be in sma/libraries/sma.php and look for <code>send_email()</code></p>
+											</div> 
+										</li>
+									</ul>
+								</li>
+							</ul> 
+						</div> <!-- cd-faq-items -->
+						<a href="#0" class="cd-close-panel">Close</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="set">
+			<div class="inner-set" id="guide">
+				<div class="set-description">
+					<h3>User Guide</h3>
+					<p>As V3 comes with new theme, let me explain the main sections of the home screen. I am add image of the dashboard and on right with overlay to name the main sections of the page. This sections are same through for each and every page. Only the main content area will be different for pages and will be displaying the view files from your theme folder.</p>
+					<p></p>
+					<div class="left">
+						<a href="assets/img/db.png" data-lightbox="dashboard" data-title="Dashboard Screenshot"><img src="assets/img/db.png" alt=""></a>
+					</div>
+					<div class="right">
+						<a href="assets/img/db-overlay.png" data-lightbox="dashboard" data-title="Dashboard Image with sections"><img src="assets/img/db-overlay.png" alt=""></a>
+					</div>
+					<div class="clear"></div>
+					<p></p>
+					<p>New listing pages comes with new page menu position, select row column and Image column (where applicable). I have added the listing page and overlay page to explain the new sections. You can see the new menu position in top left of main content area. Building icon is to list the warehouse and the tasks icon for other page menus, will work with select row.</p>
+					<p></p>
+					<div class="left">
+						<a href="assets/img/listing.png" data-lightbox="listing" data-title="Listing Page Screenshot"><img src="assets/img/listing.png" alt=""></a>
+					</div>
+					<div class="right">
+						<a href="assets/img/listing-overlay.png" data-lightbox="listing" data-title="Listing Page with secttions"><img src="assets/img/listing-overlay.png" alt=""></a>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="set">
+			<div class="inner-set" id="users">
+				<div class="set-description">
+					<h3>Users</h3>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="set">
+			<div class="inner-set" id="billers">
+				<div class="set-description">
+					<h3>Billers</h3>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="set">
+			<div class="inner-set" id="customers">
+				<div class="set-description">
+					<h3>Customers</h3>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="set">
+			<div class="inner-set" id="suppliers">
+				<div class="set-description">
+					<h3>Suppliers</h3>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="set">
+			<div class="inner-set" id="products">
+				<div class="set-description">
+					<h3>Products</h3>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="set">
+			<div class="inner-set" id="purchases">
+				<div class="set-description">
+					<h3>Purchases</h3>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="set">
+			<div class="inner-set" id="sales">
+				<div class="set-description">
+					<h3>Sales</h3>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="set">
+			<div class="inner-set" id="quotations">
+				<div class="set-description">
+					<h3>Quotations</h3>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="set">
+			<div class="inner-set" id="transfers">
+				<div class="set-description">
+					<h3>Transfers</h3>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="set">
+			<div class="inner-set" id="settings">
+				<div class="set-description">
+					<h3>Settings</h3>
+					<p>Please add your default currency and save your settings first. You need to set default currency and accounting method before using this system.</p>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="set">
+			<div class="inner-set" id="reports">
+				<div class="set-description" style="border-bottom: 0;">
+					<h3>Reports</h3>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+
+<div id="big-wrap">
+	<div id="inner-wrap">
+		<div class="set">
+			<div class="inner-set" id="developer">
+				<div class="set-description">
+					<h3>Developer Guide</h3>
+					<p>As you know SMA is developed with <a href="http://www.codeigniter.com/" target="_blank">CodeIgniter PHP Framework</a> and you can find the user guide for framework at <a href="http://www.codeigniter.com/user_guide/" target="_blank">http://www.codeigniter.com/user_guide/</a> Most of the times this will be handy resource for you to check for guide/code/snippets on this user guide.</p>
+					<p><strong>Please always backup your files and database before editing them.</strong></p>
+					<p>I didn't added any comment in code. All the methods/functions are on same pattern described here.</p>
+
+					<p>I am illustrating the page function here with comment so that you can have idea how these pages are working. In controller class, each method/function present a page.  In this example, the controller class is comments and the method/function is add page. The code will handle the add page and the view files will in your theme/comments/add.php </p>
+
+					<p>You can check the user group permission by calling the sma library's checkPermissions() You even can set your own custom permissions. The available variables are $this->Owner, $this->Admin, $this->Customer and $this->Supplier in all controllers and $Owner, $Admin, $Customer and $Supplier in all view files (if you passed them the $this->data)</p>
+
+					<p>You can set the flash messages as $this->session->set_flashdata('item', 'value'); and item as 
+						<ol>
+							<li>'<strong>message</strong>' for success message</li>
+							<li>'<strong>error</strong>' for any error</li>
+							<li>'<strong>warning</strong>' for any warning alert</li>
+						</ol>
+						so to display a success message, you will need to do this $this->session->set_flashdata('message', lang('success_msg_lang_key'));
+					</p>
+					<p>Input variables are mostly not defined in controller's page function. So you need to check the view files for inputs. But in some pages, these are defined in controller too.</p>
+					<p>For validation rules, you might need to check the controller as we doing in this example. But there are some rules that are defined in form_validation.php in sma/config/ folder. You might need to check this form_validation.php for your page. As we don't passing any variable to <code>$this->form_validation->run()</code> so the array will be comments/add. Below in removing the required from field <code>if ($this-&gt;form_validation-&gt;run(&#039;companies/add&#039;) == true) {</code>, we need to check companies/add to set the validation rules for the page.</p>
+					<p>To load the view files, I have mentioned 2 ways, once by calling the core controller's page_construct function and other by calling default loader view function. There both are used, the page_contruct() is called to load the full page view and the loader view is called to load the modal view.</p>
+				</div>
+				<div class="set-dev">
+					<h3>Developer Guide</h3>
+					<pre>
+						<code>class Comments extends MY_Controller {
+							function add() {
+							// check user permissions
+							$this->sma->checkPermissions();
+							// validate rules http://www.codeigniter.com/user_guide/libraries/form_validation.html#rulereference
+							$this->form_validation->set_rules('comment', lang("comment"), 'required|min_length[3]|xss_clean');
+							// Check validation
+							if ($this->form_validation->run() == true) {
+							// Validation true, perform actions, saving data in array
+							$data = array(
+							'comment' => $this->input->post('comment'),
+							'from_date' => $this->input->post('from_date') ? $this->sma->fld($this->input->post('from_date')) : NULL,
+							'till_date' => $this->input->post('to_date') ? $this->sma->fld($this->input->post('to_date')) : NULL,
+							);
+						}
+						// validate again and send data to model
+						if ($this->form_validation->run() == true && $this->commnets_model->addComment($data)) {
+						// validation was fine and model returned true so set message and redirect 
+						$this->session->set_flashdata('item', 'value');
+						redirect("welcome");
+					} else {
+					// validation failed or model returned false
+					// set input variables, most these are not set and used view files for input
+					$this->data['comment'] = array('name' => 'comment',
+					'id' => 'comment',
+					'type' => 'textarea',
+					'class' => 'form-control',
+					'required' => 'required',
+					'value' => $this->form_validation->set_value('comment'),
+					);
+					// check errors
+					$this->data['error'] = validation_errors() ? validation_errors() : $this->session->flashdata('error');
+					// set any other variable to pass to view
+					$this->data['modal_js'] = $this->site->modal_js();
+
+					// load view by calling core controller's page_construct()
+					$bc = array(array('link' => base_url(), 'page' => lang('home')), array('link' => '#', 'page' => lang('comments')));
+					$meta = array('page_title' => lang('add_comment'), 'bc' => $bc);
+					$this->page_construct('comments/add', $meta, $this->data);
+					// OR load view by calling loader's view()
+					$this->load->view($this->theme . 'comments/add', $this->data);
+				}
+			}
+		}</code>
+	</pre>
+</div>
+</div>
+</div>
+
+
+<div class="set">
+	<div class="inner-set" id="language">
+		<div class="set-description">
+			<h3>Adding Language</h3>
+			<p>Guide to add new language.
+				<ul>
+					<li>Please create new folder in sma/language/ and name it <code>yourlanguagename</code></li>
+					<li>Folder name should be without space and all lower letters.</li>
+					<li>Copy all the files from sma/language/english/ and paste then to sma/language/<code>yourlanguagename</code>/</li>
+					<li>Download flag image (format: png, width: 16px, height: 11px) and paste it in assets/images/</li>
+					<li>You can add new key to language array. (See Code Section)</li>
+				</ul>
+			</p>
+			<p>
+				Please replace the <code>yourlanguagename</code> with your language For example, spanish, french, chinese etc
+			</p>
+		</div>
+		<div class="set-dev">
+			<h3>Adding Language</h3>
+			
+			<p>To add select option in setting's language</p>
+			<p>Please open <code>themes/default/views/settings/index.php</code> and search for ( <code>$lang =</code> ) You can replace the <code>default</code> with your theme if you are using different theme. You can add new array key for your language as following:<br><br></p>
+			<pre><code>$lang = array(<br>		'english' => 'English', <br>		'yourlanguagename' => 'Your Language Name', <br>	    );</code></pre>
+			<code>yourlanguagename</code> must be same folder name that you created in sma/language/
+			
+		</div>
+
+	</div>
+</div>
+
+<div class="set">
+	<div class="inner-set" id="theme">
+		<div class="set-description">
+			<h3>Theme</h3>
+			<p>We are aware that developers always need to modify the base code. Once the update available, their job become difficult to update as they have modify the code for their client needs. This is first step to offer easy modification for developers. Though this only covers the view side. But we will be exploring the ways to offer easy modification for controllers/models side in future.</p>
+			<p>
+				In V3 you can add your own themes by creating the folder in /themes/. Please make sure there is no space in the folder name. Currently there are 2 folders in /themes/ i. default ii. errors
+			</p>
+			<p>
+				Errors folder will be the same for all themes and you only need to modify the error file in /themes/errors/html/ (in case you need to modify, most of the times you won't need to modify these error files.)
+			</p>
+			<p>
+				You theme will have 2 folders, assets and views, assets folder will contain all you css, js and images files and the views folder will contain the view files for page (main content area view).
+			</p>
+			<p>
+				The main file to modify will be the header.php and footer.php in /themes/yourtheme/views/ as you will set all the styles and javascript code here.
+			</p>
+
+		</div>
+		<div class="set-dev">
+			<h3>Theme</h3>
+			<p>
+				If you need to have to modify only a few view files, then you can just create only views folder in your /themes/yourtheme/ and copy the view file from /themes/default/ and paste to /themes/yourtheme/ and modify this. 
+			</p>
+			<p>
+				For example, If I need to modify the dashbord view file, I will create a theme folder in /themes/ and name it 'myviews', copy the dashboard.php file from /themes/default/ and will paste into /themes/myviews/ and modify this files as per my needs. I will need to add and set the theme in settings view file as
+			</p>
+			<pre><code>$themes = array(<br>		'default' => 'Default',<br>		'myviews' => 'My Modified View Files'<br>		);</code></pre>
+			<p>Once I updated the settings with 'My Modified View Files' as my new theme. The dashboard view file will be loaded from myviews theme and all other those don't exist in the myviews will be loaded from the /themes/default/</p>
+			<p>
+				Please be informed this rule does not apply to assets folder for any theme. If you have created the assets folder in your theme, system will look all the css, js and images from this folder and if they does not exist, you will get page without any style.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="set">
+	<div class="inner-set" id="removing">
+		<div class="set-description">
+			<h3>Removing Required</h3>
+			<div>
+				<p>To remove validation, you will need to edit few files</p>
+				<ol>
+					<li>sma/controllers/sleectTheControllerYouWantEdeit</li>
+					<li>themes/default/selectTheAppropriateFolderOrFile</li>
+					<li>Database table to accept null value for that field</li>
+				</ol>
+				<p></p>
+				<p>Please alter the database table to accept the null for your inputs (postal code).</p>
+				<ol>
+					<li>Open phpmyadmin and select the database</li>
+					<li>Select the customers table</li>
+					<li>Click Structure</li>
+					<li>Click change on field name (city) line</li>
+					<li>Tick/check the null checkbox</li>
+					<li>Click Save</li>
+				</ol>
+				<p>Now try to add customer without city. You won't get any error as we have remove the required validation for this input.</p>
+				<p>You can use these steps to remove the required field for any other fields.</p>
+				<p><strong>Please be careful while removing the required from some fields as these might be used in other modules, like removing the required validation for email to accept customer with no email could cause issues/errors for emailing the invoice to customer in sale/pos.</strong></p>
+			</div>
+
+		</div>
+		<div class="set-dev">
+			<h3>Removing Required</h3>
+			<p>Let say we want to remove the restriction from postal code from add customer</p>
+			<p>Open sma/modues/customers/views/add.php and look for city input code</p>
+			<pre><code>&lt;?php echo form_input(&#039;city&#039;, &#039;&#039;, &#039;class=&quot;form-control&quot; id=&quot;city&quot; required=&quot;required&quot;&#039;); ?&gt;</code></pre>
+			<p>We need to remove the required (you might need to check pattern) attributes. We will delete the code below</p>
+			<pre><code>required="required"</code></pre>
+			<p>You need to check the validation rules in sma/config/form_validation.php We are validation</p>
+			<pre><code>if ($this-&gt;form_validation-&gt;run(&#039;companies/add&#039;) == true) {</code></pre> 
+			<p>so search 'companies/add' array and then look for array with field 'city' and remove the required from rules and now your rules will be as </p>
+			<pre><code>'rules' => 'xss_clean'</code></pre>
+			<p>For some pages, you need to check the rules in controller as sma/modues/customers/controllers/customers.php and look for function add() and see the validation line on top as</p>
+			<pre><code>$this-&gt;form_validation-&gt;set_rules(&#039;city&#039;, lang(&quot;city&quot;), &#039;required|xss_clean&#039;);</code></pre> 
+
+			<p>Remove the required from last part of the validation. After this our validation line will look as</p>
+			<pre><code>$this-&gt;form_validation-&gt;set_rules(&#039;city&#039;, lang(&quot;city&quot;), &#039;xss_clean&#039;);</code></pre>
+		</div>
+	</div>
+</div>
+
+<div class="set">
+	<div class="inner-set" id="datatable">
+		<div class="set-description">
+			<h3>Sorting Tables</h3>
+			<p>We have used datatables library for all listing tables. If you need to change any table sorting column, you will need to modify the view file.</p>
+			<p>
+				The first column of the table will start from index 0 and then increase 1 with each columns. Let say you want to sort the table with 4th column then you will need to use index 3 as <code>"aaSorting": [[3, "asc"]],</code> 
+			</p>
+			<p>
+				You can change the sorting for any table by modifying the files as described here.
+			</p>
+
+		</div>
+		<div class="set-dev">
+			<h3>Sorting Tables</h3>
+			<p>
+				For example, if you need to change the sorting for customers, you will need to edit the /theme/default/customers/index.php and search 
+			</p>
+			<pre><code>"aaSorting": [[1, "asc"]],</code></pre>
+			<p>This is being sorted for 2nd table column, If you want to sort it by id (1st table column) then you will need to change as </p>
+			<pre><code>"aaSorting": [[0, "asc"]],</code></pre>
+			<p>You even can sort the table with multiple columns as </p>
+			<pre><code>"aaSorting": [[0, "asc"], [1, "asc"]],</code></pre>
+			
+		</div>
+	</div>
+</div>
+
+<div class="set">
+	<div class="inner-set" id="barcode">
+		<div class="set-description">
+			<h3>Barcodes and Labels</h3>
+			<p>These pages are designed to be printed with desktop laser printers. Barcode sheet or barcode pages have 2 columns' table (2 product per row and medium barcode image with 60px height) while labels have 4 columns' table (4 products per row and small barcode image with 30px height). </p>
+			<p>
+				If you need to modify any of the barcode/lable page to show/remove any information, you can do so by modify the products controller. The functions are mentioned that handle the pages.
+			</p>
+
+			<p>
+				If your products have variants, only single product barcode/label printing will show the product barcode images with variants id. To directly add the option to order list (either from product detail page or from the row actions).
+			</p>
+
+		</div>
+		<div class="set-dev">
+			<h3>Barcodes and Labels</h3>
+			<p>
+				Functions/Methods handling the barcodes and labels pages are 
+				<ul class="s-ul">
+					<li><code class="white">single_barcode()</code> - Handles barcode printing for single products</li>
+					<li><code class="white">single_label()</code> - Handles label printing for single products</li>
+					<li><code class="white">print_barcodes()</code> - Handles barcode printing for multiple products based on category</li>
+					<li><code class="white">print_lables()</code> - Handles lebel printing for multiple products based on category</li>
+					<li><code class="white">product_actions()</code> - Handles barcode and label printing for multiple selected products</li>
+				</ul>
+			</p>
+			
+		</div>
+	</div>
+</div>
+
+<div class="clear"></div>
+
+</div>
+</div>
+</div>
+
+<script src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="assets/js/plugins.js" type="text/javascript"></script>
+<script src="assets/js/highlight.pack.js" type="text/javascript"></script>
+<script src="assets/js/main.js" type="text/javascript"></script></script>
+
+</body>
+</html>
