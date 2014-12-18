@@ -1,4 +1,4 @@
-SMA-Documentation
-=================
+SMA User Guide
+==============
 
-Stock Manager Advance Documentation 
+Stock Manager Advance - User Guide
