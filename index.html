@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-	<title>Stock Manager Advance Documentation</title>
+	<title>Stock Manager Advance V3R2 Documentation V1.1</title>
 	<meta name="google-site-verification" content="fEfsU1FFm-C1BtX88gzsC4yMOjHzDVkD26lMwkxrQz8" />
 	<meta name="description" content="Online documentation for Stock Manager Advance - Inventory & Inoive managment solution and POS (Point of Sale) Module by Tecdiary.com">
 	<meta name="viewport" content="width=1200, maximum-scale=1" />
@@ -102,14 +102,15 @@
 					<div class="set category-head">
 						<div class="inner-set" id="introduction">
 							<div class="set-description">
-								<h3>Stock Manager Advance Documentation</h3>
+								<h3>Stock Manager Advance Beta V3R2 (Documentation v1.1)</h3>
 								<p>Thank you for purchasing the Stock Manager Advance</p>
 								<p>
 									First of all, I would like to apologize for delays in releasing this version 3 and would like to thank everyone who has contributed to this
 									item, including the Envato, beta testers, technical reviewers, friends, and my family members for their love and support in my work. I also thank the purchasers who have patiently been waiting for this update and who have given me lots of valuable feedback.
 								</p>
+								<p>User Guide is not yet complete as the script is still in beta and will be update with each submission.</p>
 								<div class="highlight">
-									<h2>Public Beta R1</h2>
+									<h2>Public Beta R2</h2>
 
 									<p>
 										Due to the large number of changes to v3 we have decided to release it as a beta to collect user feedback. Please note that during this period based on user feedback we may make some changes to improve the item.
@@ -134,14 +135,14 @@
 										<li>Create mysql database, database user and grant all permission to user for this database.</li>
 										<li>Open the <strong>http://yourdomain.com/pathtoupload/install/index.php</strong></li>
 										<li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
-										<li>Step2: Provide you Envato Username and Purchase Code to validate and register a free support account</li>
+										<li>Step2: Provide you Envato Username and Purchase Code to validate the purchase.</li>
 										<li>Step 3: Provide the database host, database user, database password and database name to proceed to next step</li>
-										<li>Step 4: Site Config: Please Fill in you SMA SITE URL and select your timezone. You must check the site url as installer might guess it wrong</li>
+										<li>Step 4: Site Config: Please Fill in you SMA Base URL and select your timezone. You must check the site url as installer might guess it wrong
 										<ul>
-											<li>Site URL for public_html or www/htdocs folder will be http://yourdomain.com/ or http://localhost/</li>
-											<li>Site URL for sub-domain will be http://subdomain.yourdomain.com/ </li>
-											<li>Site URL for sub-folder will be http://yourdomain.com/subfolder/ or http://localhost/subfolder/ </li>
-											<li>Site URL must not have space and it should end with a trailing slash</li>
+											<li>Base URL for public_html or www/htdocs folder will be http://yourdomain.com/ or http://localhost/</li>
+											<li>Base URL for sub-domain will be http://subdomain.yourdomain.com/ </li>
+											<li>Base URL for sub-folder will be http://yourdomain.com/subfolder/ or http://localhost/subfolder/ </li>
+											<li>Base URL must not have space and it should end with a trailing slash</li>
 										</ul>
 									</li>
 									<li>If every thing goes smooth, You will be redirect to final page with login details.</li>
@@ -151,6 +152,12 @@
 									<li>Thank you for purchasing the SMA2, If you have any questions, please contact us at contact@tecdiary.com</li>
 								</ol>
 								<h4>After Install</h4>
+								<ol>
+								<li>Add your currency.</li>
+								<li>Update the system settings, by selecting the default currency and accounting method. If you need over-selling (sell products even that are out of stock), you can only choose the AVCO as FIFO/LIFO won't work with over-selling.</li>
+								<li>Add new owner user before editing/deleting the default owner account.</li>
+								<li>You are ready to go, start adding categories, taxes, warehouses, products, customer, sales and purchase.</li>
+								</ol>
 							</div>
 						</div>
 					</div>
@@ -168,18 +175,28 @@
 									</li>
 									<li>Delete all files/folders and upload all the files/folders in upload (new downloaded files).</li>
 									<li>Once all the files are uploaded. We need to restore the above saved file (step 2) back to their location</li>
-									<li>Upload and replace the sma/config/databse.php with the locally saved copy of database config file in step 2.</li>
-									<li>LETS UPDATE, PLEASE DONT PROVIDE DATABASE SETTING WHILE UPDATING.</li>
+									<li>Now we need to set the db configuration in new file. Please open the sma/config/databse.php and the locally saved copy of database config file in step 2.</li>
+									<li>Copy the database host, database user, database password and database name from old database file to the newly upload file sma/config/database.php .</li>
+									<li>LETS UPDATE, UPDATE TOOL WON'T ASK FOR DATABASE CONFIG AS WE HAVE ALREADY UPDATED THE DATABASE SETTINGS.</li>
 									<li>Open the browser and type <strong>http://yourdomain.com/pathtoupload/update/index.php</strong></li>
 									<li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
-									<li>Step 2: Provide your Envato Username and Purchase Code to validate and update your license and support account.</li>
-									<li>Step 3: Site Config: Please Fill in you <strong>SMA Base URL</strong> and select your timezone. You must check the <strong>site url</strong> as installation tool can guess it wrong.</li>
+									<li>Step 2: Provide your Envato Username and Purchase Code to validate and update your license.</li>
+									<li>Step 3: Site Config: Please Fill in you <strong>SMA Base URL</strong> and select your timezone. You must check the <strong>site url</strong> as installation tool can guess it wrong. This is the same base_url that you have in your old sma/config/config.php file 
+										<ul>
+											<li>Base URL for public_html or www/htdocs folder will be http://yourdomain.com/ or http://localhost/</li>
+											<li>Base URL for sub-domain will be http://subdomain.yourdomain.com/ </li>
+											<li>Base URL for sub-folder will be http://yourdomain.com/subfolder/ or http://localhost/subfolder/ </li>
+											<li>Base URL must not have space and it should end with a trailing slash</li>
+										</ul>
+									</li>
 									<li>If every thing goes smooth, You will be redirect to final page with update complete message.</li>
 									<li>Remove the install and update folder from main folder before start using the SMA.</li>
 									<li>Login using your old username and password, that will work fine.</li>
 									<li>SMA is updated and ready to use once again with new features</li>
 									<li>Thank you for updating, If you have any questions, please contact us at contact@tecdiary.com</li>
 								</ol>
+								<h4>Request Update</h4>
+								<p>We will provide the service to update your old SMA 2.3 to V3 for $18.00 (1 hour cost). To request the update, please send $18 to saleem@tecdiary.com by Paypal or Skrill and send us your license file and hosting control panel details with refer of your payment to the same email saleem@tecdiary.com</p> 
 							</div>
 						</div>
 					</div>
@@ -251,8 +268,7 @@
 							<div class="set-description">
 								<h3>Feature List V3</h3>
 								<p>
-									Stock Manager Advance is php-based web application that help you to manage your stock.
-									Built-in inventory and Invoicing system. All of the functionality that was in SMA v2.3 is also available through this release with the following enhancements:
+									Stock Manager Advance (inventory and Invoicing system) is php-based web application that help you to manage your stock. All of the functionality that was in SMA v2.3 is also available through this release with the following enhancements:
 								</p>
 								<ul class="features">
 									<li> Inventory Accounting (FIFO/LIFO/AVCO)</li>
@@ -380,7 +396,7 @@
 								<h3>Live Demo For Stock Manager Advance v2.3 and v3.0</h3>
 
 								<h4>Demo Link for V3.0: <a href="http://tecdemo.com/sma3/" target="_blank">http://tecdemo.com/sma3/</a></h4>
-								<h4>Demo Link for V2.3: <a href="http://tecdemo.com/sma/" target="_blank">http://tecdemo.com/sma/</a></h4>
+								<h4>Demo Link for V2.3: <a href="http://tecdemo.com/sma2/" target="_blank">http://tecdemo.com/sma2/</a></h4>
 
 								<h4>Login Details:</h4>
 								<div class="bigshow">
@@ -824,9 +840,15 @@
 						<a href="assets/img/listing.png" data-lightbox="listing" data-title="Listing Page Screenshot"><img src="assets/img/listing.png" alt=""></a>
 					</div>
 					<div class="right">
-						<a href="assets/img/listing-overlay.png" data-lightbox="listing" data-title="Listing Page with secttions"><img src="assets/img/listing-overlay.png" alt=""></a>
+						<a href="assets/img/listing-overlay.png" data-lightbox="listing" data-title="Listing Page with sections"><img src="assets/img/listing-overlay.png" alt=""></a>
 					</div>
 					<div class="clear"></div>
+					<p>&nbsp;</p>
+					<p>
+						In V3, main menus (left side) has been updated to track the active page and breadcrumb has been added on top of the main content area.
+					</p>
+					<h4>These are the menus in V3</h4>
+					<ul class="nav main-menu"> <li class="mm_welcome"><a href="#"><i class="fa fa-dashboard"></i><span class="text"> Dashboard</span></a></li> <li class="mm_products"> <a class="dropmenu" href="#"><i class="fa fa-barcode"></i><span class="text"> Products </span> <span class="chevron closed"></span></a> <ul style="display: block;"> <li id="products_index"><a class="submenu" href="#"><i class="fa fa-barcode"></i><span class="text"> List Products</span></a></li> <li id="products_add"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Product</span></a></li> <li id="products_sheet"><a class="submenu" href="#"><i class="fa fa-tags"></i><span class="text"> Print Barcodes</span></a></li> <li id="products_print_labels"><a class="submenu" href="#"><i class="fa fa-tags"></i><span class="text"> Print Labels</span></a></li> <li id="products_import_csv"><a class="submenu" href="#"><i class="fa fa-file-text"></i><span class="text"> Import Products</span></a></li> <li id="products_update_price"><a class="submenu" href="#"><i class="fa fa-money"></i><span class="text"> Update Price</span></a></li> <li id="products_damage_products"><a class="submenu" href="#"><i class="fa fa-flask"></i><span class="text"> Damage Product</span></a></li> </ul> </li> <li class="mm_sales"> <a class="dropmenu" href="#"><i class="fa fa-heart"></i><span class="text"> Sales </span> <span class="chevron closed"></span></a> <ul> <li id="sales_index"><a class="submenu" href="#"><i class="fa fa-heart"></i><span class="text"> List Sales</span></a></li> <li id="sales_add"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Sale</span></a></li> <li id="sales_deliveries"><a class="submenu" href="#"><i class="fa fa-truck"></i><span class="text"> Deliveries</span></a></li> <li id="sales_gift_cards"><a class="submenu" href="#"><i class="fa fa-gift"></i><span class="text"> Gift Cards</span></a></li> <li id="sales_return_sales"><a class="submenu" href="#"><i class="fa fa-reply"></i><span class="text"> List Return Sales</span></a></li> </ul> </li> <li class="mm_quotes"> <a class="dropmenu" href="#"><i class="fa fa-heart-o"></i><span class="text"> Quotations </span> <span class="chevron closed"></span></a> <ul> <li id="sales_index"><a class="submenu" href="#"><i class="fa fa-heart-o"></i><span class="text"> List Quotation</span></a></li> <li id="sales_add"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Quotation</span></a></li> </ul> </li> <li class="mm_purchases"> <a class="dropmenu" href="#"><i class="fa fa-star"></i><span class="text"> Purchases </span> <span class="chevron closed"></span></a> <ul> <li id="purchases_index"><a class="submenu" href="#"><i class="fa fa-star"></i><span class="text"> List Purchases</span></a></li> <li id="purchases_add"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Purchase</span></a></li> <li id="purchases_purchase_by_csv"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Purchase by CSV</span></a></li> </ul> </li> <li class="mm_transfers"> <a class="dropmenu" href="#"><i class="fa fa-star-o"></i><span class="text"> Transfers </span> <span class="chevron closed"></span></a> <ul> <li id="transfers_index"><a class="submenu" href="#"><i class="fa fa-star-o"></i><span class="text"> List Transfers</span></a></li> <li id="transfers_add"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Transfer</span></a></li> <li id="transfers_purchase_by_csv"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Transfer by CSV</span></a></li> </ul> </li> <li class="mm_auth mm_customers mm_suppliers mm_billers active"> <a class="dropmenu" href="#"><i class="fa fa-users"></i><span class="text"> People </span> <span class="chevron closed"></span></a> <ul style="display: block;"> <li id="auth_users" class="active"><a class="submenu" href="#"><i class="fa fa-users"></i><span class="text"> List Users</span></a></li> <li id="auth_create_user"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add User</span></a></li> <li id="billers_index"><a class="submenu" href="#"><i class="fa fa-users"></i><span class="text"> List Billers</span></a></li> <li id="billers_index"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Biller</span></a></li> <li id="customers_index"><a class="submenu" href="#"><i class="fa fa-users"></i><span class="text"> List Customers</span></a></li> <li id="customers_index"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Customer</span></a></li> <li id="suppliers_index"><a class="submenu" href="#"><i class="fa fa-users"></i><span class="text"> List Suppliers</span></a></li> <li id="suppliers_index"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Supplier</span></a></li> </ul> </li> <li class="mm_notifications"><a class="submenu" href="#"><i class="fa fa-info-circle"></i><span class="text"> Notifications</span></a></li> <!--<li class="mm_messages"><a class="submenu" href="#"><i class="fa fa-envelope"></i><span class="text"> Messages</span></a></li>--> <li class="mm_system_settings"> <a class="dropmenu" href="#"><i class="fa fa-cog"></i><span class="text"> Settings </span> <span class="chevron closed"></span></a> <ul> <li id="system_settings_index"><a href="#"><i class="fa fa-cog"></i><span class="text"> System Settings</span></a></li> <li id="system_settings_change_logo"><a href="#"><i class="fa fa-upload"></i><span class="text"> Change Logo</span></a></li> <li id="system_settings_currencies"><a href="#"><i class="fa fa-money"></i><span class="text"> Currencies</span></a></li> <!--<li id="system_settings_attributes"><a href="#"><i class="fa fa-tags"></i><span class="text"> Product Variants</span></a></li>--> <li id="system_settings_customer_groups"><a href="#"><i class="fa fa-chain"></i><span class="text"> Customer Groups</span></a></li> <li id="system_settings_categories"><a href="#"><i class="fa fa-folder-open"></i><span class="text"> Categories</span></a></li> <!--<li id="system_settings_subcategories"><a href="#"><i class="fa fa-folder-open-o"></i><span class="text"> Sub Categories</span></a></li>--> <li id="system_settings_tax_rates"><a href="#"><i class="fa fa-plus-circle"></i><span class="text"> Tax Rates</span></a></li> <li id="system_settings_warehouses"><a href="#"><i class="fa fa-building-o"></i><span class="text"> Warehouses</span></a></li> <li id="system_settings_template"><a href="#"><i class="fa fa-envelope"></i><span class="text"> Email Templates</span></a></li> <li id="system_settings_user_groups"><a href="#"><i class="fa fa-key"></i><span class="text"> Group Permissions</span></a></li> <li><a href="#"><i class="fa fa-database"></i><span class="text"> Backup Database</span></a></li> </ul> </li> <li class="mm_reports"> <a class="dropmenu" href="#"><i class="fa fa-bar-chart-o"></i><span class="text"> Reports </span> <span class="chevron closed"></span></a> <ul> <li id="reports_index"><a href="#"><i class="fa fa-bars"></i><span class="text"> Overview Chart</span></a></li> <li id="reports_warehouse_stock"><a href="#"><i class="fa fa-building"></i><span class="text"> Warehouse Stock Chart</span></a></li> <li id="reports_quantity_alerts"><a href="#"><i class="fa fa-bar-chart-o"></i><span class="text"> Product Quantity Alerts</span></a></li> <li id="reports_expiry_alerts"><a href="#"><i class="fa fa-bar-chart-o"></i><span class="text"> Product Expiry Alerts</span></a></li> <li id="reports_products"><a href="#"><i class="fa fa-barcode"></i><span class="text"> Products Report</span></a></li> <li id="reports_daily_sales"><a href="#"><i class="fa fa-calendar-o"></i><span class="text"> Daily Sales</span></a></li> <li id="reports_monthly_sales"><a href="#"><i class="fa fa-calendar-o"></i><span class="text"> Monthly Sales</span></a></li> <li id="reports_sales"><a href="#"><i class="fa fa-heart"></i><span class="text"> Sales Report</span></a></li> <li id="reports_payments"><a href="#"><i class="fa fa-money"></i><span class="text"> Payments Report</span></a></li> <li id="reports_profit_loss"><a href="#"><i class="fa fa-money"></i><span class="text"> Profit and/or Loss</span></a></li> <li id="reports_purchases"><a href="#"><i class="fa fa-star"></i><span class="text"> Purchases Report</span></a></li> <li id="reports_customer_report"><a href="#"><i class="fa fa-users"></i><span class="text"> Customers Report</span></a></li> <li id="reports_supplier_report"><a href="#"><i class="fa fa-users"></i><span class="text"> Suppliers Report</span></a></li> <li id="reports_staff_report"><a href="#"><i class="fa fa-users"></i><span class="text"> Staff Report</span></a></li> </ul> </li> </ul>
 				</div>
 			</div>
 		</div>
@@ -835,6 +857,17 @@
 			<div class="inner-set" id="users">
 				<div class="set-description">
 					<h3>Users</h3>
+					<p>
+						Users are the staff members (your employees). You can add any number of users and assign them group (manager groups and permissions in settings), biller and warehouse.
+					</p>
+					<p>
+						Owner and Admin user groups are with fixed permissions and any other user group added by you, can have custom permissions.</p>
+					<p>
+					<p>
+						User/Staff rewards are not yet available and will be added soon after the release of v3r3.</p>
+					<p>
+						The users added in customer/supplier modules will be saved in this table too but you need to edit/manage them from their modules.
+					</p>
 
 				</div>
 			</div>
@@ -844,6 +877,14 @@
 			<div class="inner-set" id="billers">
 				<div class="set-description">
 					<h3>Billers</h3>
+					<p>
+						Billers are the selling companies, you can sell/quote/invoice your customers with any biller, means you can have multiple companies and can assign any of these to your staff so that all of their sale will be under assigned billing company.
+					</p>
+					<p>
+						Only users with owner group rights can add billers. Company, Name (Contact Person), Email, Phone, Address and City input fields are required.</p>
+					<p>
+						This module is simple to use and manage the biller. The interface is quite easy to understand.
+					</p>
 
 				</div>
 			</div>
@@ -853,6 +894,14 @@
 			<div class="inner-set" id="customers">
 				<div class="set-description">
 					<h3>Customers</h3>
+					<p>
+						Customers are the clients, purchases of the items that you/your companies sell. This module has been updated and now you can add customer groups in settings i.e, Normal Customer, Regular Customer, Resellers, Distributors etc and assign percentage increment to the price depending on their group. 
+					</p>
+					<p>
+						Company, Name (Contact Person), Email, Phone, Address and City input fields are required. You can add extra information about the customer as there are 6 custom fields and the select box in front of each custom field is to display this information on invoices/quotations.</p>
+					<p>
+						The inputs for customer in other modules are no more select/drop down but ajax calls, you can type in search filed to get the suggestions and select any suggestion available in database for customers. You can add customer by clicking the Add Customer menu under People from any page. The interface is quite easy to understand.
+					</p>
 
 				</div>
 			</div>
@@ -862,6 +911,14 @@
 			<div class="inner-set" id="suppliers">
 				<div class="set-description">
 					<h3>Suppliers</h3>
+					<p>
+						Suppliers are the vendors/suppling companies, the companies from you buy your stock/items.
+					</p>
+					<p>
+						Company, Name (Contact Person), Email, Phone, Address and City input fields are required. You can add extra information about the customer as there are 6 custom fields and the select box in front of each custom field is to display this information on purchases.</p>
+					<p>
+						The inputs for supplier in other modules (purchases and products) are no more select/drop down but ajax calls, you can type in search filed to get the suggestions and select any suggestion available in database for supplier. You can add supplier by clicking the Add Supplier menu under People from any page. The interface is almost same as billers and customers, easy to use.
+					</p>
 
 				</div>
 			</div>
@@ -871,7 +928,50 @@
 			<div class="inner-set" id="products">
 				<div class="set-description">
 					<h3>Products</h3>
-
+					<p>
+						Products are the items that you sell to your customer. This modules has been updated and has many new options/features. There are new menus for each product on List Products page. The icon menus has been replace with the drop down menus.
+					</p>
+					<p>
+					<ol class="nav" role="menu">
+                        <li><a href="#"><i class="fa fa-file-text-o"></i> <strong>Product Details</strong></a>: <br>A new page has been added to display the products details.</li>
+                        <li><a href="#"><i class="fa fa-plus-square"></i> <strong>Duplicate Product</strong></a>: <br>To duplicate the product, all the field on add product will be updated with selected product details. You will need to change the code and name.</li>
+                        <li><a href="#"><i class="fa fa-edit"></i> <strong>Edit Product</strong></a>: <br>To edit product details.</li>
+                        <li><a href="#"><i class="fa fa-bars"></i> <strong>Rack Quantity</strong></a>: <br>To update product rack.</li>
+                        <li><a href="#" data-type="image" data-toggle="lightbox"><i class="fa fa-file-photo-o"></i> <strong>View Image</strong></a>: <br>View the main product images, this is already shown in the image column.</li>
+                        <li><a href="#"><i class="fa fa-print"></i> <strong>Print Barcode</strong></a>: <br>To print the product barcodes, If your product has variants, then there will be 2 barcode. One for product code and second for product with option. You can print this with any laser print and scan second one to add the product with that variant.</li>
+                        <li><a href="#"><i class="fa fa-print"></i> <strong>Print Label</strong></a>: <br>To print the product labels, If your product has variants, then there will be 2 barcode. One for product code and second for product with option. You can print this with any laser print and scan second one to add the product with that variant.</li>
+                        <li><a href="#"><i class="fa fa-filter"></i> <strong>Add Damage Quantity</strong></a>: <br>To add damage product.</li>    
+                        <li><a href="#"><i class="fa fa-trash-o"></i> <strong>Delete Product</strong></a>: <br>To delete the product.</li>
+                    </ol>
+                    </p>
+					<p>
+						There are 4 types to choose for the product,
+						<ol>
+						<li><strong>Standard</strong>: These are the standard product like phone, ram, speakers etc.</li>
+						<li><strong>Combo</strong>: These are products that consist of more that 1 product in your stock like computer with Casing, RAM and Speakers as combo items.</li>
+						<li><strong>Digital</strong>: These are the digital products that can be downloaded only like software, movies, pdf tutorials etc.</li>
+						<li><strong>Service</strong>: This are service as checking/repairing fee for the computer.</li>
+						</ol>
+						
+					</p>
+					<p>
+						Now you can assign the barcode symbology, product tax, tax method and supplier (up to 5 with their price) to each product. You can select the main product images and multiple product gallery images. You even can add the current stock for each warehouse.  
+					</p>
+					<p>
+						The product details will be displayed on view product page and the product details for invoice will be displayed on the invoice under this items.
+					</p>
+					<p>
+						<strong>Product variants:</strong> This module have new option for product variants. You can add any number product variants/attributes and these will be tracked automatically on purchase/sale. There print barcode/label page for each products will show the new barcode image if there is variants available for the product. This will help you to manage the products well specially for those who need to track the products attribute i.e, sizes and color etc. 
+					</p>
+					<p>
+						If your product have nested variants, then you can add the as Red Size 5, Yellow size 6 etc. You need to add these only once for each product.
+					</p>
+					<p>
+						<strong>Barcodes and Labels:</strong> The main menu link to print the barcode and labels of the products are same as in v2.3 These links won't print the variants barcode images. To print the barcode images with product variants, you need to print for a single product, with product actions or the link on product detail page.
+					</p>
+					<p>
+						<strong>Import product and update price with csv file:</strong> The instructions are available on the pages.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -880,7 +980,30 @@
 			<div class="inner-set" id="purchases">
 				<div class="set-description">
 					<h3>Purchases</h3>
-
+					<p>
+						Purchases (Inventories) to update the stock of your products. Adding purchase will automatically increase the product quantity in the selected warehouse. List purchases page have these drop down menus in the actions column.
+						<ol class="nav" role="menu">
+                        <li><a href="#"><i class="fa fa-file-text-o"></i> <strong>Purchase Details</strong></a>:<br>To view the details of the purchase.</li>
+                        <li><a href="#"><i class="fa fa-money"></i> <strong>View Payments</strong></a>:<br>To view the payments made to the purchase.</li>
+                        <li><a href="#"><i class="fa fa-money"></i> <strong>Add Payment</strong></a>:<br>To add new payment record for the purchase.</li>
+                        <li><a href="#"><i class="fa fa-edit"></i> <strong>Edit Purchase</strong></a>:<br>To edit the purchase.</li>
+                        <li><a href="#"><i class="fa fa-file-pdf-o"></i> <strong>Download as PDF</strong></a>:<br>To download the purchase as pdf.</li>
+                        <li><a href="#"><i class="fa fa-envelope"></i> <strong>Email Purchase</strong></a>:<br>To email this to supplier.</li>
+                        <li><a href="#" class="po"><i class="fa fa-trash-o"></i> <strong>Delete Purchase</strong></a>:<br>To delete the purchase.</li>
+                    </ol> 
+					</p>
+					<p>
+						<strong>Add Purchase</strong> page has been redesigned. There is only single input field to add the products to order list. You can type the product name or code to get the suggestion and the select the suggestion or just scan the barcode with your barcode scanner to add product to the order list. If there is only 1 suggestion for your typed characters then it will automatically added to the order list.
+					</p>
+					<p>
+						Add product to order list and the totals will be automatically stick top and bottom once the order list reached the number that you have in settings for Product counts to fix for barcode input.
+					</p>
+					<p>
+						Please select more options to add the order tax, discount and shipping. You even can add purchase by csv files by visiting the Add Purchase by CSV in main menus under Purchases.
+					</p>
+					<p>
+						You even can add standard product to your database by clicking the + icon at the end of add product to order list input.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -889,6 +1012,50 @@
 			<div class="inner-set" id="sales">
 				<div class="set-description">
 					<h3>Sales</h3>
+					<p>
+						Sales (Invoices) to manage the sales and payments received. Add sale will automatically decrease the product quantity from the selected warehouse. If your product have variants that will be synchronized too. List sales page have these drop down menus in the actions column for each sale.
+						<ol class="nav" role="menu">
+                        <li><a href="#"><i class="fa fa-file-text-o"></i> <strong>Sale Details</strong></a>:<br>To view the sale details.</li>
+                        <li><a href="#"><i class="fa fa-money"></i> <strong>View Payments</strong></a>:<br>To view the payments for the sale.</li>
+                        <li><a href="#"><i class="fa fa-money"></i> <strong>Add Payment</strong></a>:<br>To record the payment for the sale. If you have enabled the paypal and skrill button in settings, the payment will automatically recorded upon successful payment by customer.</li>
+                        <li><a href="#"><i class="fa fa-truck"></i> <strong>Add Delivery</strong></a>:<br>To add the delivery of the sale items.</li>
+                        <li><a href="#"><i class="fa fa-edit"></i> <strong>Edit Sale</strong></a>:<br>To edit the sale.</li>
+                        <li><a href="#"><i class="fa fa-file-pdf-o"></i> <strong>Download as PDF</strong></a>:<br>To download the sale as pdf.</li>
+                        <li><a href="#"><i class="fa fa-envelope"></i> <strong>Email Sale</strong></a>:<br>To email the sale to the customer.</li>
+                        <li><a href="#"><i class="fa fa-angle-double-left"></i> <strong>Return Sale</strong></a>:<br>To record return sale.</li>
+                        <li><a href="#"><i class="fa fa-trash-o"></i> <strong>Delete Sale</strong></a>:<br>To delete the sale.</li>
+                    </ol>
+					</p>
+					<p>
+						<strong>Add Sale</strong> page has been redesigned to and are similar to add purchase. There is only single input field to add the products to order list. You can type the product name or code to get the suggestion and the select the suggestion or just scan the barcode with your barcode scanner to add product to the order list. If there is only 1 suggestion for your typed characters then it will automatically added to the order list. If you have scanned the barcode with option, the order item option will automatically set to the scanned barcode option.
+					</p>
+					<p>
+						Add product to order list and the totals will be automatically stick top and bottom once the order list reached the number that you have in settings for Product counts to fix for barcode input.
+					</p>
+					<p><strong>Payment terms</strong> are the number of days before this sale marked as due. This value should be an integer 14 for 14 days payment term and 30 for 1 month etc.</p>
+					<p>
+						There are 2 sale status
+						<ol>
+						<li><strong>Pending:</strong>  The sale is added but the items has not been handed-over/delivered to the customer.</li>
+						<li><strong>Completed:</strong> The sale us added and the products has been sent.handed-over/proceed for delivery.</li>
+						</ol>
+					</p>
+					<p>
+						You can have partial payments for sales. There are 4 payment status
+						<ol>
+						<li><strong>Pending:</strong> The payment has not yet received.</li>
+						<li><strong>Due:</strong> The payment term had been reached but the payment has not yet received.</li>
+						<li><strong>Partial:</strong> Customer has made the partial payment and there is balance that still need to pay by customer.</li>
+						<li><strong>Paid:</strong> The payment for the sale has been completely paid.</li>
+						</ol>
+					</p>
+					<p>
+						There are 2 icon links at the end of add product to order list input.
+						<ol>
+						<li><i class="fa fa-plus-circle"></i> icon: To add the product to the order list manually, this won't be added to the database but only to the sale.</li>
+						<li><i class="fa fa-credit-card"></i> icon: To add the gift card to database and sell by adding to the order list.</li>
+						</ol>
+					</p>
 
 				</div>
 			</div>
@@ -898,7 +1065,13 @@
 			<div class="inner-set" id="quotations">
 				<div class="set-description">
 					<h3>Quotations</h3>
-
+					<p>
+						Quotations modules is almost same as in v2.3. The only change is add quotation page redesign that is similar to the add sale page with the following status
+						<ol>
+						<li><strong>Pending:</strong> The quotation has been generated but not yet sent to customer.</li>
+						<li><strong>Sent:</strong> The quotation had been generated and sent to the customer.</li>
+						</ol>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -907,7 +1080,17 @@
 			<div class="inner-set" id="transfers">
 				<div class="set-description">
 					<h3>Transfers</h3>
-
+					<p>
+						If you have multiple warehouses/stores, you might need to transfer/move item from one to another. This module will help to manage these tasks. You can add transfer to record the transfer details.
+					</p>
+					<p>
+						There are 3 transfer status
+						<ol>
+						<li><strong>Pending:</strong> The transfer is added but the products are not yet sent.</li>
+						<li><strong>Sent:</strong> The transfer is added and products has been sent but not yet reached the destination</li>
+						<li><strong>Completed:</strong> The transfer is added and products has been sent by from warehouse and received in to warehouse.</li>
+						</ol>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -917,7 +1100,101 @@
 				<div class="set-description">
 					<h3>Settings</h3>
 					<p>Please add your default currency and save your settings first. You need to set default currency and accounting method before using this system.</p>
-
+					<p>The default currency is very important to set before any sale as this this would destroy the costing if you set if after sales.</p>
+					<p>
+						Let me explain the system settings page. In main content area, there are Skill and Paypal settings links in the end of the box heading System Settings. 
+						<ol class="features">
+						<li>Site Configuration
+							<ul>
+								<li><strong>Site Name:</strong> Input for the site name (what ever you want to call this system).</li>
+								<li><strong>Language:</strong> Option to select system default language.</li>
+								<li><strong>Default Currency:</strong> Option to select system default currency (THIS SHOULD BE SAVED BEFORE ADDING ANY SALE).</li>
+								<li><strong>Accounting Method:</strong> There are 3 methods available
+								<ul>
+								<li><strong>FIFO (First In First Out):</strong> FIFO inventory costing method will not work with over selling.</li>
+								<li><strong>LIFO (Last In First Out):</strong> LIFO inventory costing method will not work with over selling too.</li>
+								<li><strong>AVCO (Average Cost Method):</strong> AVCO is the only method that you can use with over selling enabled.</li>
+								</ul>
+								</li>
+								<li><strong>Default Email:</strong> Input for system default email, all email will be sent from this email address.</li>
+								<li><strong>Default Customer Group:</strong> Option to select default customer group.</li>
+								<li><strong>Maintenance Mode:</strong> Option to enable or disable offline mode.</li>
+								<li><strong>Theme:</strong> Option to select theme.</li>
+								<li><strong>Login Captcha:</strong> Option to enable login captcha.</li>
+								<li><strong>Rows per page:</strong> Option to show the no of record in table on each listing page.</li>
+								<li><strong>Date Format:</strong> Option to select date format.</li>
+								<li><strong>Timezone:</strong> Option to choose your timezone. This is AC input just type your continent/city and choose it fro suggestion.</li>
+								<li><strong>Allow Registration:</strong> Option to allow customer to register account.</li>
+								<li><strong>Registration Verification:</strong> Option to enable email verification for customer register accounts.</li>
+								<li><strong>Registration Notification:</strong> Option to enable notifications for registration.</li>
+								<li><strong>Calendar:</strong> Option to choose calendar privacy, Shared or Private.</li>
+								<li><strong>Default Warehouse:</strong> Option to select the default warehouse, this will be auto selected for owner on add sale/purchase/quotation/transfer page.</li>
+							</ul>
+						</li>
+						<li>Products
+							<ul>
+								<li><strong>Product Tax:</strong> Option to enable/disable product level tax.</li>
+								<li><strong>Racks:</strong> Option to enable/disable product rack feature.</li>
+								<li><strong>Product Variants:</strong> Option to enable/disable product variants (attributes) feature.</li>
+								<li><strong>Product Expiry:</strong> Option to enable/disable product expiry date feature.</li>
+								<li><strong>image Size:</strong> Option to set image sizes that can be uploaded</li>
+								<li><strong>Thumbnail Size:</strong> Option to set thumbnail size (50-80).</li>
+								<li><strong>Watermark:</strong> Option to enable/disable watermark on product images, water mark text will be your site name.</li>
+							</ul>
+						</li>
+						<li>Sales
+							<ul>
+								<li><strong>Over Selling:</strong> Option to enable over selling, this option only can work with AVCO accounting method, enabling this will automatically change the account method to AVCO (if it was FIFO or LIFO).</li>
+								<li><strong>Reference Format:</strong> Option to select the reference format.</li>
+								<li><strong>Order Tax:</strong> Option to enable/disable order level tax.</li>
+								<li><strong>Product Level Discount:</strong> Option to enable/disable product level discount.</li>
+								<li><strong>Product Serial:</strong> Option to enable product serial input on sale.</li>
+								<li><strong>Auto Detect Barcode:</strong> Option to enable/disable auto detection for barcode.</li>
+								<li><strong>Product count to fix barcode input:</strong> No of the row on add sale/quotation/purchase/transfer page to fix the product input and totals to top and bottom.</li>
+								<li><strong>Cart Item Addition Method:</strong> Option to select the method to add items to order list, You must select Add New Item to Cart if your products have variants.</li>
+							</ul>
+						</li>
+						<li>Prefix
+							<ul>
+								<li><strong>Sales Reference Prefix:</strong> Option to set sale reference prefix.</li>
+								<li><strong>Return Reference Prefix:</strong> Option to set return sale reference prefix.</li>
+								<li><strong>Payment Reference Prefix:</strong> Option to set payment reference prefix.</li>
+								<li><strong>Delivery Reference Prefix:</strong> Option to set delivery reference prefix.</li>
+								<li><strong>Quotation Reference Prefix:</strong> Option to quotation sale reference prefix.</li>
+								<li><strong>Purchase Reference Prefix:</strong> Option to set purchase reference prefix.</li>
+								<li><strong>Transfer Reference Prefix:</strong> Option to set transfer reference prefix.</li>
+							</ul>
+						</li>
+						<li>Money and Number Format
+							<ul>
+								<li><strong>Decimals:</strong> Option to set number of decimals, 0 to disable decimals.</li>
+								<li><strong>Decimals Separator:</strong> Option to set decimals separator.</li>
+								<li><strong>Thousand Separator:</strong> Option to set the thousands separator.</li>
+							</ul>
+						</li>
+						<li>Email
+							<ul>
+								<li><strong>Email Protocol:</strong> Option to select email sending protocol.
+								<ul>
+								<li><strong>PHP Mail Function:</strong> Send email using default php mail function.</li>
+								<li><strong>Send Mail:</strong> Send email using sendmail and the default mailpath is /usr/sbin/sendmail</li>
+								<li><strong>SMTP:</strong> Requires extra information and the default time out is 5 seconds.
+								<ul>
+								<li><strong>SMTP Host:</strong> SMTP Server Address</li>
+								<li><strong>SMTP User:</strong> SMTP Username</li>
+								<li><strong>SMTP Password:</strong> SMTP Password</li>
+								<li><strong>SMTP Port:</strong> SMTP Port</li>
+								</ul>
+								</li>
+								</ul>
+								</li>
+							</ul>
+						</li>
+						</ol>
+					</p>
+					<p>
+						You can manage currencies, categories, sub-categories, taxes, warehouses, customer groups, email templates, user groups and permissions. In the admin area all the price are in default currency and this multiple currency feature is just for front end that will be added later.
+					</p>
 				</div>
 			</div>
 		</div>
@@ -926,6 +1203,25 @@
 			<div class="inner-set" id="reports">
 				<div class="set-description" style="border-bottom: 0;">
 					<h3>Reports</h3>
+					<p>
+						The following reports are available
+						<ol>
+							<li><strong>Overview Chart:</strong> Main reports page with links to all other reports and the overview chart.</li>
+							<li><strong>Warehouse Stock Chart:</strong> Warehouse stock report, you can choose the warehouse in page menus.</li>
+							<li><strong>Product Quantity Alerts:</strong> The list of products that are reached the alert quantity and need to be purchased.</li>
+							<li><strong>Product Expiry Alerts:</strong> The list of products that are about to expire in less that 90 days.</li>
+							<li><strong>Product Reports:</strong> For customized product report, you can click the icon at page menu for customize the report.</li>
+							<li><strong>Daily Sales:</strong> Calendar with daily sales</li>
+							<li><strong>Monthly Sales:</strong> Calendar with monthly sales</li>
+							<li><strong>Sales Report:</strong> For customized sales report, you can click the icon at the page menu for customize the report.</li>
+							<li><strong>Payment Report:</strong> For payment report, you can click the icon at the page menu for customize the report.</li>
+							<li><strong>Profit and.or Loss:</strong> Calendar view for profit and.or loss.</li>
+							<li><strong>Purchase Report:</strong> For customized purchase report, you can click the icon at the page menu for customize the report.</li>
+							<li><strong>Customer Report:</strong> For customer report, you can click the icon at the page menu for customize the report. </li>
+							<li><strong>Supplier Report:</strong> For supplier report, you can click the icon at the page menu for customize the report. </li>
+							<li><strong>Staff Report:</strong> For staff report, you can click the icon at the page menu for customize the report. </li>
+						</ol>
+					</p>
 
 				</div>
 			</div>

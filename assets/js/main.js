@@ -12,6 +12,10 @@ jQuery(document).ready(function($){
 			window.location.hash = hash;
 		});
 	});
+	$('.nav a').click(function(e) {
+		e.preventDefault();
+		return false;
+	});
 	$('body').bind('click', function(e) {
 		$('#docs').removeClass('show-nav');
 	});
@@ -21,11 +25,7 @@ jQuery(document).ready(function($){
 	});
 
 	$('.navicon').click(function(e) {
-		if( $(e.target).hasClass('fa-list') ) { 
-			$('#docs').toggleClass('show-nav');
-		} else if( $(e.target).hasClass('fa-times') ) { 
-			closePanel(e);
-		}
+		$('#docs').toggleClass('show-nav');
 		return false;
 	});
 
