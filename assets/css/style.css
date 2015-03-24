@@ -613,6 +613,9 @@ header a.logo {
     border-radius: 1px;
     padding: 2px 3px;
 }
+.set-description .highlight p code {
+    background: rgba(1, 1, 1, 0.125);
+}
 .set-description a {
     color: #013b4b;
     text-decoration: none;
