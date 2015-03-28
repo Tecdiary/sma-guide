@@ -113,7 +113,7 @@
 										This release might still have issues in many countries with compliance of taxes and we will be listening to your feedback to solve them. 
 									</p>
 									<p>
-										Update tool is not yet available and will be added to the final release.   
+										Update tool is not yet available and will be added to soon.   
 									</p>
 								</div>
 							</div>
@@ -163,7 +163,15 @@
 						<div class="inner-set" id="update">
 							<div class="set-description">
 								<h3>Update Instruction</h3>
-								<p>Please be informed that update tool is not yet available and will be add with the stable release.</p>
+								<div class="highlight">
+								<p class="intro">The update tool will be added in the next submission for testing. We suggest you to keep the current v2.3 as it is now for reference of old sale and perform fresh installation of v3 to starting using the new features. We understand that there might need to update from v2.3 to v3. We still suggest you to make copy of the v2.3 for reference and then perform update because of the incompatibility of few features.</p>
+								</div>
+								<ul>
+									<li>All your old sales/purchases will be considers as paid.</li>
+									<li>The database could have some issues as v3 have quite different database schema.</li>
+									<li>There could be issues on view sale/purchase/quote/transfer for your old records.</li>
+								</ul>
+								<h4>Please follow these steps to update from v2.3 to v3.</h4>
 								<ol>    
 									<li>Backup all your files and database.</li>
 									<li>Save/download database config file on your computer
@@ -940,6 +948,15 @@
 											<div class="cd-faq-content">
 												<p>
 													This could be due to permission on the assets/uploads. Please set 777 permission to assets/uploads and all other folder in the assets/uploads/
+												</p>
+											</div> 
+										</li>
+										
+										<li>
+											<a class="cd-faq-trigger" href="#0">Why I getting db error and can't login?</a>
+											<div class="cd-faq-content">
+												<p>
+													Please check your db configuration in sma/config/database.php
 												</p>
 											</div> 
 										</li>
