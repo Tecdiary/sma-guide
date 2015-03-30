@@ -113,7 +113,7 @@
 										This release might still have issues in many countries with compliance of taxes and we will be listening to your feedback to solve them. 
 									</p>
 									<p>
-										Update tool is not yet available and will be added to the final release.   
+										Update tool is not yet available and will be added to soon.   
 									</p>
 								</div>
 							</div>
@@ -124,7 +124,7 @@
 								<div class="set-description">
 									<h3>Installation Instruction</h3>
 									<ol>    
-										<li>Copy/Upload the folder and files inside '<strong>Upload</strong>' folder to your web server using cPanel or FTP</li>
+										<li>Copy/Upload the folder and files to your web server using cPanel or FTP</li>
 										<li>If you are installing in sub folder, please make sure there is no space in folder names</li>
 										<li>Create mysql database, database user and grant all permission to user for this database.</li>
 										<li>Open the <strong>http://yourdomain.com/pathtoupload/install/index.php</strong></li>
@@ -163,7 +163,15 @@
 						<div class="inner-set" id="update">
 							<div class="set-description">
 								<h3>Update Instruction</h3>
-								<p>Please be informed that update tool is not yet available and will be add with the stable release.</p>
+								<div class="highlight">
+								<p class="intro">The update tool will be added in the next submission for testing. We suggest you to keep the current v2.3 as it is now for reference of old sale and perform fresh installation of v3 to starting using the new features. We understand that there might need to update from v2.3 to v3. We still suggest you to make copy of the v2.3 for reference and then perform update because of the incompatibility of few features.</p>
+								</div>
+								<ul>
+									<li>All your old sales/purchases will be considers as paid.</li>
+									<li>The database could have some issues as v3 have quite different database schema.</li>
+									<li>There could be issues on view sale/purchase/quote/transfer for your old records.</li>
+								</ul>
+								<h4>Please follow these steps to update from v2.3 to v3.</h4>
 								<ol>    
 									<li>Backup all your files and database.</li>
 									<li>Save/download database config file on your computer
@@ -171,10 +179,10 @@
 											<li>sma/config/database.php</li>
 										</ul>
 									</li>
-									<li>Delete all files/folders and upload all the files/folders in upload (new downloaded files).</li>
+									<li>Delete all files/folders and upload all the files/folders (new downloaded files).</li>
 									<li>Once all the files are uploaded. We need to restore the above saved file (step 2) back to their location</li>
 									<li>Now we need to set the db configuration in new file. Please open the sma/config/databse.php and the locally saved copy of database config file in step 2.</li>
-									<li>Copy the database host, database user, database password and database name from old database file to the newly upload file sma/config/database.php .</li>
+									<li>Copy the database host, database user, database password and database name from old database file to the newly uploaded file sma/config/database.php .</li>
 									<li>LETS UPDATE, UPDATE TOOL WON'T ASK FOR DATABASE CONFIG AS WE HAVE ALREADY UPDATED THE DATABASE SETTINGS.</li>
 									<li>Open the browser and type <strong>http://yourdomain.com/pathtoupload/update/index.php</strong></li>
 									<li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
@@ -940,6 +948,15 @@
 											<div class="cd-faq-content">
 												<p>
 													This could be due to permission on the assets/uploads. Please set 777 permission to assets/uploads and all other folder in the assets/uploads/
+												</p>
+											</div> 
+										</li>
+										
+										<li>
+											<a class="cd-faq-trigger" href="#0">Why I getting db error and can't login?</a>
+											<div class="cd-faq-content">
+												<p>
+													Please check your db configuration in sma/config/database.php
 												</p>
 											</div> 
 										</li>

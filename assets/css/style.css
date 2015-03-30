@@ -184,6 +184,12 @@ b, strong {
 .white { 
     color: white;
 }
+.bold {
+    font-weight: bold;
+}
+.intro {
+    font-size: 1.2em;
+}
 #docs {
   width: 100%;
   height: 100%;
