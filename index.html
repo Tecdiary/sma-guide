@@ -689,6 +689,35 @@
 												</p>
 											</div> 
 										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">What is the mpdf password to edit the pdf documents?</a>
+											<div class="cd-faq-content">
+												<p>
+													We haven't set any password. You can set it as you like. You can set password by editing the sma/libraries/sma.php around line no 217 <code>$pdf->SetProtection(array('print'));</code> replace with <code>$pdf->SetProtection(array('print'), 'user_password', 'owner_password');</code> If you need more information, please visit <a href="http://mpdf1.com/manual/index.php?tid=129" target="_blank">mpdf documentation</a>. 
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Why POS brings me to Java page OR my browser keep blocking the Java?</a>
+											<div class="cd-faq-content">
+												<p>
+													If you have enable the Java applet and added your domain to Exception Site List as said in the POS settings page.
+												</p>
+												<p>
+													<ul>
+													<li>You are being redirect to Java page, please download the new Java installer and install it.</li>
+													<li>Your browser blocking the Java applet even is you have already added the domain to Java Exception Site List, please allow it in your browser.</li>
+													<li>Your get qz plug-in not loaded error message, please check if the browser is not blocking the Java. Restoring the security prompts in Java Security might help. </li>
+													<li>Browser keep loading the page and never stop, your java is stop responding, please open task manage and kill jp2launcher.exe/Java/Plugin Container and reload the page. If still same, please Restoring Security Prompts in Java Security settings.</li>
+													</ul>
+												</p>
+												<p class="bold">
+													You think, this is giving too much trouble, please disable the Java applet in POS settings and let browser handle printing.
+												</p>
+											</div> 
+										</li>
 									</ul> 
 
 
