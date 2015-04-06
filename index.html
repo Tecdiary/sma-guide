@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-	<title>Stock Manager Advance V3R5 Documentation V1.2</title>
+	<title>Stock Manager Advance V3R6 Documentation V1.2.1</title>
 	<meta name="google-site-verification" content="fEfsU1FFm-C1BtX88gzsC4yMOjHzDVkD26lMwkxrQz8" />
 	<link rel="shortcut icon" href="http://tecdiary.com/files/2013/04/icon11.png"/>
 	<meta name="description" content="Online documentation for Stock Manager Advance - Inventory & Inoive managment solution and POS (Point of Sale) Module by Tecdiary.com">
@@ -97,7 +97,7 @@
 					<div class="set category-head">
 						<div class="inner-set" id="introduction">
 							<div class="set-description">
-								<h3>Stock Manager Advance Beta V3R5 (Documentation v1.2)</h3>
+								<h3>Stock Manager Advance Beta V3R6 (Documentation v1.2.1)</h3>
 								<p>Thank you for purchasing the Stock Manager Advance</p>
 								<p>
 									First of all, we would like to apologize for delays in releasing this version 3 and would like to thank everyone who has contributed to this
@@ -164,9 +164,9 @@
 							<div class="set-description">
 								<h3>Update Instruction</h3>
 								<div class="highlight">
-								<p class="intro">The update tool will be added in the next submission for testing. We suggest you to keep the current v2.3 as it is now for reference of old sale and perform fresh installation of v3 to starting using the new features. We understand that there might need to update from v2.3 to v3. We still suggest you to make copy of the v2.3 for reference and then perform update because of the incompatibility of few features.</p>
+								<p class="intro">We are preparing the update tool and having difficulties to import the old data. It will be added in soon the for testing. We suggest you to keep the current v2.3 as it is now for reference of old sale. If you can perform fresh installation of v3 to starting using the new features would be goo. We understand that there might need to update from v2.3 to v3. We will add the update tool to perform update but please keep the old installation of v2.3 as reference because of the incompatibility of old data/features.</p>
 								</div>
-								<ul>
+								<!--<ul>
 									<li>All your old sales/purchases will be considers as paid.</li>
 									<li>The database could have some issues as v3 have quite different database schema.</li>
 									<li>There could be issues on view sale/purchase/quote/transfer for your old records.</li>
@@ -202,7 +202,7 @@
 									<li>Thank you for updating, If you have any questions, please contact us at contact@tecdiary.com</li>
 								</ol>
 								<h4>Request Update</h4>
-								<p>We will provide the service to update your old SMA 2.3 to V3 for $20.00 (1 hour cost). To request the update, please send $20 to saleem@tecdiary.com by Paypal or Skrill and send us your license file and hosting control panel details with refer of your payment to support@tecdiary.com</p> 
+								<p>We will provide the service to update your old SMA 2.3 to V3 for $20.00 (1 hour cost). To request the update, please send $20 to saleem@tecdiary.com by Paypal or Skrill and send us your license file and hosting control panel details with refer of your payment to support@tecdiary.com</p> -->
 							</div>
 						</div>
 					</div>
@@ -689,6 +689,44 @@
 												</p>
 											</div> 
 										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">What is the mpdf password to edit the pdf documents?</a>
+											<div class="cd-faq-content">
+												<p>
+													We haven't set any password. You can set it as you like. You can set password by editing the sma/libraries/sma.php around line no 217 <code>$pdf->SetProtection(array('print'));</code> replace with <code>$pdf->SetProtection(array('print'), 'user_password', 'owner_password');</code> If you need more information, please visit <a href="http://mpdf1.com/manual/index.php?tid=129" target="_blank">mpdf documentation</a>. 
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">How can I change Quick Cash buttons?</a>
+											<div class="cd-faq-content">
+												<p>
+													Please modify the pos_lang.php in sma/language/english/. If you are not using English then see the file in sma/language/yourLanguageFolder/
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Why POS brings me to Java page OR my browser keep blocking the Java?</a>
+											<div class="cd-faq-content">
+												<p>
+													If you have enable the Java applet and added your domain to Exception Site List as said in the POS settings page.
+												</p>
+												<p>
+													<ul>
+													<li>You are being redirect to Java page, please download the new Java installer and install it.</li>
+													<li>Your browser blocking the Java applet even is you have already added the domain to Java Exception Site List, please allow it in your browser.</li>
+													<li>Your get qz plug-in not loaded error message, please check if the browser is not blocking the Java. Restoring the security prompts in Java Security might help. </li>
+													<li>Browser keep loading the page and never stop, your java is stop responding, please open task manage and kill jp2launcher.exe/Java/Plugin Container and reload the page. If still same, please Restoring Security Prompts in Java Security settings.</li>
+													</ul>
+												</p>
+												<p class="bold">
+													You think, this is giving too much trouble, please disable the Java applet in POS settings and let browser handle printing.
+												</p>
+											</div> 
+										</li>
 									</ul> 
 
 
@@ -1096,7 +1134,7 @@
                         <li><a href="#"><i class="fa fa-file-text-o"></i> <strong>Product Details</strong></a>: <br>A new page has been added to display the products details.</li>
                         <li><a href="#"><i class="fa fa-plus-square"></i> <strong>Duplicate Product</strong></a>: <br>To duplicate the product, all the field on add product will be updated with selected product details. You will need to change the code and name.</li>
                         <li><a href="#"><i class="fa fa-edit"></i> <strong>Edit Product</strong></a>: <br>To edit product details.</li>
-                        <li><a href="#"><i class="fa fa-bars"></i> <strong>Rack Quantity</strong></a>: <br>To update product rack.</li>
+                        <li><a href="#"><i class="fa fa-bars"></i> <strong>Set Rack</strong></a>: <br>To set/change product rack (only available if warehouse selected).</li>
                         <li><a href="#" data-type="image" data-toggle="lightbox"><i class="fa fa-file-photo-o"></i> <strong>View Image</strong></a>: <br>View the main product images, this is already shown in the image column.</li>
                         <li><a href="#"><i class="fa fa-print"></i> <strong>Print Barcode</strong></a>: <br>To print the product barcodes, If your product has variants, then there will be 2 barcode. One for product code and second for product with option. You can print this with any laser print and scan second one to add the product with that variant.</li>
                         <li><a href="#"><i class="fa fa-print"></i> <strong>Print Label</strong></a>: <br>To print the product labels, If your product has variants, then there will be 2 barcode. One for product code and second for product with option. You can print this with any laser print and scan second one to add the product with that variant.</li>
