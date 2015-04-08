@@ -214,7 +214,7 @@
 								<h4>1. Receipt Printers:</h4>
 								<p></p>
 								<p>
-									We have tested the update V3 with Bixolon SRP-350II (USB) with Web Browser Printing and Java Applet by adding qz printing plugin that will support these printers
+									We have tested the update V3 with Bixolon SRP-350II (USB) with Web Browser Printing and Java Applet by adding qz print plugin that will support these printers
 								</p>
 								<ul>
 									<li>Samsung Bixolon SRP350plus, Bixolon SRP-350II and Bixolon SRP-270.</li>
@@ -683,7 +683,7 @@
 										</li>
 
 										<li>
-											<a class="cd-faq-trigger" href="#0">I don't have stock but still can sell product. Why?</a>
+											<a class="cd-faq-trigger" href="#0">Why I can sell the products even if I don't have stock in warehouse?</a>
 											<div class="cd-faq-content">
 												<p>Please check the overselling option in system settings, that would be enabled. You can disable overselling to stop selling products with 0 or lower stock.
 												</p>
@@ -724,6 +724,35 @@
 												</p>
 												<p class="bold">
 													You think, this is giving too much trouble, please disable the Java applet in POS settings and let browser handle printing.
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Why barcode images are not showing on print barcode and label page?</a>
+											<div class="cd-faq-content">
+												<p>Please check that ini_set function is not disabled. The ini_set function should be enabled to use barcode feature.
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">How can I set the reference numbers to start from my own number?</a>
+											<div class="cd-faq-content">
+												<p>Please go to phpmyadmin, select your database, select the order_ref table and here you can set your own number. You need to change
+												<code><ul style="list-style:none;">
+												<li><strong>so</strong>  : To change the sale orders reference number.</li>
+												<li><strong>qu</strong>  : To change the quotations reference number.</li>
+												<li><strong>po</strong>  : To change the purchase orders reference number.</li>
+												<li><strong>to</strong>  : To change the transfer order reference number.</li>
+												<li><strong>pos</strong> : To change the pos sale reference number.</li>
+												<li><strong>do</strong>  : To change the delivery order number.</li>
+												<li><strong>pay</strong> : To change the payments reference number.</li>
+												<li><strong>re</strong>  : To change the return sales reference number.</li>
+												</ul></code>
+												</p>
+												<p>
+													This is useful for first time and these will be automatically reset with corn job depending your reference format in system settings. 
 												</p>
 											</div> 
 										</li>
