@@ -127,15 +127,15 @@
 										<li>Copy/Upload the folder and files to your web server using cPanel or FTP</li>
 										<li>If you are installing in sub folder, please make sure there is no space in folder names</li>
 										<li>Create mysql database, database user and grant all permission to user for this database.</li>
-										<li>Open the <strong>http://yourdomain.com/pathtoupload/install/index.php</strong></li>
+										<li>Open the <strong><code>http://yourdomain.com/pathtoupload/install/index.php</code></strong></li>
 										<li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
 										<li>Step2: Provide you Envato Username and Purchase Code to validate the purchase.</li>
-										<li>Step 3: Provide the database host, database user, database password and database name to proceed to next step</li>
-										<li>Step 4: Site Config: Please Fill in you SMA Base URL and select your timezone. You must check the site url as installer might guess it wrong
+										<li>Step 3: Provide the database host, database user, database password and database name to proceed to next step. <code>Please make sure you don't have $ sign in your password.</code></li>
+										<li>Step 4: Site Config: Please Fill in you SMA Base URL and select your timezone. <code>You must check the site url as installer might guess it wrong</code>
 										<ul>
-											<li>Base URL for public_html or www/htdocs folder will be http://yourdomain.com/ or http://localhost/</li>
-											<li>Base URL for sub-domain will be http://subdomain.yourdomain.com/ </li>
-											<li>Base URL for sub-folder will be http://yourdomain.com/subfolder/ or http://localhost/subfolder/ </li>
+											<li>Base URL for public_html or www/htdocs folder will be <code>http://yourdomain.com/</code> or <code>http://localhost/</code></li>
+											<li>Base URL for sub-domain will be <code>http://subdomain.yourdomain.com/</code> </li>
+											<li>Base URL for sub-folder will be <code>http://yourdomain.com/subfolder/</code> or <code>http://localhost/subfolder/</code> </li>
 											<li>Base URL must not have space and it should end with a trailing slash</li>
 										</ul>
 									</li>
@@ -143,14 +143,13 @@
 									<li>Remove the install folder before start using the SMA.</li>
 									<li>Login using default username and password, and edit user to change login details.</li>
 									<li>SMA is ready to use, after settings. Please save system settings and POS settings before start using it.</li>
-									<li>Thank you for purchasing the SMA2, If you have any questions, please contact us at contact@tecdiary.com</li>
 								</ol>
 								<h4>After Install</h4>
 								<ol>
-								<li>Add new owner user and login with new user to edit the default user.</li>
-								<li>Add your currency.</li>
-								<li>Update the system settings, by selecting the default currency and accounting method. If you need over-selling (sell products even that are out of stock), you can only choose the AVCO as FIFO/LIFO won't work with over-selling.</li>
 								<li>Add new owner user before editing/deleting the default owner account (we have disabled the option to edit the logged in user email and user name, You won't be able edit/delete the default user unless you are logged in with new owner account).</li>
+								<li>Add your currency.</li>
+								<li>Edit the default biller to update you company details.</li>
+								<li>Update the system settings, by selecting the default currency and accounting method. If you need over-selling (sell products even that are out of stock), you can only choose the AVCO as FIFO/LIFO won't work with over-selling.</li>
 								<li>You are ready to go, start adding categories, taxes, warehouses, products, customer, sales and purchase.</li>
 								</ol>
 								<h4>Request Installation</h4>
@@ -166,32 +165,27 @@
 								<div class="highlight">
 								<p class="intro">We are preparing the update tool and having difficulties to import the old data. It will be added in soon the for testing. We suggest you to keep the current v2.3 as it is now for reference of old sale. If you can perform fresh installation of v3 to starting using the new features would be goo. We understand that there might need to update from v2.3 to v3. We will add the update tool to perform update but please keep the old installation of v2.3 as reference because of the incompatibility of old data/features.</p>
 								</div>
-								<!--<ul>
+								<ul>
 									<li>All your old sales/purchases will be considers as paid.</li>
 									<li>The database could have some issues as v3 have quite different database schema.</li>
 									<li>There could be issues on view sale/purchase/quote/transfer for your old records.</li>
 								</ul>
 								<h4>Please follow these steps to update from v2.3 to v3.</h4>
 								<ol>    
-									<li>Backup all your files and database.</li>
-									<li>Save/download database config file on your computer
-										<ul>
-											<li>sma/config/database.php</li>
-										</ul>
+									<li>Backup all your files and database. Save/download the backup.</li>
+									<li>Save/download database config file (<code>sma/config/database.php</code>) on your computer
 									</li>
-									<li>Delete all files/folders and upload all the files/folders (new downloaded files).</li>
-									<li>Once all the files are uploaded. We need to restore the above saved file (step 2) back to their location</li>
-									<li>Now we need to set the db configuration in new file. Please open the sma/config/databse.php and the locally saved copy of database config file in step 2.</li>
-									<li>Copy the database host, database user, database password and database name from old database file to the newly uploaded file sma/config/database.php .</li>
+									<li>Delete all old files/folders and upload all the new files/folders (from your downloaded file).</li>
+									<li>Once all the files are uploaded. We need to update the datase configuratiuon to the newly uploaded database configuration file (<code>sma/config/databse.php</code>) form the locally saved copy of database config file in step 2. <code>You need to updated the hostname, username, password and database.</code> </li>
 									<li>LETS UPDATE, UPDATE TOOL WON'T ASK FOR DATABASE CONFIG AS WE HAVE ALREADY UPDATED THE DATABASE SETTINGS.</li>
-									<li>Open the browser and type <strong>http://yourdomain.com/pathtoupload/update/index.php</strong></li>
+									<li>Open the browser and type <strong><code>http://yourdomain.com/pathtoupload/update/index.php</code></strong></li>
 									<li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
 									<li>Step 2: Provide your Envato Username and Purchase Code to validate and update your license.</li>
-									<li>Step 3: Site Config: Please Fill in you <strong>SMA Base URL</strong> and select your timezone. You must check the <strong>site url</strong> as installation tool can guess it wrong. This is the same base_url that you have in your old sma/config/config.php file 
+									<li>Step 3: Site Config: Please Fill in you <strong>SMA Base URL</strong> and select your timezone. <code>You must check the <strong>site url</strong> as installation tool can guess it wrong.</code> This is the same base_url that you have in your old sma/config/config.php file 
 										<ul>
-											<li>Base URL for public_html or www/htdocs folder will be http://yourdomain.com/ or http://localhost/</li>
-											<li>Base URL for sub-domain will be http://subdomain.yourdomain.com/ </li>
-											<li>Base URL for sub-folder will be http://yourdomain.com/subfolder/ or http://localhost/subfolder/ </li>
+											<li>Base URL for public_html or www/htdocs folder will be <code>http://yourdomain.com/</code> or <code>http://localhost/</code></li>
+											<li>Base URL for sub-domain will be <code>http://subdomain.yourdomain.com/</code> </li>
+											<li>Base URL for sub-folder will be <code>http://yourdomain.com/subfolder/</code> or <code>http://localhost/subfolder/</code> </li>
 											<li>Base URL must not have space and it should end with a trailing slash</li>
 										</ul>
 									</li>
@@ -201,8 +195,14 @@
 									<li>SMA is updated and ready to use once again with new features</li>
 									<li>Thank you for updating, If you have any questions, please contact us at contact@tecdiary.com</li>
 								</ol>
+								<h4>After Update</h4>
+								<ol>
+								<li>Add your currency.</li>
+								<li>Update the system settings, by selecting the default currency and accounting method. If you need over-selling (sell products even that are out of stock), you can only choose the AVCO as FIFO/LIFO won't work with over-selling.</li>
+								<li>You are ready to go, start adding categories, taxes, warehouses, products, customer, sales and purchase.</li>
+								</ol>
 								<h4>Request Update</h4>
-								<p>We will provide the service to update your old SMA 2.3 to V3 for $20.00 (1 hour cost). To request the update, please send $20 to saleem@tecdiary.com by Paypal or Skrill and send us your license file and hosting control panel details with refer of your payment to support@tecdiary.com</p> -->
+								<p>We will provide the service to update your old SMA 2.3 to V3 for $20.00 (1 hour cost). To request the update, please send $20 to saleem@tecdiary.com by Paypal or Skrill and send us your license file and hosting control panel details with refer of your payment to support@tecdiary.com</p> 
 							</div>
 						</div>
 					</div>
@@ -753,6 +753,18 @@
 												</p>
 												<p>
 													This is useful for first time and these will be automatically reset with corn job depending your reference format in system settings. 
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">How does discount applied to the products and order?</a>
+											<div class="cd-faq-content">
+												<p>
+													<strong>Product level discount</strong> will be applied on the product price before any tax calculation. <code>i.e, Prodict Price - Product Discount + Product Tax (product tax calcuated on Prodict Price - Product Discount)</code>
+												</p>
+												<p>
+													<strong>Order level discount </strong>will be applied on the order total (total + product price) before any order tax calculation. <code>i.e, Order Total - Order Discount + Order Tax (order tax calcuated on Order Total - Order Discount)</code>
 												</p>
 											</div> 
 										</li>
