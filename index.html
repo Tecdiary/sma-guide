@@ -174,7 +174,7 @@
 									<li>Save/download database config file (<code>sma/config/database.php</code>) on your computer
 									</li>
 									<li>Delete all old files/folders and upload all the new files/folders (from your downloaded file).</li>
-									<li>Once all the files are uploaded. We need to update the datase configuratiuon to the newly uploaded database configuration file (<code>sma/config/databse.php</code>) form the locally saved copy of database config file in step 2. <code>You need to updated the hostname, username, password and database.</code> </li>
+									<li>Once all the files are uploaded. We need to update the datase configuratiuon to the newly uploaded database configuration file (<code>sma/config/databse.php</code>) form the locally saved copy of database config file in step 2. <code>You need to updated the hostname, username, password, database and set the db_debug to FALSE.</code> </li>
 									<li>LETS UPDATE, UPDATE TOOL WON'T ASK FOR DATABASE CONFIG AS WE HAVE ALREADY UPDATED THE DATABASE SETTINGS.</li>
 									<li>Open the browser and type <strong><code>http://yourdomain.com/pathtoupload/update/index.php</code></strong></li>
 									<li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
@@ -1058,6 +1058,74 @@
 											<div class="cd-faq-content">
 												<p>
 													Please check your db configuration in sma/config/database.php
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Can I use this on Windows server with IIS?</a>
+											<div class="cd-faq-content">
+												<p>
+													Yes but we haven't tested this and don't provide any support for setup. 
+												</p>
+												<p>
+													If URL Rewrite module is not installed, please install it from here <a href="http://www.iis.net/downloads/microsoft/url-rewrite" target="_blank">http://www.iis.net/downloads/microsoft/url-rewrite</a>. Please check the complete web.config file. Place this in the main installation folder where the index.php is placed.
+													<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;configuration&gt;
+  &lt;system.webServer&gt;
+    &lt;rewrite&gt;
+      &lt;rules&gt;
+        &lt;rule name=&quot;Imported Rule 1&quot; stopProcessing=&quot;true&quot;&gt;
+          &lt;match url=&quot;^(.*)$&quot; ignoreCase=&quot;false&quot; /&gt;
+          &lt;conditions logicalGrouping=&quot;MatchAll&quot;&gt;
+              &lt;add input=&quot;{REQUEST_FILENAME}&quot; matchType=&quot;IsDirectory&quot; negate=&quot;true&quot; /&gt;
+              &lt;add input=&quot;{REQUEST_FILENAME}&quot; matchType=&quot;IsFile&quot; negate=&quot;true&quot; /&gt;
+          &lt;/conditions&gt;
+          &lt;action type=&quot;Rewrite&quot; url=&quot;index.php?url={R:1}&quot; appendQueryString=&quot;true&quot; /&gt;
+          &lt;/rule&gt;
+      &lt;/rules&gt;
+    &lt;/rewrite&gt;
+  &lt;/system.webServer&gt;
+&lt;/configuration&gt;</code></pre>
+												</p>
+											</div> 
+										</li>
+
+										<li>
+										<a class="cd-faq-trigger" href="#0">Can I use this with NGINX?</a>
+											<div class="cd-faq-content">
+												<p>
+													Yes but we haven't tested this and don't provide any support for setup. 
+												</p>
+												<p>
+													You can follow the guide <a href="http://wiki.nginx.org/Codeigniter" target="_blank">http://wiki.nginx.org/Codeigniter</a>. Your nginx.conf file will look like this.
+													<pre><code>server {
+    server_name domain.tld;
+
+    root /var/www/codeignitor;
+    index index.html index.php;
+
+    # set expiration of assets to MAX for caching
+    location ~* \.(ico|css|js|gif|jpe?g|png)(\?[0-9]+)?$ {
+        expires max;
+        log_not_found off;
+    }
+
+    location / {
+        # Check if a file or directory index file exists, else route it to index.php.
+        try_files $uri $uri/ /index.php;
+    }
+
+    location ~* \.php$ {
+        fastcgi_pass 127.0.0.1:9000;
+        include fastcgi.conf;
+    }
+
+    location ~ /files {
+    	deny all;
+    	return 404;
+    }
+}</code></pre>
 												</p>
 											</div> 
 										</li>
