@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-	<title>Stock Manager Advance V3R7 Documentation V1.2.2</title>
+	<title>Stock Manager Advance V3R8 Documentation V1.2.3</title>
 	<meta name="google-site-verification" content="fEfsU1FFm-C1BtX88gzsC4yMOjHzDVkD26lMwkxrQz8" />
 	<link rel="shortcut icon" href="http://tecdiary.com/files/2013/04/icon11.png"/>
 	<meta name="description" content="Online documentation for Stock Manager Advance - Inventory & Inoive managment solution and POS (Point of Sale) Module by Tecdiary.com">
@@ -97,7 +97,7 @@
 					<div class="set category-head">
 						<div class="inner-set" id="introduction">
 							<div class="set-description">
-								<h3>Stock Manager Advance Beta V3R7 (Documentation v1.2.2)</h3>
+								<h3>Stock Manager Advance Beta V3R8 (Documentation v1.2.3)</h3>
 								<p>Thank you for purchasing the Stock Manager Advance</p>
 								<p>
 									First of all, we would like to apologize for delays in releasing this version 3 and would like to thank everyone who has contributed to this
@@ -498,10 +498,10 @@
 
 								<h4>
 									Paid Support Hours:<br> 
-									At $5 per email/ticket and only 1 question per email/ticket<br>From 0900 &ndash; 1800 (GMT+8), Mondays &ndash; Fridays<br>(Response time: 24 &ndash; 48 Hours)<br>No responses on Saturday, Sunday and Public Holidays in Malaysia
+									At $5 per email/ticket and only 1 question per email/ticket<br>From 0900 &ndash; 1800 (GMT+8), Mondays &ndash; Fridays<br>(Response time: 12 &ndash; 48 Hours)<br>No responses on Saturday, Sunday and Public Holidays in Malaysia
 								</h4>
 								<p>
-									If you are having any difficulty in understanding the item functionality or you have any question. Please try to have a look at FAQs, User Guide and Developer Guide and if can't find the answer in FAQs, User Guide and Developer Guide, we encourage you to contact us by posting on support forum <a href="http://tecdiary.com/support/" target="_blank">http://tecdiary.com/support/</a>
+									If you are having any difficulty in understanding the item functionality or you have any question. Please try to have a look at FAQs, User Guide and Developer Guide and if can't find the answer in FAQs, User Guide and Developer Guide, we encourage you to contact us by emailing to support@tecdiary.com
 								</p>
 								<p></p>
 
@@ -1371,7 +1371,7 @@
 						There are 2 sale status
 						<ol>
 						<li><strong>Pending:</strong>  The sale is added but the items has not been handed-over/delivered to the customer.</li>
-						<li><strong>Completed:</strong> The sale us added and the products has been sent.handed-over/proceed for delivery.</li>
+						<li><strong>Completed:</strong> The sale us added and the products has been sent/handed-over/proceed for delivery.</li>
 						</ol>
 					</p>
 					<p>
@@ -1393,9 +1393,11 @@
 					<p>
 						<strong>To edit or delete any payment</strong>, please click the view payments link in actions on sales list or in page menu on sale view page.
 					</p>
-					<p>
-						<strong>If any of the product in order list is red that mean the product is out of stock and don't have order quantity in the warehouse.</strong> If over-selling is disabled, it will produce error on submit.
-					</p>
+					<div class="highlight">
+						<p>
+							<strong>If any of the product in order list is red that means the product or selected variant is out of stock or warehouse quantity is lesser then ordered quantity (you can change the product variant or reduce the quantity).</strong> If over-selling is disabled, it will produce error on submit.
+						</p>
+					</div>
 
 				</div>
 			</div>
@@ -1409,7 +1411,8 @@
 						Quotations modules is almost same as in v2.3. The only change is add quotation page redesign that is similar to the add sale page with the following status
 						<ol>
 						<li><strong>Pending:</strong> The quotation has been generated but not yet sent to customer.</li>
-						<li><strong>Sent:</strong> The quotation had been generated and sent to the customer.</li>
+						<li><strong>Sent:</strong> The quotation had been generated and sent to the customer. Emailing the quotation will automatically change the status to sent.</li>
+						<li><strong>Completed:</strong> The sale had been generated for this quotation. Add invoice link on the quotation menu will automatically change the status to complete once the sale generated.</li>
 						</ol>
 					</p>
 				</div>
@@ -1426,9 +1429,9 @@
 					<p>
 						There are 3 transfer status
 						<ol>
-						<li><strong>Pending:</strong> The transfer is added but the products are not yet sent.</li>
-						<li><strong>Sent:</strong> The transfer is added and products has been sent but not yet reached the destination</li>
-						<li><strong>Completed:</strong> The transfer is added and products has been sent by from warehouse and received in to warehouse.</li>
+						<li><strong>Pending:</strong> The transfer is added but the products are not yet sent so no inventory action will be performed.</li>
+						<li><strong>Sent:</strong> The transfer is added and products has been sent but not yet reached the destination so the items have been checked from the sending warehouse but not yet add/updated to the destination warehouse.</li>
+						<li><strong>Completed:</strong> The transfer is added and products has been sent by from warehouse and received in to warehouse so the item have be subtracted from sending rehouse and add/update in the destination warehouse.</li>
 						</ol>
 					</p>
 				</div>
@@ -1448,7 +1451,7 @@
 							<ul>
 								<li><strong>Site Name:</strong> Input for the site name (what ever you want to call this system).</li>
 								<li><strong>Language:</strong> Option to select system default language.</li>
-								<li><strong>Default Currency:</strong> Option to select system default currency (THIS SHOULD BE SAVED BEFORE ADDING ANY SALE).</li>
+								<li><strong>Default Currency:</strong> Option to select system default currency (THIS SHOULD BE SAVED BEFORE ADDING ANY DATA).</li>
 								<li><strong>Accounting Method:</strong> There are 3 methods available
 								<ul>
 								<li><strong>FIFO (First In First Out):</strong> FIFO inventory costing method will not work with over selling.</li>
@@ -1492,6 +1495,7 @@
 								<li><strong>Auto Detect Barcode:</strong> Option to enable/disable auto detection for barcode.</li>
 								<li><strong>Product count to fix barcode input:</strong> No of the row on add sale/quotation/purchase/transfer page to fix the product input and totals to top and bottom.</li>
 								<li><strong>Cart Item Addition Method:</strong> Option to select the method to add items to order list, You must select Add New Item to Cart if your products have variants.</li>
+								<li><strong>Invoice View:</strong> You can switch the invoice layout to Standard or Tax Invoice.</li>
 							</ul>
 						</li>
 						<li>Prefix
@@ -1555,7 +1559,7 @@
 							<li><strong>Monthly Sales:</strong> Calendar with monthly sales</li>
 							<li><strong>Sales Report:</strong> For customized sales report, you can click the icon at the page menu for customize the report.</li>
 							<li><strong>Payment Report:</strong> For payment report, you can click the icon at the page menu for customize the report.</li>
-							<li><strong>Profit and.or Loss:</strong> Profit and/or Loss report for the selected time frame (date range).</li>
+							<li><strong>Profit and/or Loss:</strong> Profit and/or Loss report for the selected time frame (date range).</li>
 							<li><strong>Purchase Report:</strong> For customized purchase report, you can click the icon at the page menu for customize the report.</li>
 							<li><strong>Customer Report:</strong> For customer report, you can click the icon at the page menu for customize the report. </li>
 							<li><strong>Supplier Report:</strong> For supplier report, you can click the icon at the page menu for customize the report. </li>
@@ -1816,7 +1820,7 @@
 					<li><code class="white">product_actions()</code> - Handles barcode and label printing for multiple selected products</li>
 				</ul>
 			</p>
-			
+			<p>File: <code>sma/controllers/products.php</code></p>
 		</div>
 	</div>
 </div>
