@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-	<title>Stock Manager Advance V3R7 Documentation V1.2.2</title>
+	<title>Stock Manager Advance V3R8 Documentation V1.2.3</title>
 	<meta name="google-site-verification" content="fEfsU1FFm-C1BtX88gzsC4yMOjHzDVkD26lMwkxrQz8" />
 	<link rel="shortcut icon" href="http://tecdiary.com/files/2013/04/icon11.png"/>
 	<meta name="description" content="Online documentation for Stock Manager Advance - Inventory & Inoive managment solution and POS (Point of Sale) Module by Tecdiary.com">
@@ -97,7 +97,7 @@
 					<div class="set category-head">
 						<div class="inner-set" id="introduction">
 							<div class="set-description">
-								<h3>Stock Manager Advance Beta V3R7 (Documentation v1.2.2)</h3>
+								<h3>Stock Manager Advance Beta V3R8 (Documentation v1.2.3)</h3>
 								<p>Thank you for purchasing the Stock Manager Advance</p>
 								<p>
 									First of all, we would like to apologize for delays in releasing this version 3 and would like to thank everyone who has contributed to this
@@ -174,7 +174,7 @@
 									<li>Save/download database config file (<code>sma/config/database.php</code>) on your computer
 									</li>
 									<li>Delete all old files/folders and upload all the new files/folders (from your downloaded file).</li>
-									<li>Once all the files are uploaded. We need to update the datase configuratiuon to the newly uploaded database configuration file (<code>sma/config/databse.php</code>) form the locally saved copy of database config file in step 2. <code>You need to updated the hostname, username, password and database.</code> </li>
+									<li>Once all the files are uploaded. We need to update the datase configuratiuon to the newly uploaded database configuration file (<code>sma/config/databse.php</code>) form the locally saved copy of database config file in step 2. <code>You need to updated the hostname, username, password, database and set the db_debug to FALSE.</code> </li>
 									<li>LETS UPDATE, UPDATE TOOL WON'T ASK FOR DATABASE CONFIG AS WE HAVE ALREADY UPDATED THE DATABASE SETTINGS.</li>
 									<li>Open the browser and type <strong><code>http://yourdomain.com/pathtoupload/update/index.php</code></strong></li>
 									<li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
@@ -301,7 +301,8 @@
 								<ul class="features">
 									<li> Inventory Accounting (FIFO/LIFO/AVCO)</li>
 									<li> You can add your own themes or different view files</li>
-									<li> New user interface design to ease many tasks (RTL language support is not available)</li>
+									<li> New user interface design to ease many tasks (RTL language support is not available yet)</li>
+									<li> Fixed PDF export issue with Chinese and Arabic languages (But these languages are not available yet)</li>
 									<li> Ability to add new user groups</li>
 									<li> Ability to add new customer groups</li>
 									<li> Custom module permissions for user groups</li>
@@ -337,6 +338,7 @@
 										<ul>
 											<li> Option to select customer group (to manage different selling rates)</li>
 											<li> Re-structured the module to add users to customer company (front-end that will be added after this release)</li>
+											<li> You can add customer group in settings to assign different product price to customer.</li>
 										</ul>
 									</li>
 									<li>Suppliers Module
@@ -347,19 +349,19 @@
 									<li>Sales Module
 										<ul>
 											<li> New add/edit page design</li>
+											<li> Invoice view (Standard or Tax Invoice)</li>
 											<li> Ability to add manual product to order list</li>
 											<li> Ability to sell gift cards</li>
+											<li> Ability to get paid by gift cards</li>
 											<li> Ability to edit the product price on sale page</li>
 											<li> Instant discount (add percentage or fixed discount to order and/or any product)</li>
-											<li> Option to add attachment to sale</li>
-											<li> Option to show/hide product images on invoice.</li>
 											<li> Warehouse code/name/address on invoice</li>
 											<li> Return sales and issue refunds</li>
 											<li> Record payments to sale (full/partial with any no of payments)</li>
 											<li> Add payment terms (No of pending payment days before the sale marked as due)</li>
 											<li> Sale status (pending/completed)</li>
 											<li> Payment status (pending/due/partially paid/fully paid))</li>
-											<li> Payment Buttons (Paypal and Skrill) for email</li>
+											<li> Email invoices with payment buttons (Paypal and Skrill)</li>
 										</ul>
 									</li>
 									<li>Reports Module
@@ -399,6 +401,7 @@
 											<li> Added swipe credit card input</li>
 											<li> Sell gift cards</li>
 											<li> Pay by gift card</li>
+											<li> Simple restriction for staff to not delete item in POS (POS will ask for password, that owner can set in POS Settings)</li>
 										</ul>
 									</li>
 									<li> Update v3.1
@@ -411,7 +414,7 @@
 									</li>
 									<li> Update v3.2
 										<ul>
-											<li> API Module (to integrate SMA with other third-party softwares)</li>
+											<li> API Module</li>
 										</ul>
 									</li>
 								</ul>
@@ -498,10 +501,10 @@
 
 								<h4>
 									Paid Support Hours:<br> 
-									At $5 per email/ticket and only 1 question per email/ticket<br>From 0900 &ndash; 1800 (GMT+8), Mondays &ndash; Fridays<br>(Response time: 24 &ndash; 48 Hours)<br>No responses on Saturday, Sunday and Public Holidays in Malaysia
+									At $5 per email/ticket and only 1 question per email/ticket<br>From 0900 &ndash; 1800 (GMT+8), Mondays &ndash; Fridays<br>(Response time: 12 &ndash; 48 Hours)<br>No responses on Saturday, Sunday and Public Holidays in Malaysia
 								</h4>
 								<p>
-									If you are having any difficulty in understanding the item functionality or you have any question. Please try to have a look at FAQs, User Guide and Developer Guide and if can't find the answer in FAQs, User Guide and Developer Guide, we encourage you to contact us by posting on support forum <a href="http://tecdiary.com/support/" target="_blank">http://tecdiary.com/support/</a>
+									If you are having any difficulty in understanding the item functionality or you have any question. Please try to have a look at FAQs, User Guide and Developer Guide and if can't find the answer in FAQs, User Guide and Developer Guide, we encourage you to contact us by emailing to support@tecdiary.com
 								</p>
 								<p></p>
 
@@ -1061,6 +1064,74 @@
 												</p>
 											</div> 
 										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Can I use this on Windows server with IIS?</a>
+											<div class="cd-faq-content">
+												<p>
+													Yes but we haven't tested this and don't provide any support for setup. 
+												</p>
+												<p>
+													If URL Rewrite module is not installed, please install it from here <a href="http://www.iis.net/downloads/microsoft/url-rewrite" target="_blank">http://www.iis.net/downloads/microsoft/url-rewrite</a>. Please check the complete web.config file. Place this in the main installation folder where the index.php is placed.
+													<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;configuration&gt;
+  &lt;system.webServer&gt;
+    &lt;rewrite&gt;
+      &lt;rules&gt;
+        &lt;rule name=&quot;Imported Rule 1&quot; stopProcessing=&quot;true&quot;&gt;
+          &lt;match url=&quot;^(.*)$&quot; ignoreCase=&quot;false&quot; /&gt;
+          &lt;conditions logicalGrouping=&quot;MatchAll&quot;&gt;
+              &lt;add input=&quot;{REQUEST_FILENAME}&quot; matchType=&quot;IsDirectory&quot; negate=&quot;true&quot; /&gt;
+              &lt;add input=&quot;{REQUEST_FILENAME}&quot; matchType=&quot;IsFile&quot; negate=&quot;true&quot; /&gt;
+          &lt;/conditions&gt;
+          &lt;action type=&quot;Rewrite&quot; url=&quot;index.php?url={R:1}&quot; appendQueryString=&quot;true&quot; /&gt;
+          &lt;/rule&gt;
+      &lt;/rules&gt;
+    &lt;/rewrite&gt;
+  &lt;/system.webServer&gt;
+&lt;/configuration&gt;</code></pre>
+												</p>
+											</div> 
+										</li>
+
+										<li>
+										<a class="cd-faq-trigger" href="#0">Can I use this with NGINX?</a>
+											<div class="cd-faq-content">
+												<p>
+													Yes but we haven't tested this and don't provide any support for setup. 
+												</p>
+												<p>
+													You can follow the guide <a href="http://wiki.nginx.org/Codeigniter" target="_blank">http://wiki.nginx.org/Codeigniter</a>. Your nginx.conf file will look like this.
+													<pre><code>server {
+    server_name domain.tld;
+
+    root /var/www/codeignitor;
+    index index.html index.php;
+
+    # set expiration of assets to MAX for caching
+    location ~* \.(ico|css|js|gif|jpe?g|png)(\?[0-9]+)?$ {
+        expires max;
+        log_not_found off;
+    }
+
+    location / {
+        # Check if a file or directory index file exists, else route it to index.php.
+        try_files $uri $uri/ /index.php;
+    }
+
+    location ~* \.php$ {
+        fastcgi_pass 127.0.0.1:9000;
+        include fastcgi.conf;
+    }
+
+    location ~ /files {
+    	deny all;
+    	return 404;
+    }
+}</code></pre>
+												</p>
+											</div> 
+										</li>
 									</ul>
 								</li>
 							</ul> 
@@ -1303,7 +1374,7 @@
 						There are 2 sale status
 						<ol>
 						<li><strong>Pending:</strong>  The sale is added but the items has not been handed-over/delivered to the customer.</li>
-						<li><strong>Completed:</strong> The sale us added and the products has been sent.handed-over/proceed for delivery.</li>
+						<li><strong>Completed:</strong> The sale us added and the products has been sent/handed-over/proceed for delivery.</li>
 						</ol>
 					</p>
 					<p>
@@ -1325,9 +1396,11 @@
 					<p>
 						<strong>To edit or delete any payment</strong>, please click the view payments link in actions on sales list or in page menu on sale view page.
 					</p>
-					<p>
-						<strong>If any of the product in order list is red that mean the product is out of stock and don't have order quantity in the warehouse.</strong> If over-selling is disabled, it will produce error on submit.
-					</p>
+					<div class="highlight">
+						<p>
+							<strong>If any of the product in order list is red that means the product or selected variant is out of stock or warehouse quantity is lesser then ordered quantity (you can change the product variant or reduce the quantity).</strong> If over-selling is disabled, it will produce error on submit.
+						</p>
+					</div>
 
 				</div>
 			</div>
@@ -1341,7 +1414,8 @@
 						Quotations modules is almost same as in v2.3. The only change is add quotation page redesign that is similar to the add sale page with the following status
 						<ol>
 						<li><strong>Pending:</strong> The quotation has been generated but not yet sent to customer.</li>
-						<li><strong>Sent:</strong> The quotation had been generated and sent to the customer.</li>
+						<li><strong>Sent:</strong> The quotation had been generated and sent to the customer. Emailing the quotation will automatically change the status to sent.</li>
+						<li><strong>Completed:</strong> The sale had been generated for this quotation. Add invoice link on the quotation menu will automatically change the status to complete once the sale generated.</li>
 						</ol>
 					</p>
 				</div>
@@ -1358,9 +1432,9 @@
 					<p>
 						There are 3 transfer status
 						<ol>
-						<li><strong>Pending:</strong> The transfer is added but the products are not yet sent.</li>
-						<li><strong>Sent:</strong> The transfer is added and products has been sent but not yet reached the destination</li>
-						<li><strong>Completed:</strong> The transfer is added and products has been sent by from warehouse and received in to warehouse.</li>
+						<li><strong>Pending:</strong> The transfer is added but the products are not yet sent so no inventory action will be performed.</li>
+						<li><strong>Sent:</strong> The transfer is added and products has been sent but not yet reached the destination so the items have been checked from the sending warehouse but not yet add/updated to the destination warehouse.</li>
+						<li><strong>Completed:</strong> The transfer is added and products has been sent by from warehouse and received in to warehouse so the item have be subtracted from sending rehouse and add/update in the destination warehouse.</li>
 						</ol>
 					</p>
 				</div>
@@ -1380,7 +1454,7 @@
 							<ul>
 								<li><strong>Site Name:</strong> Input for the site name (what ever you want to call this system).</li>
 								<li><strong>Language:</strong> Option to select system default language.</li>
-								<li><strong>Default Currency:</strong> Option to select system default currency (THIS SHOULD BE SAVED BEFORE ADDING ANY SALE).</li>
+								<li><strong>Default Currency:</strong> Option to select system default currency (THIS SHOULD BE SAVED BEFORE ADDING ANY DATA).</li>
 								<li><strong>Accounting Method:</strong> There are 3 methods available
 								<ul>
 								<li><strong>FIFO (First In First Out):</strong> FIFO inventory costing method will not work with over selling.</li>
@@ -1424,6 +1498,7 @@
 								<li><strong>Auto Detect Barcode:</strong> Option to enable/disable auto detection for barcode.</li>
 								<li><strong>Product count to fix barcode input:</strong> No of the row on add sale/quotation/purchase/transfer page to fix the product input and totals to top and bottom.</li>
 								<li><strong>Cart Item Addition Method:</strong> Option to select the method to add items to order list, You must select Add New Item to Cart if your products have variants.</li>
+								<li><strong>Invoice View:</strong> You can switch the invoice layout to Standard or Tax Invoice.</li>
 							</ul>
 						</li>
 						<li>Prefix
@@ -1487,7 +1562,7 @@
 							<li><strong>Monthly Sales:</strong> Calendar with monthly sales</li>
 							<li><strong>Sales Report:</strong> For customized sales report, you can click the icon at the page menu for customize the report.</li>
 							<li><strong>Payment Report:</strong> For payment report, you can click the icon at the page menu for customize the report.</li>
-							<li><strong>Profit and.or Loss:</strong> Profit and/or Loss report for the selected time frame (date range).</li>
+							<li><strong>Profit and/or Loss:</strong> Profit and/or Loss report for the selected time frame (date range).</li>
 							<li><strong>Purchase Report:</strong> For customized purchase report, you can click the icon at the page menu for customize the report.</li>
 							<li><strong>Customer Report:</strong> For customer report, you can click the icon at the page menu for customize the report. </li>
 							<li><strong>Supplier Report:</strong> For supplier report, you can click the icon at the page menu for customize the report. </li>
@@ -1748,7 +1823,7 @@
 					<li><code class="white">product_actions()</code> - Handles barcode and label printing for multiple selected products</li>
 				</ul>
 			</p>
-			
+			<p>File: <code>sma/controllers/products.php</code></p>
 		</div>
 	</div>
 </div>
