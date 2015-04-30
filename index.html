@@ -1833,11 +1833,63 @@
 </div>
 </div>
 </div>
-
+<div id="actions">
+<div class="actions">
+	<div class="actions-con">
+	<form name="f1" id="f1">
+	<div class="input-group">
+		<input type="text" value="" name="findthis" id="t1" placeholder="Find in this page" class="search-input">
+		<div class="input-group-btn">
+				    <button class="btn btn-success" type="submit" name="b1" id="b1"><i class="fa fa-search"></i></button>
+				    </div>
+		</div>
+		</form>
+		<a class="font-size" id="14" style="font-size: 12px;" href="#"><i class="fa fa-font"></i></a> 
+		<a class="font-size" id="16" style="font-size: 16px;" href="#"><i class="fa fa-font"></i></a> 
+		<a class="font-size" id="18" style="font-size: 20px;" href="#"><i class="fa fa-font"></i></a>
+	</div>
+	<div style="clear:both;"></div>
+</div>
+<button class="btn btn1" id="action"><i class="fa fa-angle-double-right"></i></button>
+</div>
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="assets/js/plugins.js" type="text/javascript"></script>
 <script src="assets/js/highlight.pack.js" type="text/javascript"></script>
 <script src="assets/js/main.js" type="text/javascript"></script></script>
-
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#b1').click(function(){
+			if($('#t1').val()) {
+				window.find($('#t1').val());
+			}
+			return false;
+		});
+		$('#f1').submit(function(){
+			if($('#t1').val()) {
+				window.find($('#t1').val());
+			}
+			return false;
+		});
+		$('body').bind('keypress', function(e) {
+			if (e.keyCode == 13) {
+				$('#f1').submit();
+				e.preventDefault();
+				return false;
+			}
+		});
+		$("#action").click(function() {
+			$(this).find('i').toggleClass('fa-angle-double-right');
+			$(this).find('i').toggleClass('fa-angle-double-left');
+			$(this).toggleClass('mr');
+			$('.actions-con').fadeToggle();
+		});
+		$('.font-size').click(function(event) {
+			var size = $(this).attr('id');
+			event.preventDefault();
+			$('body').css("font-size", size+"px");
+			return false;
+		});
+	});
+</script>
 </body>
 </html>

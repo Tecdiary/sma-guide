@@ -189,6 +189,10 @@ b, strong {
 .intro {
     font-size: 1.2em;
 }
+.hl {
+    background: #FCF3A7;
+    color: red;
+}
 #docs {
   width: 100%;
   height: 100%;
@@ -255,6 +259,95 @@ header a.logo {
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
+}
+.input-group {
+    width: 280px;
+    border-collapse: separate;
+    display: table;
+    position: relative;
+    margin-right: 25px;
+}
+.input-group-btn {
+    position: relative;
+    white-space: nowrap;
+}
+.input-group-addon, .input-group-btn {
+    vertical-align: middle;
+    white-space: nowrap;
+    width: 1%;
+}
+.input-group-btn, .input-group .form-control {
+    display: table-cell;
+}
+.search-input {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    display: block;
+    font-size: 14px;
+    height: 24px;
+    line-height: 1.28;
+    padding: 3px 6px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    vertical-align: middle;
+    margin-bottom: 0;
+    width: 250px;
+}
+.btn-success {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    color: #ffffff;
+}
+.btn {
+    -moz-user-select: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.28;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+#actions {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: blcok;
+    width: 480px;
+}
+.actions {
+    position: relative;
+}
+.actions-con {
+    background: #EEE;
+    padding: 5px;
+    width: 434px;
+    height: 33px;
+    top: 0;
+    position: absolute;
+    right: 0;
+    padding-left: 8px;
+}
+.actions-con a {
+    margin-right: 15px;
+}
+.actions-con form {
+    float: left;
+}
+.btn1 {
+    margin-top: 5px;
+    float: left;
+    z-index: 5555;
+    outline: none;
+    background: #EEE;
+}
+#actions .mr {
+    float: right;
 }
 #s-header {
     background: #e0e0e0;
@@ -495,7 +588,6 @@ header a.logo {
     padding-left: 30px;
 }
 .set ol li, .set ul li {
-    line-height: 20px;
     padding-left: 5px;
     margin: 3px 0;
 }
@@ -506,16 +598,16 @@ header a.logo {
     padding: 21px 25px;
 }
 .set-description .highlight h2 {
-    font-size: 31px;
+    font-size: 2em;
     color: #fff;
 }
 .set-description .highlight p {
     color: #b1ebe3;
-    font-size: 17px;
+    font-size: 1.2em;
     line-height: 1.3;
 }
 .set-description h4 {
-    font-size: 19px;
+    font-size: 1.6em;
     margin: 6px 0;
 }
 .set-description ul.nested {
@@ -531,11 +623,11 @@ header a.logo {
 }
 .set-description ul.nested li strong {
     display: block;
-    font-size: 21px;
+    font-size: 1.8em;
     margin-bottom: 6px;
 }
 .set-description ul.nested li code {
-    font-size: 15px;
+    font-size: 1em;
 }
 .set-description ul.nested li ul {
     margin: 4px 0 0 18px;
@@ -548,13 +640,13 @@ header a.logo {
 }
 .set-description ul.nested li ul li strong {
     display: inline;
-    font-size: 17px;
+    font-size: 1.6em;
 }
 .set-description ul.nested li ul li ul li {
     margin: 0 0 2px;
 }
 .set-description ul.nested li ul li ul li strong {
-    font-size: 15px;
+    font-size: 1em;
 }
 .set-description.open {
     padding: 0 30px 48px 71px;
@@ -578,7 +670,7 @@ header a.logo {
     background: rgba(0, 0, 0, 0);
     border: medium none;
     color: #023544;
-    font-size: 30px;
+    font-size: 2em;
     margin-top: 0;
     top: 26px;
 }
@@ -587,7 +679,7 @@ header a.logo {
     border-top: 1px solid #e9e9e9;
     border-bottom: 1px solid #e9e9e9;
     color: #023544;
-    font-size: 19px;
+    font-size: 1.6em;
     font-weight: bold;
     left: 0;
     right: 0;
@@ -659,7 +751,7 @@ header a.logo {
     background: rgba(0, 0, 0, 0);
     color: #e0e0e0;
     content: "";
-    font-size: 34px;
+    font-size: 2.2em;
     height: 100px;
     left: 0;
     letter-spacing: 0;
@@ -688,7 +780,7 @@ header a.logo {
     background-color: #023544;
     color: #e0e0e0;
     content: "";
-    font-size: 18px;
+    font-size: 1.6em;
     font-weight: normal;
     height: 56px;
     left: 0;
@@ -710,7 +802,7 @@ header a.logo {
 }
 .set-dev .beta p {
     color: #96a4ac;
-    font-size: 17px;
+    font-size: 1.6em;
     line-height: 1.3;
 }
 .set-dev table {
@@ -743,7 +835,7 @@ header a.logo {
 }
 .set-dev h4 {
     color: #5b6c75;
-    font-size: 16px;
+    font-size: 1.5em;
     font-weight: normal;
     letter-spacing: 1.3px;
     margin-bottom: 9px;
@@ -910,11 +1002,11 @@ body:after{content:url(../img/close.png) url(../img/loading.gif) url(../img/prev
         width: 96%;
     }
     .set-description h3 {
-        font-size: 24px;
+        font-size: 1.8em;
         font-weight: bold;
     }
     .category-head .set-description h3 {
-        font-size: 24px;
+        font-size: 1.8em;
         line-height: normal;
         font-weight: bold;
     }
@@ -953,6 +1045,9 @@ body:after{content:url(../img/close.png) url(../img/loading.gif) url(../img/prev
     }
     .sidebar a.logo {
         height: 30px;
+    }
+    .actions {
+        display: none;
     }
 }
 
