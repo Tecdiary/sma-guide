@@ -995,7 +995,7 @@
 													Please 
 													<ol>
 													<li>make sure that your apache mod_rewite is enabled</li>
-													<li>check that .htaccess file is successfully upload and exists in the main directory of SMA</li>
+													<li>check that .htaccess file is successfully uploaded and exists in the main directory of SMA</li>
 													<li>base_url in sma/config/config.php</li>
 													<li>check your database settings in sma/config/database.php</li>
 													</ol>
@@ -1134,6 +1134,25 @@
     	return 404;
     }
 }</code></pre>
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Why some products are missing from order when I add 100+ products?</a>
+											<div class="cd-faq-content">
+												<p>
+													There is no restriction in SMA code on the number of order items. If you are having such issue, please check your php configuration file (php.ini) for <code>max_input_vars</code> and set it to higher number i.e, 10000.
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#0">Why Wordpress showing 404 page when I access the SMA?</a>
+											<div class="cd-faq-content">
+												<p>
+													You can exclude sub-directory from RewriteRule of wordpress by adding the line below to your .htaccess file in main directory of wordpress.
+													<pre><code>RewriteCond %{REQUEST_URI} !^/(mydir|mydir/.*)$</code></pre>
 												</p>
 											</div> 
 										</li>
@@ -1839,62 +1858,30 @@
 </div>
 </div>
 <div id="actions">
-<div class="actions">
-	<div class="actions-con">
-	<form name="f1" id="f1">
-	<div class="input-group">
-		<input type="text" value="" name="findthis" id="t1" placeholder="Find in this page" class="search-input">
-		<div class="input-group-btn">
-				    <button class="btn btn-success" type="submit" name="b1" id="b1"><i class="fa fa-search"></i></button>
-				    </div>
+	<div class="actions">
+		<div class="actions-con">
+			<form name="f1" id="f1">
+				<div class="input-group">
+					<input type="text" value="" name="findthis" id="t1" placeholder="Find in this page" class="search-input">
+					<div class="input-group-btn">
+						<button class="btn btn-success" type="submit" name="b1" id="b1"><i class="fa fa-search"></i></button>
+					</div>
+				</div>
+			</form>
+			<a class="font-size" id="14" style="font-size: 12px;" href="#"><i class="fa fa-font"></i></a> 
+			<a class="font-size" id="16" style="font-size: 16px;" href="#"><i class="fa fa-font"></i></a> 
+			<a class="font-size" id="18" style="font-size: 20px;" href="#"><i class="fa fa-font"></i></a>
 		</div>
-		</form>
-		<a class="font-size" id="14" style="font-size: 12px;" href="#"><i class="fa fa-font"></i></a> 
-		<a class="font-size" id="16" style="font-size: 16px;" href="#"><i class="fa fa-font"></i></a> 
-		<a class="font-size" id="18" style="font-size: 20px;" href="#"><i class="fa fa-font"></i></a>
+		<div style="clear:both;"></div>
 	</div>
-	<div style="clear:both;"></div>
-</div>
-<button class="btn btn1" id="action"><i class="fa fa-angle-double-right"></i></button>
+	<button class="btn btn1" id="action"><i class="fa fa-angle-double-right"></i></button>
 </div>
 <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script src="assets/js/plugins.js" type="text/javascript"></script>
 <script src="assets/js/highlight.pack.js" type="text/javascript"></script>
 <script src="assets/js/main.js" type="text/javascript"></script></script>
 <script type="text/javascript">
-	$(document).ready(function() {
-		$('#b1').click(function(){
-			if($('#t1').val()) {
-				window.find($('#t1').val());
-			}
-			return false;
-		});
-		$('#f1').submit(function(){
-			if($('#t1').val()) {
-				window.find($('#t1').val());
-			}
-			return false;
-		});
-		$('body').bind('keypress', function(e) {
-			if (e.keyCode == 13) {
-				$('#f1').submit();
-				e.preventDefault();
-				return false;
-			}
-		});
-		$("#action").click(function() {
-			$(this).find('i').toggleClass('fa-angle-double-right');
-			$(this).find('i').toggleClass('fa-angle-double-left');
-			$(this).toggleClass('mr');
-			$('.actions-con').fadeToggle();
-		});
-		$('.font-size').click(function(event) {
-			var size = $(this).attr('id');
-			event.preventDefault();
-			$('body').css("font-size", size+"px");
-			return false;
-		});
-	});
+	$(document).ready(function(){$("#b1").click(function(){return $("#t1").val()&&window.find($("#t1").val()),!1}),$("#f1").submit(function(){return $("#t1").val()&&window.find($("#t1").val()),!1}),$("body").bind("keypress",function(t){return 13==t.keyCode?($("#f1").submit(),t.preventDefault(),!1):void 0}),$("#action").click(function(){$(this).find("i").toggleClass("fa-angle-double-right"),$(this).find("i").toggleClass("fa-angle-double-left"),$(this).toggleClass("mr"),$(".actions-con").fadeToggle()}),$(".font-size").click(function(t){var i=$(this).attr("id");return t.preventDefault(),$("body").css("font-size",i+"px"),!1}),$("#action").trigger("click")});
 </script>
 </body>
 </html>
