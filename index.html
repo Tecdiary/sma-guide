@@ -85,6 +85,7 @@
 						<li><a href="#language">Language</a></li>
 						<li><a href="#theme">Theme</a></li>
 						<li><a href="#removing">Removing Required</a></li>
+						<li><a href="#add_column">Add/Remove Column</a></li>
 						<li><a href="#datatable">Sorting Tables</a></li>
 						<li><a href="#barcode">Barcodes & Labels</a></li>
 					</ul>
@@ -1808,6 +1809,50 @@
 
 			<p>Remove the required from last part of the validation. After this our validation line will look as</p>
 			<pre><code>$this-&gt;form_validation-&gt;set_rules(&#039;city&#039;, lang(&quot;city&quot;), &#039;xss_clean&#039;);</code></pre>
+		</div>
+	</div>
+</div>
+
+<div class="set">
+	<div class="inner-set" id="add_column">
+		<div class="set-description">
+			<h3>Add/Remove column to table</h3>
+			<p>Here are thing to step to follow</p>
+			<ol>
+				<li>Modify the select statement and select the desired column, in the controller.</li>
+				<li>Add new element to datatables aoColumns (should be in sequence).</li>
+				<li>If you need to add footer filter then to dtFilter.</li>
+				<li>Lastly add the th tag with column heading to table head and table foot (should be in sequence).</li>
+			</ol>
+			<p></p>
+			<p>These will be the step for add any new column on any listing page.</p>
+			<p><strong>To remove a column you will need to</strong></p>
+			<ol>
+				<li>Modify the select statement and remove the desired column, in the controller.</li>
+				<li>Remove the element form aoColumns of datatables.</li>
+				<li>If there is table foot filter, please remove it from dtFilter too.</li>
+				<li>Lastly Remove the th tag with column heading to table head and table foot.</li>
+			</ol>
+			<p></p>
+			<p>I am adding the code to add the new column (state) on the customer list page and there won't be code to remove the columns but you can follow the step above.</p>
+
+		</div>
+		<div class="set-dev">
+			<h3>Add new column to table</h3>
+			<p>
+				1. Open then sma/controllers/customers.php and look for the select statement in getCustomers() and add state after city
+			</p>
+			<pre><code>->select("id, company, name, email, phone, city, <strong><em>state,</em></strong> customer_group_name, vat_no, award_points")</code></pre>
+			<p>2. Open the themes/default/views/customers/index.php and look for aoColumns and null as 7th element</p>
+			<pre><code>"aoColumns": [ {"bSortable": false, "mRender": checkbox}, null, null, null, null, null, <strong><em>null,</em></strong> null, null, null, {"bSortable": false}]</code></pre>
+			<p>3. Let's add column filter we will be adding for column number 6  the 7th element if start from 1 for array 0. Please don't forget to increase the column number for other columns that are after this.</p>
+			<pre><code><strong><em>{column_number : 6, filter_default_label: &quot;[&lt;?=lang(&#039;state&#039;);?&gt;]&quot;, filter_type: &quot;text&quot; },</em></strong>
+{column_number : 7, filter_default_label: &quot;[&lt;?=lang(&#039;customer_group&#039;);?&gt;]&quot;, filter_type: &quot;text&quot; },
+{column_number : 8, filter_default_label: &quot;[&lt;?=lang(&#039;vat_no&#039;);?&gt;]&quot;, filter_type: &quot;text&quot; },
+{column_number : 9, filter_default_label: &quot;[&lt;?=lang(&#039;award_points&#039;);?&gt;]&quot;, filter_type: &quot;text&quot; },</code></pre>
+			<p>Array element start from 0 so the 7th element number will be 6 in the array.</p>
+			<p>4. Let's add th tag to table head and foot by add the line below after the th tag city for city.</p>
+			<pre><code><strong><em>&lt;th&gt;&lt;?= lang(&quot;state&quot;); ?&gt;&lt;/th&gt;</em></strong></code></pre>
 		</div>
 	</div>
 </div>
