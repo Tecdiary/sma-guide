@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-	<title>Stock Manager Advance RC3.0.1 Documentation V1.2.4.1</title>
+	<title>Stock Manager Advance RC3.0.1.1 Documentation V1.2.4.2</title>
 	<meta name="google-site-verification" content="fEfsU1FFm-C1BtX88gzsC4yMOjHzDVkD26lMwkxrQz8" />
 	<link rel="shortcut icon" href="http://tecdiary.com/files/2013/04/icon11.png"/>
 	<meta name="description" content="Online documentation for Stock Manager Advance - Inventory & Inoive managment solution and POS (Point of Sale) Module by Tecdiary.com">
@@ -98,7 +98,7 @@
 					<div class="set category-head">
 						<div class="inner-set" id="introduction">
 							<div class="set-description">
-								<h3>Stock Manager Advance RC3.0.1 (Documentation v1.2.4.1)</h3>
+								<h3>Stock Manager Advance RC3.0.1.1 (Documentation v1.2.4.2)</h3>
 								<p>Thank you for purchasing the Stock Manager Advance</p>
 								<p>
 									First of all, we would like to apologize for delays in releasing this version 3 and would like to thank everyone who has contributed to this
@@ -163,7 +163,35 @@
 					<div class="set">
 						<div class="inner-set" id="update">
 							<div class="set-description">
-								<h3>Update Instruction</h3>
+								<h3>Updating from RC3.0.1</h3>
+								<ol>
+								<li>Please open phpmyadmin, Select you database, Select SQL tab, Paste the code below in query area and click Go.
+								<pre>
+
+CREATE TABLE IF NOT EXISTS `sma_migrations` (
+  `version` bigint(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `sma_migrations` (`version`) VALUES (301);
+								</pre>
+								</li>
+								<li>Extract the downloaded file.</li>
+								<li>Copy RC3.0.1.1/sma/config/migration.php, paste and replace the old file in yourinstallationdirectory/config/</li>
+								<li>Copy RC3.0.1.1/themes, paste and replace the old folder in yourinstallationdirectory/</li>
+								<li>Copy 
+								<ol>
+								<li>RC3.0.1.1/sma/controllers</li>
+								<li>RC3.0.1.1/sma/core</li>
+								<li>RC3.0.1.1/sma/helpers</li>
+								<li>RC3.0.1.1/sma/language</li>
+								<li>RC3.0.1.1/sma/libraries</li>
+								<li>RC3.0.1.1/sma/migrations</li>
+								<li>RC3.0.1.1/sma/models</li>
+								</ol>
+								 Paste and replace the old folders in yourinstallationdirectory/sma/</li>
+								 <li>Login to your site and I hope that every thing will be fine.</li>
+								 <li>There were few issues with update and tried to fixed in this release. If you have any issue after update, please email to support@tecdiary.com with purchase code, site and server details.</li>
+								</ol>
+								<h3>Updating from V2.3</h3>
 								<div class="highlight">
 								<p class="intro">We suggest you to keep the current v2.3 as it is now for reference of old sale. If you can perform fresh installation of v3 to starting using the new features would be good. We understand that there might need to update from v2.3 to v3. We are adding the update tool to perform update still you need to keep the old installation of v2.3 as reference because of the incompatibility of old files/database/features.</p>
 								<p class="intro">We have added the update tool for testing purpose and feedback only. If you are advance user and have good command and experience of backup/restore (files &database) then you can try this update tool.</p>
@@ -403,19 +431,6 @@
 											<li> Sell gift cards</li>
 											<li> Pay by gift card</li>
 											<li> Simple restriction for staff to not delete item in POS (POS will ask for password, that owner can set in POS Settings)</li>
-										</ul>
-									</li>
-									<li> Update v3.1
-										<ul>
-											<li> Front-end for customer/supplier to add/view orders and make payments</li>
-											<li> User Registration</li>
-											<li> Activity logger</li>
-											<li> Reward point for sales staff and customers</li>
-										</ul>
-									</li>
-									<li> Update v3.2
-										<ul>
-											<li> API Module</li>
 										</ul>
 									</li>
 								</ul>
@@ -738,6 +753,20 @@
 											<div class="cd-faq-content">
 												<p>
 													Not every theme will have different style option, the default theme have 3 menu color styles and can only be chosen from the top bar.
+												</p>
+											</div> 
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#">What is the difference between inclusive and exclusive tax on add product page?</a>
+											<div class="cd-faq-content">
+												<p>
+													Inclusive tax method means that tax is already included in the price. Exclusive tax method means that tax is not included in the price and should be calculated/added separately.
+												</p>
+												<p>For example:<br>
+												<code>Product Price 100 and Tax 10%<br>
+												Inclusive tax method: Price 90.91 and Tax amount: 9.09 = 100 (total price with tax)<br>
+												Exclusive tax method: Price 100 and Tax amount: 10 = 110 (total price with tax)</code>
 												</p>
 											</div> 
 										</li>
