@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-	<title>Stock Manager Advance RC3.0.2.2 Documentation V1.2.4.3</title>
+	<title>Stock Manager Advance RC3.0.2.xx Documentation V1.2.4.4</title>
 	<meta name="google-site-verification" content="fEfsU1FFm-C1BtX88gzsC4yMOjHzDVkD26lMwkxrQz8" />
 	<link rel="shortcut icon" href="http://tecdiary.com/files/2013/04/icon11.png"/>
 	<meta name="description" content="Online documentation for Stock Manager Advance - Inventory & Inoive managment solution and POS (Point of Sale) Module by Tecdiary.com">
@@ -98,7 +98,7 @@
 					<div class="set category-head">
 						<div class="inner-set" id="introduction">
 							<div class="set-description">
-								<h3>Stock Manager Advance RC3.0.2.2 (Documentation v1.2.4.3)</h3>
+								<h3>Stock Manager Advance RC3.0.2.xx (Documentation v1.2.4.4)</h3>
 								<p>Thank you for purchasing the Stock Manager Advance</p>
 								<p>
 									First of all, we would like to apologize for delays in releasing this version 3 and would like to thank everyone who has contributed to this
@@ -128,7 +128,7 @@
 										<li>Create mysql database, database user and grant all permission to user for this database.</li>
 										<li>Open the <strong><code>http://yourdomain.com/pathtoupload/install/index.php</code></strong></li>
 										<li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
-										<li>Step2: Provide you Envato Username and Purchase Code to validate the purchase.</li>
+										<li>Step 2: Provide you Envato Username and Purchase Code to validate the purchase.</li>
 										<li>Step 3: Provide the database host, database user, database password and database name to proceed to next step. <code>Please make sure you don't have $ sign in your password.</code></li>
 										<li>Step 4: Site Config: Please Fill in you SMA Base URL and select your timezone. <code>You must check the site url as installer might guess it wrong</code>
 										<ul>
@@ -160,33 +160,27 @@
 					<div class="set">
 						<div class="inner-set" id="update">
 							<div class="set-description">
-								<h3>Updating from RC3.0.1</h3>
+								<h3>Updating from RC3.0.1.xx/RC3.0.2.xx to latest</h3>
 								<ol>
-								<li>Please open phpmyadmin, Select you database, Select SQL tab, Paste the code below in query area and click Go.
-								<pre>
-
-CREATE TABLE IF NOT EXISTS `sma_migrations` (
-  `version` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-INSERT INTO `sma_migrations` (`version`) VALUES (301);
-								</pre>
 								</li>
 								<li>Extract the downloaded file.</li>
-								<li>Copy RC3.0.1.x/sma/config/migration.php, paste and replace the old file in yourinstallationdirectory/config/</li>
-								<li>Copy RC3.0.1.x/themes, paste and replace the old folder in yourinstallationdirectory/</li>
+								<li>Copy RC3.0.2.xx/sma/config/migration.php, paste and replace the old file in yourinstallationdirectory/config/</li>
+								<li>Copy RC3.0.2.xx/themes, paste and replace the old folder in yourinstallationdirectory/</li>
+                                <li>Copy RC3.0.2.xx/system, paste and replace the old folder in yourinstallationdirectory/</li>
 								<li>Copy
 								<ol>
-								<li>RC3.0.1.x/sma/controllers</li>
-								<li>RC3.0.1.x/sma/core</li>
-								<li>RC3.0.1.x/sma/helpers</li>
-								<li>RC3.0.1.x/sma/language</li>
-								<li>RC3.0.1.x/sma/libraries</li>
-								<li>RC3.0.1.x/sma/migrations</li>
-								<li>RC3.0.1.x/sma/models</li>
+								<li>RC3.0.2.xx/sma/controllers</li>
+								<li>RC3.0.2.xx/sma/core</li>
+								<li>RC3.0.2.xx/sma/helpers</li>
+								<li>RC3.0.2.xx/sma/language</li>
+								<li>RC3.0.2.xx/sma/libraries</li>
+								<li>RC3.0.2.xx/sma/migrations</li>
+								<li>RC3.0.2.xx/sma/models</li>
 								</ol>
 								 Paste and replace the old folders in yourinstallationdirectory/sma/</li>
+                                <li>Please copy the database changes from one by one starting from the version you are updating and run in phpmyadmin after selecting your database.</li>
+								 <li>For Database changes, please check the help folder.</li>
 								 <li>Login to your site and I hope that every thing will be fine.</li>
-								 <li>There were few issues with update and tried to fixed in this release. If you have any issue after update, please email to support@tecdiary.com with purchase code, site and server details.</li>
 								</ol>
 								<h3>Updating from V2.3</h3>
 								<div class="highlight">
@@ -250,7 +244,7 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 								<li>You are ready to start using new version.</li>
 								</ol>
 								<h4>Request Update</h4>
-								<p>We will provide the service to update your old SMA 2.3 to V3 for $20.00. To request the update, please send $20 to saleem@tecdiary.com by Paypal or Skrill and email us your license file and hosting control panel details with reference of your payment to support@tecdiary.com</p>
+								<p>We will provide the service to update your old SMA 2.3 to V3 for $20 To request the update, please send $20 to saleem@tecdiary.com by Paypal or Skrill and email us your license file and hosting control panel details with reference of your payment to support@tecdiary.com</p>
 							</div>
 						</div>
 					</div>
@@ -262,7 +256,7 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 								<h4>1. Receipt Printers:</h4>
 								<p></p>
 								<p>
-									We have tested the update V3 with Bixolon SRP-350II (USB) with Web Browser Printing and Java Applet by adding qz print plugin that will support these printers
+									We have tested the update RC3 with Bixolon SRP-350II (USB) with Web Browser Printing and Java Applet by adding qz print plugin that will support these printers
 								</p>
 								<ul>
 									<li>Samsung Bixolon SRP350plus, Bixolon SRP-350II and Bixolon SRP-270.</li>
@@ -285,7 +279,7 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 								<h4>2. Barcode Scanners/Readers:</h4>
 								<p></p>
 								<p>
-									Any of the barcode scanners/readers will work fine with v3 as long as it can read accurately.
+									Any of the barcode scanners/readers will work fine with RC3 as long as it can read accurately.
 								</p>
 								<h4>3. Magnetic Card Readers:</h4>
 								<p></p>
@@ -320,7 +314,7 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 					<div class="set">
 						<div class="inner-set" id="features">
 							<div class="set-description">
-								<h3>Feature List V3</h3>
+								<h3>Feature List RC3</h3>
 								<p>
 									Stock Manager Advance (inventory and Invoicing system) is php-based web application that help you to manage your stock. All of the functionality that was in SMA v2.3 is also available through this release with the following enhancements:
 								</p>
@@ -438,9 +432,9 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 					<div class="set">
 						<div class="inner-set" id="demo">
 							<div class="set-description">
-								<h3>Live Demo For Stock Manager Advance v2.3 and v3.0</h3>
+								<h3>Live Demo For Stock Manager Advance v2.3 and RC3.0</h3>
 
-								<h4>Demo Link for V3.0: <a href="http://tecdemo.com/sma3/" target="_blank">http://tecdemo.com/sma3/</a></h4>
+								<h4>Demo Link for RC3.0: <a href="http://tecdemo.com/sma3/" target="_blank">http://tecdemo.com/sma3/</a></h4>
 								<h4>Demo Link for V2.3: <a href="http://tecdemo.com/sma2/" target="_blank">http://tecdemo.com/sma2/</a></h4>
 
 								<h4>Login Details:</h4>
@@ -485,7 +479,7 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 								<div class="smallshow">
 									<p><pre><strong>Role:               Username                 Password</strong><br><strong>Owner:</strong>              owner@tecdiary.com       12345678<br><strong>Admin:</strong>              admin@tecdiary.com       12345678<br><strong>Purchasing staff:</strong>   purchaser@tecdiary.com   12345678<br><strong>Sales staff:</strong>        salesman@tecdiary.com    12345678<br><strong>Viewer only user:</strong>   user@tecdiary.com        12345678</pre></p>
 								</div>
-								<p><strong>In v3.0 you can add more user groups and set different permissions.</strong></p>
+								<p><strong>In RC3.0 you can add more user groups and set different permissions.</strong></p>
 
 							</div>
 						</div>
@@ -550,9 +544,9 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 							<div class="set-description">
 								<h3>Languages</h3>
 								<h4>We are very thankful to these amazing people who have contributed their language files.</h4>
-								<h4>V3</h4>
+								<h4>RC3</h4>
 								<p></p>
-								<p>Only English available for v3.0 and other languages will be added soon.</p>
+								<p>Only English available for RC3.0 and other languages will be added soon.</p>
 								<h4>V2.3</h4>
 								<p></p>
 								<p>
@@ -615,7 +609,7 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 
 								<div class="cd-faq-items">
 									<ul id="basics" class="cd-faq-group">
-										<li class="cd-faq-title"><h4>General</h4></li>
+										<li class="cd-faq-title"><h4>General <i class="pull-right fa fa-toggle-off toggle-faqs" style="cursor:pointer;"></i></h4></li>
 										<li>
 											<a class="cd-faq-trigger" href="#">How many products can be managed with this Stock Manager?</a>
 											<div class="cd-faq-content">
@@ -930,11 +924,72 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 												</ul>
                                             </div>
                                         </li>
+
+                                        <li>
+                                        	<a class="cd-faq-trigger" href="#">Can you please explain Inventory Accounting (FIFO/LIFO/AVCO)?</a>
+                                        	<div class="cd-faq-content">
+                                        		<h4>First-in-first-out (FIFO)</h4>
+
+                                        		<p>Defined: The oldest inventory asset is recorded as sold first – regardless of the actual shelf-age of the given physical asset.</p>
+
+                                        		<p>Applied: While it is the most widely used accounting technique in periodic inventory management today, FIFO may fail to offer a full picture of inventory value if inflation and price increases are not closely analyzed. Thus, FIFO may inflate or deflate the actual value of future inventory.</p>
+
+                                        		<h4>Last-in first-out (LIFO)</h4>
+
+                                        		<p>Defined: The newest inventory asset is recorded as sold first.</p>
+
+                                        		<p>Applied:  The LIFO method could reduce a company’s tax responsibility in times of growing inflation – but it has been heavily regulated under the International Financial Reporting Standards.</p>
+
+                                        		<h4>Average cost or weighted cost (AVCO)</h4>
+
+                                        		<p>Defined: The AVCO (average cost) method will take the total cost of goods still available for sale and divide it by the total sum of product from the beginning inventory and purchases.</p>
+
+                                        		<p>Applied: With the AVCO method, cost flow is determined as a weighted average of all total unit costs.</p>
+                                        	</div>
+                                        </li>
+
+                                        <li>
+                                            <a class="cd-faq-trigger" href="#">When and where the inventory accounting method is used to calculate costing?</a>
+                                            <div class="cd-faq-content">
+                                                <p>
+                                                    The balance quantity and costing will be calculated on sale in the site model (sma/models/site.php)
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="cd-faq-trigger" href="#">Why I have cron job warning/message in system settings?</a>
+                                            <div class="cd-faq-content">
+                                                <p>
+                                                    That is informational message to set the cron job. 
+                                                </p>
+												<p>
+													If you have already set the cron job then just ignore it.
+												</p>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <a class="cd-faq-trigger" href="#">Why I need to set cron job?</a>
+                                            <div class="cd-faq-content">
+                                                <p>
+                                                    Cron job will perform these tasks 
+                                                    <ul>
+                                                    	<li>Reset reference numbers</li>
+                                                    	<li>Set the payment status to overdue after payment term for pending and partial paid sales/purchases</li>
+                                                    	<li>Delete expired products (disable/enable this in settings)</li>
+                                                    	<li>Expire product promotions after end date</li>
+                                                    	<li>Delete older login records</li>
+                                                    	<li>Check if updates are available</li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                        </li>
+
 									</ul>
 
-
 									<ul id="account" class="cd-faq-group">
-										<li class="cd-faq-title"><h4>Account and Users</h4></li>
+										<li class="cd-faq-title"><h4>Account and Users <i class="pull-right fa fa-toggle-off toggle-faqs" style="cursor:pointer;"></i></h4></li>
 										<li>
 											<a class="cd-faq-trigger" href="#">What type of account are available?</a>
 											<div class="cd-faq-content">
@@ -1004,7 +1059,7 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 									</ul>
 
 									<ul id="payments" class="cd-faq-group">
-										<li class="cd-faq-title"><h4>Payments</h4></li>
+										<li class="cd-faq-title"><h4>Payments <i class="pull-right fa fa-toggle-off toggle-faqs" style="cursor:pointer;"></i></h4></li>
 
 										<li>
 											<a class="cd-faq-trigger" href="#">What payment gateways are available in SMA?</a>
@@ -1017,7 +1072,7 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 													</ol>
 												</p>
 												<p>
-													Payment options has been added to V3 that will be available to customers when you email invoice to them. Customers would be able to make payment by this gateway using link in email and from front-end (once available).
+													Payment options has been added to RC3 that will be available to customers when you email invoice to them. Customers would be able to make payment by this gateway using link in email and from front-end (once available).
 												</p>
 												<p>
 													<em>There is no payment option available in V2.3</em>
@@ -1082,12 +1137,24 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 												</p>
 											</div>
 										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#">How the deposit payment type works?</a>
+											<div class="cd-faq-content">
+												<p>
+													Please visit the customer listing page to check the deposit amount and add new deposits to any customer.
+												</p>
+												<p>
+													On sales, you can use the deposit in paid by and system will automatically deduct the sale amount from customer's deposit amount. 
+												</p>
+											</div>
+										</li>
 									</ul>
 
 									<ul id="errors" class="cd-faq-group">
-										<li class="cd-faq-title"><h4>Error</h4></li>
+										<li class="cd-faq-title"><h4>Error <i class="pull-right fa fa-toggle-off toggle-faqs" style="cursor:pointer;"></i></h4></li>
 										<li>
-											<a class="cd-faq-trigger" href="#">Why am I getting CloudFlare Security or Blank error on verfication while installating the item?</a>
+											<a class="cd-faq-trigger" href="#">Why am I getting CloudFlare Security or Blank error on verification while installation the item?</a>
 											<div class="cd-faq-content">
 												<p>
 													If you are not getting any error but blank red alert or CloudFlare Security error mean your request is no reaching to verification server. Please check that you server is not blocking the curl request and secondly there are chances that CloudFlare might be challenging your request due to various reasons. Please check with your host and request them to white list CloudFlare ips <a href="https://www.cloudflare.com/ips" target="_blank">https://www.cloudflare.com/ips</a>
@@ -1102,13 +1169,31 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 										</li>
 
 										<li>
-											<a class="cd-faq-trigger" href="#">Why I am getting "no input specified" error after install/update?</a>
+											<a class="cd-faq-trigger" href="#">Why I am getting "No input file specified" error after install/update?</a>
 											<div class="cd-faq-content">
 												<p>
 													Please add the ? 'question sign' after index.php in the .htaccess file, you line will be look as <code>RewriteRule ^(.*)$ /index.php?$1 [L]</code>code.
 												</p>
 												<p>
 													For more information, please visit <a href="https://github.com/bcit-ci/CodeIgniter/wiki/Godaddy-Installation-Tips" target="_blank">this guide page</a>.
+												</p>
+											</div>
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#">Why all Ajax calls are being failed?</a>
+											<div class="cd-faq-content">
+												<p>
+													I guess, you have changed the index_page in config file, please set it back to blank string and then if you have any issue (such as No input file specified above), please solve it with the help of .htaccess file.
+												</p>
+											</div>
+										</li>
+
+										<li>
+											<a class="cd-faq-trigger" href="#">Why I am getting "Ajax request failed"?</a>
+											<div class="cd-faq-content">
+												<p>
+													I guess, you have changed the <code>index_page</code> in config file. Please change it back to blank and then resolve your issue with the help you .htaccess file. Mostly you do this because of <code>No input file specified</code>code> error and the solution is in the faq above.
 												</p>
 											</div>
 										</li>
@@ -1326,7 +1411,7 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 			<div class="inner-set" id="guide">
 				<div class="set-description">
 					<h3>User Guide</h3>
-					<p>As V3 comes with new theme, let me explain the main sections of the home screen. We am add image of the dashboard and on right with overlay to name the main sections of the page. This sections are same through for each and every page. Only the main content area will be different for pages and will be displaying the view files from your theme folder.</p>
+					<p>As RC3 comes with new theme, let me explain the main sections of the home screen. We am add image of the dashboard and on right with overlay to name the main sections of the page. This sections are same through for each and every page. Only the main content area will be different for pages and will be displaying the view files from your theme folder.</p>
 					<p></p>
 					<div class="left">
 						<a href="assets/img/db.png" data-lightbox="dashboard" data-title="Dashboard Screenshot"><img src="assets/img/db.png" alt=""></a>
@@ -1347,9 +1432,9 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 					<div class="clear"></div>
 					<p>&nbsp;</p>
 					<p>
-						In V3, main menus (left side) has been updated to track the active page and breadcrumb has been added on top of the main content area.
+						In RC3, main menus (left side) has been updated to track the active page and breadcrumb has been added on top of the main content area.
 					</p>
-					<h4>These are the menus in V3</h4>
+					<h4>These are the menus in RC3</h4>
 					<ul class="nav main-menu"> <li class="mm_welcome"><a href="#"><i class="fa fa-dashboard"></i><span class="text"> Dashboard</span></a></li> <li class="mm_products"> <a class="dropmenu" href="#"><i class="fa fa-barcode"></i><span class="text"> Products </span> <span class="chevron closed"></span></a> <ul style="display: block;"> <li id="products_index"><a class="submenu" href="#"><i class="fa fa-barcode"></i><span class="text"> List Products</span></a></li> <li id="products_add"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Product</span></a></li> <li id="products_sheet"><a class="submenu" href="#"><i class="fa fa-tags"></i><span class="text"> Print Barcodes</span></a></li> <li id="products_print_labels"><a class="submenu" href="#"><i class="fa fa-tags"></i><span class="text"> Print Labels</span></a></li> <li id="products_import_csv"><a class="submenu" href="#"><i class="fa fa-file-text"></i><span class="text"> Import Products</span></a></li> <li id="products_update_price"><a class="submenu" href="#"><i class="fa fa-money"></i><span class="text"> Update Price</span></a></li> <li id="products_damage_products"><a class="submenu" href="#"><i class="fa fa-flask"></i><span class="text"> Damage Product</span></a></li> </ul> </li> <li class="mm_sales"> <a class="dropmenu" href="#"><i class="fa fa-heart"></i><span class="text"> Sales </span> <span class="chevron closed"></span></a> <ul> <li id="sales_index"><a class="submenu" href="#"><i class="fa fa-heart"></i><span class="text"> List Sales</span></a></li> <li id="sales_add"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Sale</span></a></li> <li id="sales_deliveries"><a class="submenu" href="#"><i class="fa fa-truck"></i><span class="text"> Deliveries</span></a></li> <li id="sales_gift_cards"><a class="submenu" href="#"><i class="fa fa-gift"></i><span class="text"> Gift Cards</span></a></li> <li id="sales_return_sales"><a class="submenu" href="#"><i class="fa fa-reply"></i><span class="text"> List Return Sales</span></a></li> </ul> </li> <li class="mm_quotes"> <a class="dropmenu" href="#"><i class="fa fa-heart-o"></i><span class="text"> Quotations </span> <span class="chevron closed"></span></a> <ul> <li id="sales_index"><a class="submenu" href="#"><i class="fa fa-heart-o"></i><span class="text"> List Quotation</span></a></li> <li id="sales_add"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Quotation</span></a></li> </ul> </li> <li class="mm_purchases"> <a class="dropmenu" href="#"><i class="fa fa-star"></i><span class="text"> Purchases </span> <span class="chevron closed"></span></a> <ul> <li id="purchases_index"><a class="submenu" href="#"><i class="fa fa-star"></i><span class="text"> List Purchases</span></a></li> <li id="purchases_add"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Purchase</span></a></li> <li id="purchases_purchase_by_csv"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Purchase by CSV</span></a></li> <li id="purchases_expenses"><a class="submenu" href="#"><i class="fa fa-dollar"></i><span class="text"> Expenses</span></a></li> <li id="purchases_add"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Expense</span></a></li> </ul> </li> <li class="mm_transfers"> <a class="dropmenu" href="#"><i class="fa fa-star-o"></i><span class="text"> Transfers </span> <span class="chevron closed"></span></a> <ul> <li id="transfers_index"><a class="submenu" href="#"><i class="fa fa-star-o"></i><span class="text"> List Transfers</span></a></li> <li id="transfers_add"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Transfer</span></a></li> <li id="transfers_purchase_by_csv"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Transfer by CSV</span></a></li> </ul> </li> <li class="mm_auth mm_customers mm_suppliers mm_billers active"> <a class="dropmenu" href="#"><i class="fa fa-users"></i><span class="text"> People </span> <span class="chevron closed"></span></a> <ul style="display: block;"> <li id="auth_users" class="active"><a class="submenu" href="#"><i class="fa fa-users"></i><span class="text"> List Users</span></a></li> <li id="auth_create_user"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add User</span></a></li> <li id="billers_index"><a class="submenu" href="#"><i class="fa fa-users"></i><span class="text"> List Billers</span></a></li> <li id="billers_index"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Biller</span></a></li> <li id="customers_index"><a class="submenu" href="#"><i class="fa fa-users"></i><span class="text"> List Customers</span></a></li> <li id="customers_index"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Customer</span></a></li> <li id="suppliers_index"><a class="submenu" href="#"><i class="fa fa-users"></i><span class="text"> List Suppliers</span></a></li> <li id="suppliers_index"><a class="submenu" href="#"><i class="fa fa-plus-circle"></i><span class="text"> Add Supplier</span></a></li> </ul> </li> <li class="mm_notifications"><a class="submenu" href="#"><i class="fa fa-info-circle"></i><span class="text"> Notifications</span></a></li> <!--<li class="mm_messages"><a class="submenu" href="#"><i class="fa fa-envelope"></i><span class="text"> Messages</span></a></li>--> <li class="mm_system_settings"> <a class="dropmenu" href="#"><i class="fa fa-cog"></i><span class="text"> Settings </span> <span class="chevron closed"></span></a> <ul> <li id="system_settings_index"><a href="#"><i class="fa fa-cog"></i><span class="text"> System Settings</span></a></li> <li id="system_settings_change_logo"><a href="#"><i class="fa fa-upload"></i><span class="text"> Change Logo</span></a></li> <li id="system_settings_currencies"><a href="#"><i class="fa fa-money"></i><span class="text"> Currencies</span></a></li> <!--<li id="system_settings_attributes"><a href="#"><i class="fa fa-tags"></i><span class="text"> Product Variants</span></a></li>--> <li id="system_settings_customer_groups"><a href="#"><i class="fa fa-chain"></i><span class="text"> Customer Groups</span></a></li> <li id="system_settings_categories"><a href="#"><i class="fa fa-folder-open"></i><span class="text"> Categories</span></a></li> <!--<li id="system_settings_subcategories"><a href="#"><i class="fa fa-folder-open-o"></i><span class="text"> Sub Categories</span></a></li>--> <li id="system_settings_tax_rates"><a href="#"><i class="fa fa-plus-circle"></i><span class="text"> Tax Rates</span></a></li> <li id="system_settings_warehouses"><a href="#"><i class="fa fa-building-o"></i><span class="text"> Warehouses</span></a></li> <li id="system_settings_template"><a href="#"><i class="fa fa-envelope"></i><span class="text"> Email Templates</span></a></li> <li id="system_settings_user_groups"><a href="#"><i class="fa fa-key"></i><span class="text"> Group Permissions</span></a></li> <li><a href="#"><i class="fa fa-database"></i><span class="text"> Backup Database</span></a></li> </ul> </li> <li class="mm_reports"> <a class="dropmenu" href="#"><i class="fa fa-bar-chart-o"></i><span class="text"> Reports </span> <span class="chevron closed"></span></a> <ul> <li id="reports_index"><a href="#"><i class="fa fa-bars"></i><span class="text"> Overview Chart</span></a></li> <li id="reports_warehouse_stock"><a href="#"><i class="fa fa-building"></i><span class="text"> Warehouse Stock Chart</span></a></li> <li id="reports_quantity_alerts"><a href="#"><i class="fa fa-bar-chart-o"></i><span class="text"> Product Quantity Alerts</span></a></li> <li id="reports_expiry_alerts"><a href="#"><i class="fa fa-bar-chart-o"></i><span class="text"> Product Expiry Alerts</span></a></li> <li id="reports_products"><a href="#"><i class="fa fa-barcode"></i><span class="text"> Products Report</span></a></li> <li id="reports_daily_sales"><a href="#"><i class="fa fa-calendar-o"></i><span class="text"> Daily Sales</span></a></li> <li id="reports_monthly_sales"><a href="#"><i class="fa fa-calendar-o"></i><span class="text"> Monthly Sales</span></a></li> <li id="reports_sales"><a href="#"><i class="fa fa-heart"></i><span class="text"> Sales Report</span></a></li> <li id="reports_payments"><a href="#"><i class="fa fa-money"></i><span class="text"> Payments Report</span></a></li> <li id="reports_profit_loss"><a href="#"><i class="fa fa-money"></i><span class="text"> Profit and/or Loss</span></a></li> <li id="reports_purchases"><a href="#"><i class="fa fa-star"></i><span class="text"> Purchases Report</span></a></li> <li id="reports_customer_report"><a href="#"><i class="fa fa-users"></i><span class="text"> Customers Report</span></a></li> <li id="reports_supplier_report"><a href="#"><i class="fa fa-users"></i><span class="text"> Suppliers Report</span></a></li> <li id="reports_staff_report"><a href="#"><i class="fa fa-users"></i><span class="text"> Staff Report</span></a></li> </ul> </li> </ul>
 				</div>
 			</div>
@@ -1365,9 +1450,6 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 					<p>
 						Owner and Admin user groups are with fixed permissions and any other user group added by you, can have custom permissions.</p>
 					<p>
-					<p>
-						User/Staff rewards are not yet available and will be added in version v3.1
-					</p>
 					<p>
 						The users added in customer/supplier modules will be saved in this table too but you need to edit/manage them from their modules.
 					</p>
@@ -1876,7 +1958,7 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 			<h3>Theme</h3>
 			<p>We are aware that developers always need to modify the base code. Once the update available, their job become difficult to update as they have modify the code for their client needs. This is first step to offer easy modification for developers. Though this only covers the view side. But we will be exploring the ways to offer easy modification for controllers/models side in future.</p>
 			<p>
-				In V3 you can add your own themes by creating the folder in /themes/. Please make sure there is no space in the folder name. Currently there are 2 folders in /themes/ i. default ii. errors
+				In RC3 you can add your own themes by creating the folder in /themes/. Please make sure there is no space in the folder name. Currently there are 2 folders in /themes/ i. default ii. errors
 			</p>
 			<p>
 				Errors folder will be the same for all themes and you only need to modify the error file in /themes/errors/html/ (in case you need to modify, most of the times you won't need to modify these error files.)
@@ -2029,13 +2111,17 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 	<div class="inner-set" id="barcode">
 		<div class="set-description">
 			<h3>Barcodes and Labels</h3>
-			<p>These pages are designed to be printed with desktop laser printers. Barcode sheet or barcode pages have 2 columns' table (2 product per row and medium barcode image with 60px height) while labels have 4 columns' table (4 products per row and small barcode image with 30px height). </p>
 			<p>
-				If you need to modify any of the barcode/lable page to show/remove any information, you can do so by modify the products controller. The functions are mentioned that handle the pages.
+				You can print barcodes/labels by  visiting the print barcodes/labels under products menu, then add products and choose any template. The feature has been updated to suit most of your needs.
 			</p>
-
 			<p>
-				If your products have variants, only single product barcode/label printing will show the product barcode images with variants id. To directly add the option to order list (either from product detail page or from the row actions).
+				Beside fixed templates, the continuous feed option has been improved to accept the size (width, height and orientation) so that everyone can print according to their need. There are option to display extra information on the barcodes/labels. 
+			</p>
+			<p>
+				You can easily add your own template by modifying the <code>themes/default/assets/styles/helpers/print.css</code> and the view file <code>themes/default/views/products/print_barcodes.php</code> as you need.
+			</p>
+			<p>
+				<strong>You can visit categories/subcategories to add all the products to this barcode/label printing list, same can be done from purchases and transfers.</strong>
 			</p>
 
 		</div>
@@ -2044,10 +2130,9 @@ INSERT INTO `sma_migrations` (`version`) VALUES (301);
 			<p>
 				Functions/Methods handling the barcodes and labels pages are
 				<ul class="s-ul">
+					<li><code class="white">print_barcodes()</code> - Handles barcode/label printing for multiple products</li>
 					<li><code class="white">single_barcode()</code> - Handles barcode printing for single products</li>
 					<li><code class="white">single_label()</code> - Handles label printing for single products</li>
-					<li><code class="white">print_barcodes()</code> - Handles barcode printing for multiple products based on category</li>
-					<li><code class="white">print_lables()</code> - Handles lebel printing for multiple products based on category</li>
 					<li><code class="white">product_actions()</code> - Handles barcode and label printing for multiple selected products</li>
 				</ul>
 			</p>
