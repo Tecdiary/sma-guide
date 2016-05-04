@@ -993,7 +993,8 @@
                                                     You can create task in windows Task Scheduler. 
                                                     <ul>
                                                     	<li>Download wget setup from <a href="https://sourceforge.net/projects/gnuwin32/files/wget/" target="_blank">https://sourceforge.net/projects/gnuwin32/files/wget/</a> and install it in C:\GnuWin32\</li>
-                                                    	<li>Open Task Scheduler, then select Daily, then select Time, then Start a Program and then
+                                                    	<li>Open Task Scheduler (Control Panel > System and Security > Administrative Tools > Task Scheduler OR run: <code>control schedtasks</code>)</li>
+                                                    	<li>Create a Basic Task, then select Daily, then select Time, then Start a Program and then
                                                     	<pre>Program/Script: browse to select wget.exe (C:\GnuWin32\bin\wget.exe)
 Add Arguments (optional): -q -O NUL replace_this_with_cron_job_url_from_settings_page_here (http://localhost/sma/cron/run)
 Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
