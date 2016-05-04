@@ -986,6 +986,28 @@
                                             </div>
                                         </li>
 
+                                        <li>
+                                            <a class="cd-faq-trigger" href="#">How can I setup cron job locally on windows?</a>
+                                            <div class="cd-faq-content">
+                                                <p>
+                                                    You can create task in windows Task Scheduler. 
+                                                    <ul>
+                                                    	<li>Download wget setup from <a href="https://sourceforge.net/projects/gnuwin32/files/wget/" target="_blank">https://sourceforge.net/projects/gnuwin32/files/wget/</a> and install it in C:\GnuWin32\</li>
+                                                    	<li>Open Task Scheduler, then select Daily, then select Time, then Start a Program and then
+                                                    	<pre>Program/Script: browse to select wget.exe (C:\GnuWin32\bin\wget.exe)
+Add Arguments (optional): -q -O NUL replace_this_with_cron_job_url_from_settings_page_here (http://localhost/sma/cron/run)
+Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
+                                                    	<li>Finish to complete the wizard. You can see your task in Task Scheduler Library.</li>
+                                                    </ul>
+                                                </p>
+                                                <div class="highlight">
+                                                	<p>
+                                                	For emails, you should have setup your email server. If not you can try searching Google or check out this gist <a href="https://gist.github.com/MianSaleem/d80a98fef1fac32f48027623f54504f6" target="_blank" style="color:#FFF;">Email Server (Windows Only)</a>.
+                                                	</p>
+                                                </div>
+                                            </div>
+                                        </li>
+
 									</ul>
 
 									<ul id="account" class="cd-faq-group">
