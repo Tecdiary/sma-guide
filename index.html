@@ -1900,7 +1900,7 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
     // check user permissions
     $this->sma->checkPermissions();
     // validate rules http://www.codeigniter.com/user_guide/libraries/form_validation.html#rulereference
-    $this->form_validation->set_rules('comment', lang("comment"), 'required|min_length[3]|xss_clean');
+    $this->form_validation->set_rules('comment', lang("comment"), 'required|min_length[3]|other_validation');
     // Check validation
     if ($this->form_validation->run() == true) {
       // Validation true, perform actions, saving data in array
@@ -2042,17 +2042,19 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 		<div class="set-dev">
 			<h3>Removing Required</h3>
 			<p>Let say we want to remove the restriction from postal code from add customer</p>
+			<p>Open themes/default/views/customers/add.php and look for city input code</p>
 			<pre><code>&lt;?php echo form_input(&#039;city&#039;, &#039;&#039;, &#039;class=&quot;form-control&quot; id=&quot;city&quot; required=&quot;required&quot;&#039;); ?&gt;</code></pre>
 			<p>We need to remove the required (you might need to check pattern) attributes. We will delete the code below</p>
 			<pre><code>required="required"</code></pre>
 			<p>You need to check the validation rules in app/config/form_validation.php We are validation</p>
 			<pre><code>if ($this-&gt;form_validation-&gt;run(&#039;companies/add&#039;) == true) {</code></pre>
 			<p>so search 'companies/add' array and then look for array with field 'city' and remove the required from rules and now your rules will be as </p>
-			<pre><code>'rules' => 'xss_clean'</code></pre>
-			<pre><code>$this-&gt;form_validation-&gt;set_rules(&#039;city&#039;, lang(&quot;city&quot;), &#039;required|xss_clean&#039;);</code></pre>
+			<pre><code>'rules' => 'other_validation'</code></pre>
+			<p>For some pages, you need to check the rules in controller as app/controllers/customers.php and look for function add() and see the validation line on top as</p>
+			<pre><code>$this-&gt;form_validation-&gt;set_rules(&#039;city&#039;, lang(&quot;city&quot;), &#039;required|other_validation&#039;);</code></pre>
 
-			<p>Remove the required from last part of the validation. After this our validation line will look as</p>
-			<pre><code>$this-&gt;form_validation-&gt;set_rules(&#039;city&#039;, lang(&quot;city&quot;), &#039;xss_clean&#039;);</code></pre>
+			<p>Remove the line, if you want to keep other validation, please remove required from last part of the validation. After this our validation line will look as</p>
+			<pre><code>$this-&gt;form_validation-&gt;set_rules(&#039;city&#039;, lang(&quot;city&quot;), &#039;other_validation&#039;);</code></pre>
 		</div>
 	</div>
 </div>
