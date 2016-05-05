@@ -164,20 +164,21 @@
 								<ol>
 								</li>
 								<li>Extract the downloaded file.</li>
-								<li>Copy RC3.0.2.xx/sma/config/migration.php, paste and replace the old file in yourinstallationdirectory/config/</li>
+								<li>Rename yourinstallationdirectory/sma/ folder to yourinstallationdirectory/app/ (only for RC3.0.2.8 or lower).</li>
+								<li>Copy RC3.0.2.xx/app/config/migration.php, paste and replace the old file in yourinstallationdirectory/app/config/</li>
 								<li>Copy RC3.0.2.xx/themes, paste and replace the old folder in yourinstallationdirectory/</li>
                                 <li>Copy RC3.0.2.xx/system, paste and replace the old folder in yourinstallationdirectory/</li>
 								<li>Copy
 								<ol>
-								<li>RC3.0.2.xx/sma/controllers</li>
-								<li>RC3.0.2.xx/sma/core</li>
-								<li>RC3.0.2.xx/sma/helpers</li>
-								<li>RC3.0.2.xx/sma/language</li>
-								<li>RC3.0.2.xx/sma/libraries</li>
-								<li>RC3.0.2.xx/sma/migrations</li>
-								<li>RC3.0.2.xx/sma/models</li>
+								<li>RC3.0.2.xx/app/controllers</li>
+								<li>RC3.0.2.xx/app/core</li>
+								<li>RC3.0.2.xx/app/helpers</li>
+								<li>RC3.0.2.xx/app/language</li>
+								<li>RC3.0.2.xx/app/libraries</li>
+								<li>RC3.0.2.xx/app/migrations</li>
+								<li>RC3.0.2.xx/app/models</li>
 								</ol>
-								 Paste and replace the old folders in yourinstallationdirectory/sma/</li>
+								 Paste and replace the old folders in yourinstallationdirectory/app/</li>
                                 <li>Please copy the database changes from one by one starting from the version you are updating and run in phpmyadmin after selecting your database.</li>
 								 <li>For Database changes, please check the help folder.</li>
 								 <li>Login to your site and I hope that every thing will be fine.</li>
@@ -194,12 +195,12 @@
 									<li>Save/download database config file (<code>sma/config/database.php</code>) on your computer
 									</li>
 									<li>Delete all old files/folders and upload all the new files/folders (from your downloaded file).</li>
-									<li>Once all the files are uploaded. We need to update the datase configuratiuon to the newly uploaded database configuration file (<code>sma/config/databse.php</code>) form the locally saved copy of database config file in step 2. <code>You need to updated the hostname, username, password, database and set the db_debug to FALSE.</code> </li>
+									<li>Once all the files are uploaded. We need to update the datase configuratiuon to the newly uploaded database configuration file (<code>app/config/databse.php</code>) form the locally saved copy of database config file in step 2. <code>You need to updated the hostname, username, password, database and set the db_debug to FALSE.</code> </li>
 									<li>LETS UPDATE, UPDATE TOOL WON'T ASK FOR DATABASE CONFIG AS WE HAVE ALREADY UPDATED THE DATABASE SETTINGS.</li>
 									<li>Open the browser and type <strong><code>http://yourdomain.com/pathtoupload/update/index.php</code></strong></li>
 									<li>Step 1: Pre-install system checklist - If there is any issue with checklist, you will need to fix it first to proceed to next step.</li>
 									<li>Step 2: Provide your Envato Username and Purchase Code to validate and update your license.</li>
-									<li>Step 3: Site Config: Please Fill in you <strong>SMA Base URL</strong> and select your timezone. <code>You must check the <strong>site url</strong> as installation tool can guess it wrong.</code> This is the same base_url that you have in your old sma/config/config.php file
+									<li>Step 3: Site Config: Please Fill in you <strong>SMA Base URL</strong> and select your timezone. <code>You must check the <strong>site url</strong> as installation tool can guess it wrong.</code> This is the same base_url that you have in your old app/config/config.php file
 										<ul>
 											<li>Base URL for public_html or www/htdocs folder will be <code>http://yourdomain.com/</code> or <code>http://localhost/</code></li>
 											<li>Base URL for sub-domain will be <code>http://subdomain.yourdomain.com/</code> </li>
@@ -620,7 +621,7 @@
 										<li>
 											<a class="cd-faq-trigger" href="#">How to enable HTTPS support?</a>
 											<div class="cd-faq-content">
-												<p>You can easily enable https by editing the 2 lines in config file (<code>sma/config/config.php</code>) as following:
+												<p>You can easily enable https by editing the 2 lines in config file (<code>app/config/config.php</code>) as following:
 													<ol>
 														<li>Update base url from <code>http://yoursite.com</code> to <code>https://yoursite.com</code></li>
 														<li>Set <code>$config['cookie_secure']</code> to TRUE</li>
@@ -746,7 +747,7 @@
 											<a class="cd-faq-trigger" href="#">What is the mpdf password to edit the pdf documents?</a>
 											<div class="cd-faq-content">
 												<p>
-													We haven't set any password. You can set it as you like. You can set password by editing the sma/libraries/sma.php around line no 217 <code>$pdf->SetProtection(array('print'));</code> replace with <code>$pdf->SetProtection(array('print'), 'user_password', 'owner_password');</code> If you need more information, please visit <a href="http://mpdf1.com/manual/index.php?tid=129" target="_blank">mpdf documentation</a>.
+													We haven't set any password. You can set it as you like. You can set password by editing the app/libraries/sma.php around line no 217 <code>$pdf->SetProtection(array('print'));</code> replace with <code>$pdf->SetProtection(array('print'), 'user_password', 'owner_password');</code> If you need more information, please visit <a href="http://mpdf1.com/manual/index.php?tid=129" target="_blank">mpdf documentation</a>.
 												</p>
 											</div>
 										</li>
@@ -787,7 +788,7 @@
 											<a class="cd-faq-trigger" href="#">How can I change Quick Cash buttons?</a>
 											<div class="cd-faq-content">
 												<p>
-													Please modify the pos_lang.php in sma/language/english/. If you are not using English then see the file in sma/language/yourLanguageFolder/
+													Please modify the pos_lang.php in app/language/english/. If you are not using English then see the file in app/language/yourLanguageFolder/
 												</p>
 											</div>
 										</li>
@@ -857,10 +858,10 @@
 											<a class="cd-faq-trigger" href="#">What files I need to edit if I have moved to different server and/or domain?</a>
 											<div class="cd-faq-content">
 												<p>
-													<strong>Same url (domain)</strong>: You will need to update the database configuration in sma/config/database.php</code>
+													<strong>Same url (domain)</strong>: You will need to update the database configuration in app/config/database.php</code>
 												</p>
 												<p>
-													<strong>Different url (domain)</strong>: You will need to update the base_url in sma/config/config.php and database configuration in sma/config/database.php</code>
+													<strong>Different url (domain)</strong>: You will need to update the base_url in app/config/config.php and database configuration in app/config/database.php</code>
 												</p>
 											</div>
 										</li>
@@ -887,7 +888,7 @@
                                             <a class="cd-faq-trigger" href="#">Can I auto redirect back to POS after submitting the sale on POS?</a>
                                             <div class="cd-faq-content">
                                                 <p>
-                                                    <strong>Yes, by modifying a line of code</strong>, please open sma/controllers/pos.php and search for <code>redirect("pos/view/" . $sale['sale_id']);</code> replace it with <code>redirect("pos");</code> Now after sale, system will redirect you back to POS instead of view receipt page.
+                                                    <strong>Yes, by modifying a line of code</strong>, please open app/controllers/pos.php and search for <code>redirect("pos/view/" . $sale['sale_id']);</code> replace it with <code>redirect("pos");</code> Now after sale, system will redirect you back to POS instead of view receipt page.
                                                 </p>
                                             </div>
                                         </li>
@@ -952,7 +953,7 @@
                                             <a class="cd-faq-trigger" href="#">When and where the inventory accounting method is used to calculate costing?</a>
                                             <div class="cd-faq-content">
                                                 <p>
-                                                    The balance quantity and costing will be calculated on sale in the site model (sma/models/site.php)
+                                                    The balance quantity and costing will be calculated on sale in the site model (app/models/site.php)
                                                 </p>
                                             </div>
                                         </li>
@@ -1241,8 +1242,8 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 													<ol>
 													<li>make sure that your apache mod_rewite is enabled</li>
 													<li>check that .htaccess file is successfully uploaded and exists in the main directory of SMA</li>
-													<li>base_url in sma/config/config.php</li>
-													<li>check your database settings in sma/config/database.php</li>
+													<li>base_url in app/config/config.php</li>
+													<li>check your database settings in app/config/database.php</li>
 													<li>check your folders/files permissions (folders should have 755 and files should have 644 permissions).</li>
 													</ol>
 												</p>
@@ -1280,7 +1281,7 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 										<li>
 											<a class="cd-faq-trigger" href="#">Why I can't send emails?</a>
 											<div class="cd-faq-content">
-												<p>We have tested the email function on different hosting servers. Please check with your host about this and if you need to check the code that will be in sma/libraries/sma.php and look for <code>send_email()</code></p>
+												<p>We have tested the email function on different hosting servers. Please check with your host about this and if you need to check the code that will be in app/libraries/sma.php and look for <code>send_email()</code></p>
 											</div>
 										</li>
 
@@ -1288,7 +1289,7 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 											<a class="cd-faq-trigger" href="#">Why I can't login and getting time out error?</a>
 											<div class="cd-faq-content">
 												<p>
-													Timeout feature has been enabled. The user will be timed out after 3 unsuccessful login attempts for 10 minutes. You can disabled this in sma/config/ion_auth.php by changing the
+													Timeout feature has been enabled. The user will be timed out after 3 unsuccessful login attempts for 10 minutes. You can disabled this in app/config/ion_auth.php by changing the
 
 													<code>$config['track_login_attempts'] = TRUE;</code>
 													to
@@ -1311,7 +1312,7 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 											<a class="cd-faq-trigger" href="#">Why I getting db error and can't login?</a>
 											<div class="cd-faq-content">
 												<p>
-													Please check your db configuration in sma/config/database.php
+													Please check your db configuration in app/config/database.php
 												</p>
 											</div>
 										</li>
@@ -1478,7 +1479,7 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 					</p>
 					<div class="highlight">
 						<p>
-							Timeout feature has been enabled. The user will be timed out after 3 unsuccessful login attempts for 10 minutes. You can disabled this in sma/config/ion_auth.php by changing the
+							Timeout feature has been enabled. The user will be timed out after 3 unsuccessful login attempts for 10 minutes. You can disabled this in app/config/ion_auth.php by changing the
 
 						<code>$config['track_login_attempts'] = TRUE;</code>
 						to
@@ -1889,7 +1890,7 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 						so to display a success message, you will need to do this $this->session->set_flashdata('message', lang('success_msg_lang_key'));
 					</p>
 					<p>Input variables are mostly not defined in controller's page function. So you need to check the view files for inputs. But in some pages, these are defined in controller too.</p>
-					<p>For validation rules, you might need to check the controller as we doing in this example. But there are some rules that are defined in form_validation.php in sma/config/ folder. You might need to check this form_validation.php for your page. As we don't passing any variable to <code>$this->form_validation->run()</code> so the array will be comments/add. Below in removing the required from field <code>if ($this-&gt;form_validation-&gt;run(&#039;companies/add&#039;) == true) {</code>, we need to check companies/add to set the validation rules for the page.</p>
+					<p>For validation rules, you might need to check the controller as we doing in this example. But there are some rules that are defined in form_validation.php in app/config/ folder. You might need to check this form_validation.php for your page. As we don't passing any variable to <code>$this->form_validation->run()</code> so the array will be comments/add. Below in removing the required from field <code>if ($this-&gt;form_validation-&gt;run(&#039;companies/add&#039;) == true) {</code>, we need to check companies/add to set the validation rules for the page.</p>
 					<p>To load the view files, we have mentioned 2 ways, one by calling the core controller's page_construct function and other by calling default loader view function. These both are used, the page_contruct() is called to load the full page view and the loader view is called to load the modal view.</p>
 				</div>
 				<div class="set-dev">
@@ -1949,9 +1950,9 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 			<h3>Adding Language</h3>
 			<p>Guide to add new language.
 				<ul>
-					<li>Please create new folder in sma/language/ and name it <code>yourlanguagename</code></li>
+					<li>Please create new folder in app/language/ and name it <code>yourlanguagename</code></li>
 					<li>Folder name should be without space and all lower letters.</li>
-					<li>Copy all the files from sma/language/english/ and paste then to sma/language/<code>yourlanguagename</code>/</li>
+					<li>Copy all the files from app/language/english/ and paste then to app/language/<code>yourlanguagename</code>/</li>
 					<li>Now you can translate these all file to your language</li>
 					<li>Download flag image (format: png, width: 16px, height: 11px) and paste it in assets/images/</li>
 					<li>You can add new key to language array. (See Code Section)</li>
@@ -1960,7 +1961,7 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 			<p>
 				Please replace the <code>yourlanguagename</code> with your language For example, spanish, french, chinese etc
 			</p>
-			<p><strong>If you are getting the error "<code>Unable to load the requested language file: language/francais/form_validation_lang.php or calendar_lang.php</code>" Then you will need to add your language in system/language/ as you did above for sma/language/ and translate the system language files to your language.</strong></p>
+			<p><strong>If you are getting the error "<code>Unable to load the requested language file: language/francais/form_validation_lang.php or calendar_lang.php</code>" Then you will need to add your language in system/language/ as you did above for app/language/ and translate the system language files to your language.</strong></p>
 		</div>
 		<div class="set-dev">
 			<h3>Adding Language</h3>
@@ -1968,7 +1969,7 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 			<p>To add select option in setting's language</p>
 			<p>Please open <code>themes/default/views/settings/index.php</code> and search for ( <code>$lang =</code> ) You can replace the <code>default</code> with your theme if you are using different theme. You can add new array key for your language as following:<br><br></p>
 			<pre><code>$lang = array(<br>		'english' => 'English', <br>		'yourlanguagename' => 'Your Language Name', <br>	    );</code></pre>
-			<code>yourlanguagename</code> must be same folder name that you created in sma/language/
+			<code>yourlanguagename</code> must be same folder name that you created in app/language/
 
 		</div>
 
@@ -2018,7 +2019,7 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 			<div>
 				<p>To remove validation, you will need to edit few files</p>
 				<ol>
-					<li>sma/controllers/sleectTheControllerYouWantEdeit</li>
+					<li>app/controllers/sleectTheControllerYouWantEdeit</li>
 					<li>themes/default/selectTheAppropriateFolderOrFile</li>
 					<li>Database table to accept null value for that field</li>
 				</ol>
@@ -2041,15 +2042,13 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 		<div class="set-dev">
 			<h3>Removing Required</h3>
 			<p>Let say we want to remove the restriction from postal code from add customer</p>
-			<p>Open sma/modues/customers/views/add.php and look for city input code</p>
 			<pre><code>&lt;?php echo form_input(&#039;city&#039;, &#039;&#039;, &#039;class=&quot;form-control&quot; id=&quot;city&quot; required=&quot;required&quot;&#039;); ?&gt;</code></pre>
 			<p>We need to remove the required (you might need to check pattern) attributes. We will delete the code below</p>
 			<pre><code>required="required"</code></pre>
-			<p>You need to check the validation rules in sma/config/form_validation.php We are validation</p>
+			<p>You need to check the validation rules in app/config/form_validation.php We are validation</p>
 			<pre><code>if ($this-&gt;form_validation-&gt;run(&#039;companies/add&#039;) == true) {</code></pre>
 			<p>so search 'companies/add' array and then look for array with field 'city' and remove the required from rules and now your rules will be as </p>
 			<pre><code>'rules' => 'xss_clean'</code></pre>
-			<p>For some pages, you need to check the rules in controller as sma/modues/customers/controllers/customers.php and look for function add() and see the validation line on top as</p>
 			<pre><code>$this-&gt;form_validation-&gt;set_rules(&#039;city&#039;, lang(&quot;city&quot;), &#039;required|xss_clean&#039;);</code></pre>
 
 			<p>Remove the required from last part of the validation. After this our validation line will look as</p>
@@ -2085,7 +2084,7 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 		<div class="set-dev">
 			<h3>Add new column to table</h3>
 			<p>
-				1. Open then sma/controllers/customers.php and look for the select statement in getCustomers() and add state after city
+				1. Open then app/controllers/customers.php and look for the select statement in getCustomers() and add state after city
 			</p>
 			<pre><code>->select("id, company, name, email, phone, city, <strong><em>state,</em></strong> customer_group_name, vat_no, award_points")</code></pre>
 			<p>2. Open the themes/default/views/customers/index.php and look for aoColumns and null as 7th element</p>
@@ -2159,7 +2158,7 @@ Start in (optional): path to wget folder (C:\GnuWin32\bin\)</pre></li>
 					<li><code class="white">product_actions()</code> - Handles barcode and label printing for multiple selected products</li>
 				</ul>
 			</p>
-			<p>File: <code>sma/controllers/products.php</code></p>
+			<p>File: <code>app/controllers/products.php</code></p>
 		</div>
 	</div>
 </div>
