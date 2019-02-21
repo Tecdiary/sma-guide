@@ -9,7 +9,7 @@
 *   Fixed unit price calculation issue on edit order item modal
 ```
 ----
-## Version: 3.4.13
+### Version: 3.4.13
 *Release Date: __February 13, 2019__*
 ```
 *   Fixed item discount issue for add purchase by csv
