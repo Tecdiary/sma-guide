@@ -1,6 +1,14 @@
 # Stock Manager Advance
 *__Please review the changelog for Stock Manager Advance below:__*
 
+## Version: 3.4.14
+*Release Date: __February 21, 2019__*
+```
+*   Fixed product unit for return sale
+*   Fixed quantity format issue for packaging
+*   Fixed unit price calculation issue on edit order item modal
+```
+----
 ## Version: 3.4.13
 *Release Date: __February 13, 2019__*
 ```
