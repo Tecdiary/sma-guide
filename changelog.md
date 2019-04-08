@@ -2,7 +2,7 @@
 *__Please review the changelog for Stock Manager Advance below:__*
 
 ## Version: 3.4.15
-*Release Date: __February 21, 2019__*
+*Release Date: __April 8, 2019__*
 ```
 *   Used database transactions for orders
 *   Fixed manual products issue for quotations
@@ -14,7 +14,7 @@
 ```
 ----
 ## Version: 3.4.14
-*Release Date: __April 8, 2019__*
+*Release Date: __February 21, 2019__*
 ```
 *   Fixed product unit for return sale
 *   Fixed quantity format issue for packaging
