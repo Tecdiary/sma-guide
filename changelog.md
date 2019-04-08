@@ -4,12 +4,12 @@
 ## Version: 3.4.15
 *Release Date: __April 8, 2019__*
 ```
-*   Used database transactions for orders
 *   Fixed manual products issue for quotations
 *   Fixed variant issue on update bulk products
 *   Fixed quantity format issue for packaging
 *   Fixed payment status of 100% discount
 *   Fixed product promotion date issue
+*   Used database transactions for orders
 *   Display name if not compnay for billers/customers/suppliers 
 ```
 ----
