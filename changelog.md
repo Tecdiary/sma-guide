@@ -1,7 +1,14 @@
 # Stock Manager Advance
 *__Please review the changelog for Stock Manager Advance below:__*
 
-## Version: 3.4.15
+## Version: 3.4.16
+*Release Date: __April 16, 2019__*
+```
+*   Fixed shop sale issue caused in previous version
++   Added option to adjust row subtotal to nearest value
+```
+----
+### Version: 3.4.15
 *Release Date: __April 8, 2019__*
 ```
 *   Fixed manual products issue for quotations
@@ -13,7 +20,7 @@
 *   Display name if not compnay for billers/customers/suppliers 
 ```
 ----
-## Version: 3.4.14
+### Version: 3.4.14
 *Release Date: __February 21, 2019__*
 ```
 *   Fixed product unit for return sale
