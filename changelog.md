@@ -7,6 +7,7 @@
 *   Hide gift card number on receipt but show last 4 numbers only
 *   Fixed price calculation issue for variants on quantity change
 ```
+----
 ### Version: 3.4.16
 *Release Date: __April 16, 2019__*
 ```
