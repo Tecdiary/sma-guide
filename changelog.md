@@ -1,7 +1,8 @@
 # Stock Manager Advance
 *__Please review the changelog for Stock Manager Advance below:__*
 
-*Release Date: __April 16, 2019__*
+## Version: 3.4.17
+*Release Date: __May 3, 2019__*
 ```
 *   Fixed view gift card modal issue
 *   Hide gift card number on receipt but show last 4 numbers only
