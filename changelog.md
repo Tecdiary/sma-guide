@@ -1,7 +1,16 @@
 # Stock Manager Advance
 *__Please review the changelog for Stock Manager Advance below:__*
 
-## Version: 3.4.17
+
+## Version: 3.4.18
+*Release Date: __May 20, 2019__*
+```
+*   Added shipping in the return sales
+*   Fixed quantity sync issue on edit sale
+*   Fixed variant price issue on edit sale
+```
+----
+### Version: 3.4.17
 *Release Date: __May 3, 2019__*
 ```
 *   Fixed view gift card modal issue
