@@ -2,7 +2,18 @@
 *__Please review the changelog for Stock Manager Advance below:__*
 
 
-## Version: 3.4.18
+## Version: 3.4.19
+*Release Date: __July 4, 2019__*
+```
+*   Fixed balance column issue for POS sales
+-   Removed quantity option from add products
+*   Fixed delete return when product price is zero
++   Added check to not open 2nd register for same user
+*   Fixed balance quantity issue when overselling enabled
+*   Fixed balance quantity calculation issue on products report
+```
+----
+### Version: 3.4.18
 *Release Date: __May 20, 2019__*
 ```
 *   Added shipping in the return sales
