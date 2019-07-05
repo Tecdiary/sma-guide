@@ -2,7 +2,13 @@
 *__Please review the changelog for Stock Manager Advance below:__*
 
 
-## Version: 3.4.19
+## Version: 3.4.20
+*Release Date: __July 5, 2019__*
+```
+*   Fixed order discount issue for returns
+```
+----
+### Version: 3.4.19
 *Release Date: __July 4, 2019__*
 ```
 *   Fixed balance column issue for POS sales
