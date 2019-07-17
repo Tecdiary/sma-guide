@@ -1,8 +1,14 @@
 # Stock Manager Advance
 *__Please review the changelog for Stock Manager Advance below:__*
 
-
-## Version: 3.4.20
+## Version: 3.4.21
+*Release Date: __July 17, 2019__*
+```
+*   Fixed overselling issue
+*   Fixed return sale item price issue
+```
+----
+### Version: 3.4.20
 *Release Date: __July 5, 2019__*
 ```
 *   Fixed order discount issue for returns
