@@ -2,6 +2,17 @@
 *__Please review the changelog for Stock Manager Advance below:__*
 
 ## Version: 3.4.21
+*Release Date: __August 14, 2019__*
+```
+*   Update CI to 3.1.10
+*   Fix parent category in export
++   Add supplier to product export
+*   Fixed bank details issue (Shop)
+*   Hide stock, just show yes/no for in stock (Shop)
+*   Fixed blank variants issue on product import/export
+```
+----
+### Version: 3.4.21
 *Release Date: __July 17, 2019__*
 ```
 *   Fixed overselling issue
