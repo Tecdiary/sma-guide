@@ -1,8 +1,15 @@
 ---
-title: Project Structure
 outline: deep
 prev: false
-next: false
+
+title: Developer Guide
+head:
+  - - meta
+    - name: description
+      content: Developer guide for modifying code of Stock Manage Advance
+  - - meta
+    - name: keywords
+      content: developer, docs, modifications, customizations, php, laravel, vuejs, inertia, tecdiay
 ---
 
 # Developer Guide

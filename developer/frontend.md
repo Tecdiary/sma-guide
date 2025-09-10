@@ -1,8 +1,14 @@
 ---
-title: Frontend Guide
 outline: deep
-prev: false
-next: false
+
+title: Frontend (Vuejs)
+head:
+  - - meta
+    - name: description
+      content: Stock Manage Advance is developed using Vuejs
+  - - meta
+    - name: keywords
+      content: developer, docs, modifications, customizations, php, laravel, vuejs, inertia, tecdiay
 ---
 
 # Frontend Guide

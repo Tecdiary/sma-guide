@@ -1,8 +1,13 @@
 ---
-title: Adding/updating language
 outline: deep
-prev: false
-next: false
+title: Adding/updating language
+head:
+  - - meta
+    - name: description
+      content: You can add your language or update it as you need to use Stock Manage Advance in your local language
+  - - meta
+    - name: keywords
+      content: developer, docs, language, multi-lingual, locale, modifications, customizations, php, laravel, vuejs, inertia, tecdiay
 ---
 
 # Language

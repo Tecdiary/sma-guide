@@ -1,7 +1,5 @@
 ---
 outline: deep
-prev: false
-next: false
 
 title: Getting Ready
 head:

@@ -1,8 +1,14 @@
 ---
-title: Backend Guide
 outline: deep
-prev: false
-next: false
+
+title: Backend (Laravel)
+head:
+  - - meta
+    - name: description
+      content: Stock Manage Advance is developed using Laravel
+  - - meta
+    - name: keywords
+      content: developer, docs, modifications, customizations, php, laravel, vuejs, inertia, tecdiay
 ---
 
 # Backend Guide

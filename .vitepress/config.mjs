@@ -82,6 +82,7 @@ export default defineConfig({
           { text: "Adding Language", link: "/developer/language" },
         ],
       },
+      { text: "FAQs", link: "/faqs" },
     ],
 
     socialLinks: [
