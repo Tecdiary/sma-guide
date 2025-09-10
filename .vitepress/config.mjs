@@ -89,7 +89,7 @@ export default defineConfig({
     ],
 
     editLink: {
-      pattern: "https://github.com/tecdiary/sma-guide/:path",
+      pattern: "https://github.com/tecdiary/sma-guide/tree/main/:path",
       text: "Edit this page on GitHub",
     },
     // lastUpdated: true,
