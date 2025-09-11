@@ -606,8 +606,8 @@ We used Laravel Standard folder structure with some extensions.
     "label": "lang",
     "children": [
       { "label": "en", "icon": "folder" },
-      { "label": "en.json", "icon": "folder" },
-      { "label": "languages.json", "icon": "folder" }
+      { "label": "en.json" },
+      { "label": "languages.json" }
     ]
   },
   { "label": "modules", "icon": "folder" },
