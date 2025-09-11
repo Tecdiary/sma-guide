@@ -27,5 +27,6 @@ Please backup your database, `.env` file, `public/asset` and `storage/app` folde
 
 3. Restore the `.env`, `public/asset` and `storage/app` folders.
 
-:::danger If you have any question or require further information, you should ask support question at [support portal](https://tecdiary.com/support)
+::: info Didn't understand any step?
+If you need further assistance, please validate your purchase code at [support portal](https://tecdiary.com/support) and ask question there.
 :::

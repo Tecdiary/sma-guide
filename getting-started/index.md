@@ -41,11 +41,11 @@ Version 4 requires php8.3+
 
 ### MySQL 8+ or MariaDB 10.5+
 
-Version 4 requires json support
+Version 4 requires your database server with json support
 
 ### Server Recommendation
 
-We recommend using the application on VPS from one of the Cloud Hosting Provider
+We recommend using the application on VPS (**_Min. 2GB Ram_**) from one of the Cloud Provider
 
 1. [Hetzner](https://hetzner.cloud/?ref=3wvhB46ExT1u) Get €20 in cloud credits
 2. [DigitalOcean](https://m.do.co/c/1cd0148320d9) Spend $25 to gets $200 in credit over 60 days
