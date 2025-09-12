@@ -57,7 +57,7 @@
 }
 
 img {
-  @apply rounded-lg;
+  @apply rounded-lg border border-neutral-800;
 }
 
 /**

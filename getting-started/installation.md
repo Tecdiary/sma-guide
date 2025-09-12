@@ -47,7 +47,7 @@ If you need further assistance, please validate your purchase code at [support p
 :::
 
 ::: details Not familiar with Servers?
-We offer installation service for $20.00 If you can [Open Ticket](https://tecdiary.com/support/tickets/create) to request installation.
+We offer installation service for $20.00, you can [Open Ticket](https://tecdiary.com/support/tickets/create) to request installation.
 :::
 
 ## After Installation

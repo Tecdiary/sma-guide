@@ -5,7 +5,9 @@ outline: deep
 
 # Settings
 
-Application setting here
+![Dashboard](/screenshots/settings.png)
+
+![Dashboard](/screenshots/stores.png)
 
 ::: warning Setup CRON Job
 As you know that app is developer using Laravel. So, when using Laravel's scheduler, we only need to add a

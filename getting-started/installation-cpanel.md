@@ -135,3 +135,7 @@ if (symlink($targetFolder, $linkFolder)) {
 ::: info Didn't understand any step?
 If you need further assistance, please validate your purchase code at [support portal](https://tecdiary.com/support) and ask question there.
 :::
+
+::: details Want to request installation service?
+We offer installation service for $20.00, you can [Open Ticket](https://tecdiary.com/support/tickets/create) to request installation.
+:::

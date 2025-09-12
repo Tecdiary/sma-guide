@@ -6,4 +6,4 @@ prev: false
 
 # SMA Guide
 
-User guide
+![Dashboard](/screenshots/dashboard.png)
