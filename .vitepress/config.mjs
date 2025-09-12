@@ -3,11 +3,11 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "SMA Guide",
+  base: "/sma-guide/",
   description: "Documentation for Stock Manager Advance",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "https://tecdiary.com/img/icon.svg",
-    base: "/sma-guide/",
+    logo: "/icon.svg",
     search: {
       provider: "local",
     },
