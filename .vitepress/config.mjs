@@ -7,6 +7,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "https://tecdiary.com/img/icon.svg",
+    base: "/sma-guide/",
     search: {
       provider: "local",
     },
