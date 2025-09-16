@@ -16,6 +16,18 @@ The chart display sales, purchases, payments and expense accordingly grouped by 
 
 ## Table design
 
-You can search the table with search input at the top bar and click the table column heading to sort it by the column. First click will sort will sort the column ascending and click again to sort by descending order.
+You can search the table with search input at the top bar, The table column heading are clickable to sort the column. First click will sort the column ascending and clicking again will sort in descending order.
 
 ![Dashboard](/screenshots/sales.png)
+
+## Application Alerts
+
+To open application alerts, please click the bell icon in the top bar. It displays unpaid sales and purchases along with low stock alerts.
+
+## Invoice Templates
+
+At the moment only one view is available. We will add more invoice templates in future.
+
+## Soft Deletes
+
+SMA marks the records as trashed on delete. If you want to permanently delete, please click the filter icon (funnel) at the top right and select `Only Trashed` to list the trashed records and delete them again.

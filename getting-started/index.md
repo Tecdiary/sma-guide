@@ -27,7 +27,11 @@ valued feedback by posting comment on item page, asking questions or requesting 
 
 Each purchase comes with free support for 6 months.
 
-If you have purchased from Envato marketplace then please validate your purchase code at support portal to add item to your supported list.
+If you have purchased from Envato marketplace then please validate your purchase code at support portal to add item to your supported list. Once validated, the you should be able to ask questions for your supported items.
+
+### Tickets (Paid Support)
+
+**_Please don't get confused with tickets._** **Tickets** are only to request extra support that is not covered in standard support, like requesting installation/update service.
 
 ::: warning No Emails Please!
 We don't offer email support, so please ask support questions at [support portal](https://tecdiary.com/support).

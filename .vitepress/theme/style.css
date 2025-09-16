@@ -22,7 +22,7 @@
   @apply pl-6!;
 }
 .container .title .VPNavBarTitle a.title .logo {
-  @apply font-black!;
+  @apply font-black! border-0 size-10;
 }
 .VPSidebar .curtain {
   @apply mx-0!;
