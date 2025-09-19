@@ -49,14 +49,16 @@ Version 4 requires your database server with json support
 
 ### Server Recommendation
 
-We recommend using the application on VPS (**_Min. 2GB Ram_**) from one of the Cloud Provider
+We recommend using the application on VPS (**_Min. 2GB Ram_**) from any Cloud VPS Provider
 
 1. [Hetzner](https://hetzner.cloud/?ref=3wvhB46ExT1u) Get €20 in cloud credits
 2. [DigitalOcean](https://m.do.co/c/1cd0148320d9) Spend $25 to gets $200 in credit over 60 days
 3. [Vultr](https://www.vultr.com/?ref=9802834-9J) Receive $300 to test
 4. AWS
 
-**_Hetzner offer good VPSs for lower price._**
+**_Hetzner is known for offering Virtual Private Servers (VPSs) at lower prices._**
+
+_\* The above links are affiliate links with offers from the providers._
 
 ## Things to get ready before installation
 
