@@ -84,6 +84,7 @@ export default defineConfig({
         ],
       },
       { text: "FAQs", link: "/faqs" },
+      { text: "Future Plans", link: "/future-plans" },
     ],
 
     socialLinks: [
