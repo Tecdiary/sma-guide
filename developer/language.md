@@ -22,11 +22,29 @@ You can add language by following these steps.
    { "value": "bm", "label": "Bahasa Malaysia", "flag": "MY" }
    ```
 3. Build the application
-   ```sh
-   npm i && npm run build
+   ::: code-group
+
+   ```sh [pnpm]
+   pnpm install            # install dependencies
+   pnpm run build          # for production build
+   pnpm run build:only     # for production build on Windows
    ```
 
-::: info For development, you can run `npm run dev`
+   ```sh [npm]
+   npm install             # install dependencies
+   npm run build           # for production build
+   npm run build:only      # for production build on Windows
+   ```
+
+   ```sh [yarn]
+   yarn install            # install dependencies
+   yarn run build          # for production build
+   yarn run build:only     # for production build on Windows
+   ```
+
+   :::
+
+::: info For development, you can run `pnpm run dev`
 :::
 
 ## Update Language
@@ -35,12 +53,27 @@ You can modify your language by following these steps.
 
 1. Modify your language files `lang/bm.json` and `lang/bm/*.php`
 2. Re-build the application
-   ```sh
-   npm run build
+   ::: code-group
+
+   ```sh [pnpm]
+   pnpm run build          # for production build
+   pnpm run build:only     # for production build on Windows
    ```
 
-::: info For development, you can run `npm run dev`
+   ```sh [npm]
+   npm run build           # for production build
+   npm run build:only      # for production build on Windows
+   ```
+
+   ```sh [yarn]
+   yarn run build          # for production build
+   yarn run build:only     # for production build on Windows
+   ```
+
+   :::
+
+::: info For development, you can run `pnpm run dev`
 :::
 
-::: tip You must have installed the dependencies before running the commands with `npm i`
+::: tip You must have installed the dependencies before running the commands with `pnpm i`
 :::
