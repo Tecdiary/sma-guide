@@ -63,6 +63,15 @@ img {
   @apply border-neutral-900;
 }
 
+@media print {
+  .VPNav,
+  .VPLocalNav,
+  .VPDocFooter,
+  details.details {
+    display: none !important;
+  }
+}
+
 /**
  * Colors: Solid
  * -------------------------------------------------------------------------- */
