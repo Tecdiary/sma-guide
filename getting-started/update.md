@@ -25,6 +25,10 @@ Please backup your database, `.env` file, `public/asset` and `storage/app` folde
 
    ```
 
+   ::: info Info!
+   If you get the output `INFO  Nothing to migrate.` then you are fine as there is no database change made in the current update.
+   :::
+
 3. Restore the `.env`, `public/asset` and `storage/app` folders.
 
 ::: info Didn't understand any step?
