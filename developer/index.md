@@ -14,8 +14,9 @@ head:
 
 # Developer Guide
 
-We used Laravel Standard folder structure with some extensions.
+We used Laravel with some extensions and other packages.
 
+<!--
 ```sh
 .
 ├─ app
@@ -99,71 +100,13 @@ We used Laravel Standard folder structure with some extensions.
 ├─ package.json
 ├─ vite.config.js
 └─ other files*
-```
+``` -->
 
 <div class="file-tree">
 <FileTree :items='[
   {
     "label": "app",
     "children": [
-      {
-        "label": "Actions",
-        "children": [
-          {
-            "label": "Sma",
-            "children": [{ "label": "SaveAdjustment.php", "icon": "php" }]
-          }
-        ]
-      },
-      {
-        "label": "Casts",
-        "children": [
-          { "label": "AppDate.php", "icon": "php" },
-          { "label": "ProductStoreTaxes.php", "icon": "php" }
-        ]
-      },
-      { "label": "Console", "icon": "folder" },
-      {
-        "label": "Core",
-        "children": [
-          { "label": "Notifiable.php", "icon": "php" },
-          { "label": "Router.php", "icon": "php" },
-          { "label": "Translator.php", "icon": "php" }
-        ]
-      },
-      {
-        "label": "Events",
-        "children": [
-          { "label": "AdjustmentEvent.php", "icon": "php" },
-          { "label": "AttachmentEvent.php", "icon": "php" },
-          { "label": "PurchaseEvent.php", "icon": "php" },
-          { "label": "ReturnOrderEvent.php", "icon": "php" },
-          { "label": "SaleEvent.php", "icon": "php" },
-          { "label": "TransferEvent.php", "icon": "php" }
-        ]
-      },
-      {
-        "label": "Exports",
-        "children": [
-          { "label": "BrandExport.php", "icon": "php" },
-          { "label": "CategoryExport.php", "icon": "php" },
-          { "label": "ComboProductExport.php", "icon": "php" },
-          { "label": "CustomerExport.php", "icon": "php" },
-          { "label": "ProductExport.php", "icon": "php" },
-          { "label": "ProductsExport.php", "icon": "php" },
-          { "label": "ProductTaxExport.php", "icon": "php" },
-          { "label": "ProductVariationExport.php", "icon": "php" },
-          { "label": "StockCountExport.php", "icon": "php" },
-          { "label": "SupplierExport.php", "icon": "php" }
-        ]
-      },
-      {
-        "label": "Helpers",
-        "children": [
-          { "label": "Env.php", "icon": "php" },
-          { "label": "functions.php", "icon": "php" }
-        ]
-      },
       {
         "label": "Http",
         "children": [
@@ -358,56 +301,8 @@ We used Laravel Standard folder structure with some extensions.
         ]
       },
       {
-        "label": "Imports",
-        "children": [
-          { "label": "BrandImport.php", "icon": "php" },
-          { "label": "CategoryImport.php", "icon": "php" },
-          { "label": "ComboProductImport.php", "icon": "php" },
-          { "label": "ComboProductRowImport.php", "icon": "php" },
-          { "label": "CustomerImport.php", "icon": "php" },
-          { "label": "ProductImport.php", "icon": "php" },
-          { "label": "ProductsImport.php", "icon": "php" },
-          { "label": "ProductTaxImport.php", "icon": "php" },
-          { "label": "ProductVariationImport.php", "icon": "php" },
-          { "label": "StockCountImport.php", "icon": "php" },
-          { "label": "SupplierImport.php", "icon": "php" }
-        ]
-      },
-      {
-        "label": "Jobs",
-        "children": [
-          {
-            "label": "FiscalService",
-            "children": [
-              { "label": "ReportNewReturnSale.php", "icon": "php" },
-              { "label": "ReportNewSale.php", "icon": "php" },
-              { "label": "ReportSaleUpdate.php", "icon": "php" }
-            ]
-          },
-          {
-            "label": "Sma",
-            "children": [{ "label": "AdjustStoreStock.php", "icon": "php" }]
-          }
-        ]
-      },
-      {
-        "label": "Listeners",
-        "children": [
-          { "label": "AdjustmentEventListener.php", "icon": "php" },
-          { "label": "AttachmentEventListener.php", "icon": "php" },
-          { "label": "PurchaseEventListener.php", "icon": "php" },
-          { "label": "ReturnOrderEventListener.php", "icon": "php" },
-          { "label": "SaleEventListener.php", "icon": "php" },
-          { "label": "TransferEventListener.php", "icon": "php" }
-        ]
-      },
-      {
         "label": "Models",
         "children": [
-          {
-            "label": "Scopes",
-            "children": [{ "label": "OfStore.php", "icon": "php" }]
-          },
           {
             "label": "Sma",
             "children": [
@@ -494,50 +389,6 @@ We used Laravel Standard folder structure with some extensions.
         ]
       },
       {
-        "label": "Notifications",
-        "children": [
-          {
-            "label": "Sma",
-            "children": [
-              {
-                "label": "Order",
-                "children": [
-                  { "label": "PaymentNotification.php", "icon": "php" },
-                  { "label": "PurchaseNotification.php", "icon": "php" },
-                  { "label": "QuotationNotification.php", "icon": "php" },
-                  { "label": "ReturnOrderNotification.php", "icon": "php" },
-                  { "label": "SaleNotification.php", "icon": "php" }
-                ]
-              },
-              {
-                "label": "Product",
-                "children": [
-                  { "label": "TransferNotification.php", "icon": "php" }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Notifications",
-        "children": [
-          { "label": "AdjustmentObserver.php", "icon": "php" },
-          { "label": "ExpenseObserver.php", "icon": "php" },
-          { "label": "PaymentObserver.php", "icon": "php" },
-          { "label": "ProductObserver.php", "icon": "php" },
-          { "label": "PurchaseObserver.php", "icon": "php" },
-          { "label": "ReturnORderObserver.php", "icon": "php" },
-          { "label": "SaleObserver.php", "icon": "php" },
-          { "label": "TransferObserver.php", "icon": "php" },
-          { "label": "VariationObserver.php", "icon": "php" }
-        ]
-      },
-      {
-        "label": "Policies",
-        "children": [{ "label": "UpdatePolicy.php", "icon": "php" }]
-      },
-      {
         "label": "Providers",
         "children": [
           { "label": "AppServiceProvider.php", "icon": "php" },
@@ -546,42 +397,219 @@ We used Laravel Standard folder structure with some extensions.
         ]
       },
       {
-        "label": "Rules",
+        "label": "Tec",
         "children": [
-          { "label": "AddressState.php", "icon": "php" },
-          { "label": "ExtraAttributes.php", "icon": "php" },
-          { "label": "LocaleLength.php", "icon": "php" },
-          { "label": "PhoneNumber.php", "icon": "php" },
-          { "label": "ProductVariation.php", "icon": "php" },
-          { "label": "Recaptcha.php", "icon": "php" },
-          { "label": "Turnstile.php", "icon": "php" }
-        ]
-      },
-      {
-        "label": "Services",
-        "children": [
-          { "label": "CheckOverSelling.php", "icon": "php" },
-          { "label": "OrderCalculator.php", "icon": "php" },
-          { "label": "OrderItemCalculator.php", "icon": "php" }
-        ]
-      },
-      {
-        "label": "Traits",
-        "children": [
-          { "label": "Authorizable.php", "icon": "php" },
-          { "label": "GroupPrice.php", "icon": "php" },
-          { "label": "HasAttachments.php", "icon": "php" },
-          { "label": "HasAwardPoints.php", "icon": "php" },
-          { "label": "HasPromotions.php", "icon": "php" },
-          { "label": "HasSchemalessAttributes.php", "icon": "php" },
-          { "label": "HasStock.php", "icon": "php" },
-          { "label": "HasTaxes.php", "icon": "php" },
-          { "label": "HidePrivateAttributes.php", "icon": "php" },
-          { "label": "Impersonate.php", "icon": "php" },
-          { "label": "LogActivity.php", "icon": "php" },
-          { "label": "Paginatable.php", "icon": "php" },
-          { "label": "SyncHasMany.php", "icon": "php" },
-          { "label": "Trackable.php", "icon": "php" }
+          {
+            "label": "Actions",
+            "children": [
+              {
+                "label": "Sma",
+                "children": [
+                  { "label": "Fortify", "icon": "folder" },
+                  { "label": "Jetstream", "icon": "folder" },
+                  { "label": "SaveAdjustment.php", "icon": "php" },
+                  { "label": "SaveDelivery.php", "icon": "php" },
+                  { "label": "SaveProduct.php", "icon": "php" },
+                  { "label": "SavePromotion.php", "icon": "php" },
+                  { "label": "SavePurchase.php", "icon": "php" },
+                  { "label": "SaveQuotation.php", "icon": "php" },
+                  { "label": "SaveReturnOrder.php", "icon": "php" },
+                  { "label": "SaveSale.php", "icon": "php" },
+                  { "label": "SaveTransfer.php", "icon": "php" },
+                  { "label": "SaveUser.php", "icon": "php" }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Casts",
+            "children": [
+              { "label": "AppDate.php", "icon": "php" },
+              { "label": "ProductStoreTaxes.php", "icon": "php" }
+            ]
+          },
+          {
+            "label": "Console",
+            "icon": "folder",
+            "children": [
+              {
+                "label": "Sma",
+                "children": [{ "label": "Commands", "icon": "folder" }]
+              }
+            ]
+          },
+          {
+            "label": "Core",
+            "children": [
+              { "label": "Notifiable.php", "icon": "php" },
+              { "label": "Router.php", "icon": "php" },
+              { "label": "Translator.php", "icon": "php" }
+            ]
+          },
+          {
+            "label": "Events",
+            "children": [
+              { "label": "AdjustmentEvent.php", "icon": "php" },
+              { "label": "AttachmentEvent.php", "icon": "php" },
+              { "label": "PurchaseEvent.php", "icon": "php" },
+              { "label": "ReturnOrderEvent.php", "icon": "php" },
+              { "label": "SaleEvent.php", "icon": "php" },
+              { "label": "TransferEvent.php", "icon": "php" }
+            ]
+          },
+          {
+            "label": "Exports",
+            "children": [
+              { "label": "BrandExport.php", "icon": "php" },
+              { "label": "CategoryExport.php", "icon": "php" },
+              { "label": "ComboProductExport.php", "icon": "php" },
+              { "label": "CustomerExport.php", "icon": "php" },
+              { "label": "ProductExport.php", "icon": "php" },
+              { "label": "ProductsExport.php", "icon": "php" },
+              { "label": "ProductTaxExport.php", "icon": "php" },
+              { "label": "ProductVariationExport.php", "icon": "php" },
+              { "label": "StockCountExport.php", "icon": "php" },
+              { "label": "SupplierExport.php", "icon": "php" }
+            ]
+          },
+          {
+            "label": "Helpers",
+            "children": [
+              { "label": "Env.php", "icon": "php" },
+              { "label": "functions.php", "icon": "php" }
+            ]
+          },
+          {
+            "label": "Imports",
+            "children": [
+              { "label": "BrandImport.php", "icon": "php" },
+              { "label": "CategoryImport.php", "icon": "php" },
+              { "label": "ComboProductImport.php", "icon": "php" },
+              { "label": "ComboProductRowImport.php", "icon": "php" },
+              { "label": "CustomerImport.php", "icon": "php" },
+              { "label": "ProductImport.php", "icon": "php" },
+              { "label": "ProductsImport.php", "icon": "php" },
+              { "label": "ProductTaxImport.php", "icon": "php" },
+              { "label": "ProductVariationImport.php", "icon": "php" },
+              { "label": "StockCountImport.php", "icon": "php" },
+              { "label": "SupplierImport.php", "icon": "php" }
+            ]
+          },
+          {
+            "label": "Jobs",
+            "children": [
+              {
+                "label": "FiscalService",
+                "children": [
+                  { "label": "ReportNewReturnSale.php", "icon": "php" },
+                  { "label": "ReportNewSale.php", "icon": "php" },
+                  { "label": "ReportSaleUpdate.php", "icon": "php" }
+                ]
+              },
+              {
+                "label": "Sma",
+                "children": [{ "label": "AdjustStoreStock.php", "icon": "php" }]
+              }
+            ]
+          },
+          {
+            "label": "Listeners",
+            "children": [
+              { "label": "AdjustmentEventListener.php", "icon": "php" },
+              { "label": "AttachmentEventListener.php", "icon": "php" },
+              { "label": "PurchaseEventListener.php", "icon": "php" },
+              { "label": "ReturnOrderEventListener.php", "icon": "php" },
+              { "label": "SaleEventListener.php", "icon": "php" },
+              { "label": "TransferEventListener.php", "icon": "php" }
+            ]
+          },
+          {
+            "label": "Notifications",
+            "children": [
+              {
+                "label": "Sma",
+                "children": [
+                  {
+                    "label": "Order",
+                    "children": [
+                      { "label": "PaymentNotification.php", "icon": "php" },
+                      { "label": "PurchaseNotification.php", "icon": "php" },
+                      { "label": "QuotationNotification.php", "icon": "php" },
+                      { "label": "ReturnOrderNotification.php", "icon": "php" },
+                      { "label": "SaleNotification.php", "icon": "php" }
+                    ]
+                  },
+                  {
+                    "label": "Product",
+                    "children": [
+                      { "label": "TransferNotification.php", "icon": "php" }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "label": "Observers",
+            "children": [
+              { "label": "AdjustmentObserver.php", "icon": "php" },
+              { "label": "ExpenseObserver.php", "icon": "php" },
+              { "label": "PaymentObserver.php", "icon": "php" },
+              { "label": "ProductObserver.php", "icon": "php" },
+              { "label": "PurchaseObserver.php", "icon": "php" },
+              { "label": "ReturnORderObserver.php", "icon": "php" },
+              { "label": "SaleObserver.php", "icon": "php" },
+              { "label": "TransferObserver.php", "icon": "php" },
+              { "label": "VariationObserver.php", "icon": "php" }
+            ]
+          },
+          {
+            "label": "Policies",
+            "children": [{ "label": "UpdatePolicy.php", "icon": "php" }]
+          },
+          {
+            "label": "Rules",
+            "children": [
+              { "label": "AddressState.php", "icon": "php" },
+              { "label": "ExtraAttributes.php", "icon": "php" },
+              { "label": "LocaleLength.php", "icon": "php" },
+              { "label": "PhoneNumber.php", "icon": "php" },
+              { "label": "ProductVariation.php", "icon": "php" },
+              { "label": "Recaptcha.php", "icon": "php" },
+              { "label": "Turnstile.php", "icon": "php" }
+            ]
+          },
+          {
+            "label": "Scopes",
+            "children": [{ "label": "OfStore.php", "icon": "php" }]
+          },
+          {
+            "label": "Services",
+            "children": [
+              { "label": "CheckOverSelling.php", "icon": "php" },
+              { "label": "OrderCalculator.php", "icon": "php" },
+              { "label": "OrderItemCalculator.php", "icon": "php" }
+            ]
+          },
+          {
+            "label": "Traits",
+            "children": [
+              { "label": "Authorizable.php", "icon": "php" },
+              { "label": "GroupPrice.php", "icon": "php" },
+              { "label": "HasAttachments.php", "icon": "php" },
+              { "label": "HasAwardPoints.php", "icon": "php" },
+              { "label": "HasPromotions.php", "icon": "php" },
+              { "label": "HasSchemalessAttributes.php", "icon": "php" },
+              { "label": "HasStock.php", "icon": "php" },
+              { "label": "HasTaxes.php", "icon": "php" },
+              { "label": "HidePrivateAttributes.php", "icon": "php" },
+              { "label": "Impersonate.php", "icon": "php" },
+              { "label": "LogActivity.php", "icon": "php" },
+              { "label": "Paginatable.php", "icon": "php" },
+              { "label": "SyncHasMany.php", "icon": "php" },
+              { "label": "Trackable.php", "icon": "php" }
+            ]
+          }
         ]
       }
     ]
@@ -589,6 +617,8 @@ We used Laravel Standard folder structure with some extensions.
   {
     "label": "bootstrap",
     "children": [
+      { "label": "cache", "icon": "folder" },
+      { "label": "ssr", "icon": "folder" },
       { "label": "app.php", "icon": "php" },
       { "label": "providers.php", "icon": "php" }
     ]
@@ -610,8 +640,60 @@ We used Laravel Standard folder structure with some extensions.
       { "label": "languages.json" }
     ]
   },
-  { "label": "modules", "icon": "folder" },
+  {
+    "label": "modules",
+    "children": [
+      {
+        "label": "Shop",
+        "children": [
+          { "label": "Console", "icon": "folder" },
+          { "label": "Database", "icon": "folder" },
+          {
+            "label": "Http",
+            "children": [
+              { "label": "Components", "icon": "folder" },
+              { "label": "Controllers", "icon": "folder" },
+              { "label": "Jet", "icon": "folder" },
+              {
+                "label": "Livewire",
+                "icon": "folder",
+                "children": [
+                  { "label": "Admin", "icon": "folder" },
+                  { "label": "Auth", "icon": "folder" },
+                  { "label": "Components", "icon": "folder" },
+                  { "label": "ShopModes", "icon": "folder" },
+                  { "label": "BrandProducts.php", "icon": "php" },
+                  { "label": "Brands.php", "icon": "php" },
+                  { "label": "CategoryProducts.php", "icon": "php" },
+                  { "label": "Categories.php", "icon": "php" },
+                  { "label": "Index.php", "icon": "php" },
+                  { "label": "Page.php", "icon": "php" },
+                  { "label": "Product.php", "icon": "php" },
+                  { "label": "Products.php", "icon": "php" }
+                ]
+              },
+              { "label": "Middlewares", "icon": "folder" }
+            ]
+          },
+          { "label": "Models", "icon": "folder" },
+          { "label": "resources", "icon": "folder" },
+          { "label": "routes", "icon": "folder" },
+          { "label": "Tec", "icon": "folder" },
+          { "label": "ShopServiceProvider.php", "icon": "php" }
+        ]
+      },
+      { "label": "Saas", "icon": "folder" }
+    ]
+  },
   { "label": "packages", "icon": "folder" },
+  {
+    "label": "plugins",
+    "info": "for fiscal services and payment gateways",
+    "children": [
+      { "label": "FiscalServices", "icon": "folder", "info": "check example fiscal service", },
+      { "label": "Payments", "icon": "folder", "info": "check example payment method in gateways", }
+    ]
+  },
   { "label": "public", "icon": "folder" },
   {
     "label": "resources",
@@ -664,7 +746,11 @@ We used Laravel Standard folder structure with some extensions.
         ]
       },
       { "label": "framework", "icon": "folder" },
-      { "label": "logs", "icon": "folder" }
+      {
+        "label": "logs",
+        "icon": "folder",
+        "info": "application log files, check for error details"
+      }
     ]
   },
   { "label": "tests", "icon": "folder" },

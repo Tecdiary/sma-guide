@@ -10,13 +10,13 @@ const data = ref(props.items);
 
 <template>
   <div
-    :class="[number ? '' : 'p-4']"
-    class="rounded-md font-[family-name:var(--vp-font-family-mono)]"
+    :class="[number ? '' : 'p-4', number >= 1 ? 'pt-2' : '']"
+    class="rounded-md font-[family-name:var(--vp-font-family-mono)] flex flex-col gap-y-1"
   >
     <div
       :key="index"
       v-for="(item, index) in data"
-      class="accordion-item active transition-height duration-300"
+      class="accordion-item active transition-height duration-300 mb-1"
     >
       <template v-if="item.children && item.children.length">
         <div
@@ -26,14 +26,14 @@ const data = ref(props.items);
           <div class="grow rounded-md px-1.5">
             <div
               @click="item.expanded = !item.expanded"
-              class="inline-flex items-center gap-x-3 cursor-pointer"
+              class="inline-flex items-start gap-x-3 cursor-pointer"
             >
               <svg
                 v-if="item.expanded"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="size-4"
+                class="size-5"
               >
                 <path
                   fill-rule="evenodd"
@@ -46,7 +46,7 @@ const data = ref(props.items);
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="size-4"
+                class="size-5"
               >
                 <path
                   fill-rule="evenodd"
@@ -54,7 +54,15 @@ const data = ref(props.items);
                   clip-rule="evenodd"
                 />
               </svg>
-              <div>{{ item.label }}</div>
+              <div>
+                <div>{{ item.label }}</div>
+                <div
+                  v-if="item.info"
+                  class="text-base-content text-xs text-gray-500"
+                >
+                  {{ item.info }}
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -73,7 +81,7 @@ const data = ref(props.items);
           class="text-sm flex w-full items-center gap-x-0.5 rounded-md py-0.5"
         >
           <div class="grow rounded-md px-1.5">
-            <div class="flex items-center gap-x-3">
+            <div class="flex items-start gap-x-3 h-6">
               <template v-if="item.icon && item.icon == 'folder'">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +89,7 @@ const data = ref(props.items);
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="size-4"
+                  class="size-5"
                 >
                   <path
                     stroke-linecap="round"
@@ -93,7 +101,7 @@ const data = ref(props.items);
               <template v-else-if="item.icon && item.icon == 'php'">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="shrink-0 size-4"
+                  class="shrink-0 size-5"
                   viewBox="0 0 16 16"
                 >
                   <path
@@ -113,7 +121,7 @@ const data = ref(props.items);
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="shrink-0 size-4"
+                class="shrink-0 size-5"
               >
                 <path
                   stroke-linecap="round"
@@ -123,7 +131,13 @@ const data = ref(props.items);
               </svg>
 
               <div class="grow">
-                <span class="text-base-content">{{ item.label }}</span>
+                <div class="text-base-content">{{ item.label }}</div>
+                <div
+                  v-if="item.info"
+                  class="text-base-content text-xs text-gray-500"
+                >
+                  {{ item.info }}
+                </div>
               </div>
             </div>
           </div>

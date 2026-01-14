@@ -10,7 +10,7 @@ This section describes modules and versions we started or would like to tackle i
 
 #### **_SaaS Version_**
 
-We are planing to build SaaS/Cloud version so that you can offer subscription based solution to your clients.
+SaaS/Cloud version is in beta that can be used to offer subscriptions of SMA to your clients. Please try the live demo at [sma-saas.com](https://sma-saas.com)
 
 #### **_Full APIs Support_**
 
