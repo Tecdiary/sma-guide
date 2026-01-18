@@ -13,7 +13,7 @@ export default defineConfig({
     },
     nav: [
       { text: "Home", link: "/" },
-      { text: "Get Started", link: "/getting-started/" },
+      { text: "SaaS/Cloud Version", link: "/saas-cloud-version/" },
       // { text: "Live Demo", link: "https://sma.tec.sh" },
       { text: "Support", link: "https://tecdiary.com/support" },
     ],
@@ -72,6 +72,7 @@ export default defineConfig({
       },
       { text: "FAQs", link: "/faqs" },
       { text: "Future Plans", link: "/future-plans" },
+      { text: "SaaS/Cloud Version", link: "/saas-cloud-version" },
     ],
 
     socialLinks: [
