@@ -16,91 +16,149 @@ head:
 
 We used Laravel with some extensions and other packages.
 
-<!--
-```sh
-.
-├─ app
-│  ├─ Actions
-│  │  ├─ Fortify
-│  │  ├─ Jetstream
-│  │  ├─ SMA
-│  │  ├─  ├─ SMA Action files to save data
-│  ├─ Casts
-│  ├─ Console
-│  ├─ Core
-│  │  ├─  To extend few class like Notification & Translator
-│  ├─ Events
-│  │  ├─  Events are used for stock sync
-│  ├─ Exports
-│  │  ├─  Exportable classes
-│  ├─ Helpers
-│  │  ├─  Env
-│  │  ├─  functions.php (for SMA helper functions - auto loaded)
-│  ├─ Http
-│  │  ├─  Controllers
-│  │  ├─  ├─  Sma
-│  │  ├─  ├─  ├─  Order (sale and purchase menu related controllers)
-│  │  ├─  ├─  ├─  People (people menu related controllers)
-│  │  ├─  ├─  ├─  Pos (point of sale menu related controllers)
-│  │  ├─  ├─  ├─  Product (product menu related controllers)
-│  │  ├─  ├─  ├─  Report (reports controllers)
-│  │  ├─  ├─  ├─  Search
-│  │  ├─  ├─  ├─  ├─  SearchController
-│  │  ├─  ├─  ├─  Settings (settings menu related controllers)
-│  │  ├─  ├─  ├─  HomeController
-│  │  ├─  ├─  ├─  PublicController
-│  │  ├─  Middlewares
-│  │  ├─  ├─  HandleInertiaRequests (shares data to Vuejs $page.props)
-│  │  ├─  ├─  Other Middlewares
-│  │  ├─  Requests
-│  │  ├─  ├─  Sma
-│  │  ├─  ├─  ├─  Order (sale and purchase menu related form request)
-│  │  ├─  ├─  ├─  People (people menu related form request)
-│  │  ├─  ├─  ├─  Product (product menu related form request)
-│  │  ├─  ├─  ├─  Setting (point of sale menu related form request)
-│  │  ├─  ├─  LoginRequest (extends fortify login request)
-│  │  ├─  Resources (for pagination data)
-│  ├─ Imports
-│  │  ├─  Importable classes
-│  ├─ Jobs
-│  │  ├─  FiscalService (classes to send your sales data to Govt. fiscal service)
-│  │  ├─  ├─  ReportNewReturnSale (send return order to fiscal service)
-│  │  ├─  ├─  ReportNewSale (send sale to fiscal service)
-│  │  ├─  ├─  ReportSaleUpdate (send sale update to fiscal service)
-│  ├─ Listeners
-│  │  ├─  Events are listened and stock sync done here
-│  ├─ Livewire
-│  ├─ Models
-│  │  ├─  SMA (all SMA related model here)
-│  ├─ Notifications
-│  │  ├─  SMA (all SMA notifications for sale, purchase & payments etc)
-│  ├─ Observers (some fire events and others to perform actions like payment sync etc)
-│  ├─ Policies
-│  │  ├─ UpdatePolicy
-│  ├─ Providers
-│  ├─ Rules
-│  ├─ Services (to check overselling or calculate order data)
-│  ├─ Traits (model traits)
-├─ bootstrap
-│  ├─ app.php
-│  ├─ providers.php
-├─ config (Laravel and packages config files)
-├─ database
-├─ lang (language files are in this folder for translation)
-├─ modules* (shop module for now)
-├─ packages*
-├─ public (root path for public access/traffic)
-├─ resources (views, css and javascript files)
-├─ routes (application routes)
-├─ storage
-├─ tests
-├─ vendors
-├─ artisan
-├─ composer.json
-├─ package.json
-├─ vite.config.js
-└─ other files*
-``` -->
+## Directory Structure
+
+```
+sma/
+├── app/                          # Application core code
+│   ├── Http/                     # HTTP layer
+│   │   ├── Controllers/          # Request controllers
+│   │   ├── Middleware/           # HTTP middleware
+│   │   ├── Requests/             # Form request validation
+│   │   └── Resources/            # API resources
+│   ├── Models/                   # Eloquent models
+│   │   ├── Sma/                  # SMA-specific models
+│   │   │   ├── Order/            # Order-related models
+│   │   │   ├── People/           # Customer/Supplier models
+│   │   │   ├── Pos/              # Point of Sale models
+│   │   │   ├── Product/          # Product-related models
+│   │   │   └── Setting/          # Settings models
+│   │   ├── User.php              # User model
+│   │   ├── Role.php              # Role model
+│   │   ├── Permission.php        # Permission model
+│   │   └── ...                   # Other core models
+│   ├── Providers/                # Service providers
+│   └── Tec/                      # Tecdiary core functionality
+│       ├── Actions/              # Single-action classes
+│       ├── Casts/                # Eloquent attribute casts
+│       ├── Console/              # Artisan commands
+│       ├── Core/                 # Core utilities
+│       ├── Events/               # Event classes
+│       ├── Exports/              # Excel/CSV exports
+│       ├── Helpers/              # Helper functions
+│       ├── Imports/              # Excel/CSV imports
+│       ├── Jobs/                 # Application jobs
+│       ├── Listeners/            # Event listeners
+│       ├── Mcp/                  # MCP server tools
+│       ├── Notifications/        # Notification classes
+│       ├── Observers/            # Model observers
+│       ├── Policies/             # Authorization policies
+│       ├── Rules/                # Validation rules
+│       ├── Scopes/               # Query scopes
+│       ├── Services/             # Service classes
+│       └── Traits/               # Reusable traits
+│
+├── bootstrap/                    # Framework bootstrap files
+│   ├── app.php                   # Application bootstrap
+│   ├── providers.php             # Service providers registration
+│   ├── cache/                    # Framework cache
+│   └── ssr/                      # SSR bootstrap
+│
+├── config/                       # Configuration files
+│   ├── app.php                   # Application config
+│   ├── auth.php                  # Authentication config
+│   ├── database.php              # Database config
+│   ├── fortify.php               # Laravel Fortify config
+│   ├── inertia.php               # Inertia.js config
+│   ├── livewire.php              # Livewire config
+│   └── ...                       # Other config files
+│
+├── database/                     # Database files
+│   ├── factories/                # Model factories
+│   ├── migrations/               # Database migrations
+│   ├── schema/                   # Schema dumps
+│   └── seeders/                  # Database seeders
+│
+├── lang/                         # Localization files
+│   ├── en/                       # English translations
+│   ├── es/                       # Spanish translations
+│   ├── fr/                       # French translations
+│   └── languages.json            # Available languages
+│
+├── modules/                      # Application modules
+│   └── Shop/                     # Shop module
+│       ├── Console/              # Module commands
+│       ├── Database/             # Module database files
+│       ├── Http/                 # Module HTTP layer
+│       ├── Models/               # Module models
+│       ├── Tec/                  # Module core logic
+│       ├── resources/            # Module resources
+│       ├── routes/               # Module routes
+│       └── ShopServiceProvider.php
+│
+├── packages/                     # Application packages
+│
+├── plugins/                      # Application plugins
+│   ├── FiscalServices/           # Fiscal services plugin
+│   └── Payments/                 # Payment gateways plugin
+│
+├── public/                       # Publicly accessible files
+│
+├── resources/                    # Frontend resources
+│   ├── css/                      # Stylesheets
+│   ├── js/                       # JavaScript source
+│   │   ├── Components/           # Vue components
+│   │   ├── Core/                 # Core utilities
+│   │   ├── Layouts/              # Layout components
+│   │   ├── Pages/                # Inertia pages
+│   │   │   ├── Auth/             # Authentication pages
+│   │   │   ├── Profile/          # User profile pages
+│   │   │   ├── Sma/              # SMA application pages
+│   │   │   │   ├── Dashboard.vue # Main dashboard
+│   │   │   │   ├── Order/        # Order management
+│   │   │   │   ├── People/       # Customers/Suppliers
+│   │   │   │   ├── Pos/          # Point of Sale
+│   │   │   │   ├── Product/      # Product management
+│   │   │   │   ├── Report/       # Reports
+│   │   │   │   └── Setting/      # Settings
+│   │   │   └── ...               # Other pages
+│   │   ├── app.js                # Main app entry
+│   │   ├── bootstrap.js          # JS bootstrap
+│   │   └── ssr.js                # SSR entry point
+│   ├── markdown/                 # Markdown content
+│   └── views/                    # Blade templates
+│       ├── app.blade.php         # Main Blade layout
+│       ├── emails/               # Email templates
+│       └── errors/               # Error pages
+│
+├── routes/                       # Route definitions
+│   ├── ai.php                    # MCP/AI routes
+│   ├── api.php                   # API routes
+│   ├── console.php               # Console routes
+│   ├── web.php                   # Web routes
+│   └── groups/                   # Route groups
+│
+├── storage/                      # Application storage
+│   ├── app/                      # Application files
+│   ├── framework/                # Framework cache/sessions
+│   └── logs/                     # Log files
+│
+├── tests/                        # Test files
+│   ├── Feature/                  # Feature tests
+│   ├── Unit/                     # Unit tests
+│   ├── Pest.php                  # Pest configuration
+│   └── TestCase.php              # Base test case
+│
+├── vendor/                       # Composer dependencies
+│
+├── artisan                       # Artisan CLI
+├── composer.json                 # PHP dependencies
+├── package.json                  # Node dependencies
+├── vite.config.js                # Vite configuration
+├── phpunit.xml                   # PHPUnit configuration
+├── pint.json                     # Laravel Pint config
+└── eslint.config.js              # ESLint configuration
+```
 
 <div class="file-tree">
 <FileTree :items='[

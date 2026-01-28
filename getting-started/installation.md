@@ -7,6 +7,10 @@ outline: deep
 
 ## Please start installation by following these steps
 
+::: info Using Git?
+When deploying via `git`, be aware that the `vendor` and `public/assets` directories are excluded from version control. As a result, you must install dependencies with `composer install` and build the application using `pnpm i && pnpm build` as part of the deployment process.
+:::
+
 1. Please upload **_all the files & folders_** to your server.
 
 2. You can access the installer by adding `/install` at the end of your domain.

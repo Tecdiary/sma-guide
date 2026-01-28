@@ -13,6 +13,10 @@ There are quite many services available to manage Servers (VPSs) like, Laravel F
 
 Please add site to your server then link git repo or upload the files manually.
 
+::: info Using Git?
+When deploying via `git`, be aware that the `vendor` and `public/assets` directories are excluded from version control. As a result, you must install dependencies with `composer install` and build the application using `pnpm i && pnpm build` as part of the deployment process.
+:::
+
 ::: warning Git repo error
 If you get error while installing git repo, please disable the composer install command then try again.
 :::
@@ -54,6 +58,26 @@ fi
 $FORGE_PHP artisan inertia:stop-ssr
 
 echo "Deployed!"
+```
+
+For zero-downtime deployments
+
+```sh
+$CREATE_RELEASE()
+
+cd $FORGE_RELEASE_DIRECTORY
+
+$FORGE_COMPOSER install --no-interaction --prefer-dist --optimize-autoloader
+$FORGE_PHP artisan storage:link
+$FORGE_PHP artisan migrate --force
+$FORGE_PHP artisan optimize:clear
+$FORGE_PHP artisan queue:restart
+
+pnpm install --frozen-lockfile || pnpm install && pnpm build
+
+$ACTIVATE_RELEASE()
+
+$RESTART_QUEUES()
 ```
 
 ### Queue and SSL
