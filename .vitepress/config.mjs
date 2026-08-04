@@ -58,6 +58,7 @@ export default defineConfig({
           { text: "Settings", link: "/guide/settings" },
           { text: "Shop (eCommerce) Module", link: "/guide/shop" },
           { text: "Reports", link: "/guide/reports" },
+          { text: "WhatsApp Notifications", link: "/guide/whatsapp" },
         ],
       },
       {
@@ -107,10 +108,7 @@ export default defineConfig({
 
     footer: {
       // message: 'Released under the MIT License.',
-      copyright:
-        "Copyright © " +
-        new Date().getFullYear() +
-        ' <a href="https://tecdiary.com/">Tecdiary IT Solutions</a>',
+      copyright: "Copyright © " + new Date().getFullYear() + ' <a href="https://tecdiary.com/">Tecdiary IT Solutions</a>',
     },
   },
   markdown: {

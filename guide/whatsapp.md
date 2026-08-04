@@ -134,28 +134,28 @@ with:
 
 - **Category:** Utility
 - **Language:** English (US) — `en_US`
-- The **exact name** and **body text** below (the `{{1}}`, `{{2}}` etc. are Meta's placeholder
+- The **exact name** and **body text** below (the <code v-pre>{{1}}</code>, <code v-pre>{{2}}</code> etc. are Meta's placeholder
   syntax — type them literally, Meta turns them into fill-in-the-blank variables)
 
 > **Don't shorten these bodies.** Meta rejects a template if a variable sits at the very start or
 > end of the message, if two variables are back-to-back, or if there isn't enough surrounding
 > static text for the number of variables used (roughly: static words ≥ 3 × variable count, minus
-> the variables themselves). A body as short as `Hello {{1}}! {{2}}` fails with _"This template
+> the variables themselves). A body as short as <code v-pre>Hello {{1}}! {{2}}</code> fails with _"This template
 > has too many variables for its length... Variables can't be at the start or end of the
 > template"_ — every body below already has enough wrapping text to pass.
 
 | Template name               | Sent when…                                         | Body text                                                                                              |
 | --------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `sale_notification`         | A sale is created                                  | `Hello <code v-pre>{{1}}</code>! Here's an update: {{2}} Thank you for your business!`                 |
-| `purchase_notification`     | A purchase order is created                        | `Hello {{1}}! Here's an update: {{2}} Thank you for your business!`                                    |
-| `payment_notification`      | A payment is recorded                              | `Hello {{1}}! Here's an update: {{2}} Thank you for your business!`                                    |
-| `payment_receipt_status`    | A customer's uploaded receipt is approved/rejected | `Hello {{1}}! Here's an update: {{2}} Thank you for your business!`                                    |
-| `payment_receipt_upload`    | A customer uploads a payment receipt               | `Hello {{1}}! Here's an update: {{2}} Thank you for your business!`                                    |
-| `quotation_notification`    | A quotation is created                             | `Hello {{1}}! Here's an update: {{2}} Thank you for your business!`                                    |
-| `quotation_signed`          | A customer signs/approves a quotation              | `Hello {{1}}! Here's an update: {{2}} Thank you for your business!`                                    |
-| `return_order_notification` | A return order is created                          | `Hello {{1}}! Here's an update: {{2}} Thank you for your business!`                                    |
-| `transfer_notification`     | A stock transfer is created                        | `Hello {{1}}! Here's an update: {{2}} Thank you for your business!`                                    |
-| `reservation_status`        | A table reservation is confirmed/cancelled         | `Hello! Here's an update on your reservation: {{1}} Reference: {{2}}. Scheduled for {{3}}. Thank you!` |
+| `sale_notification`         | A sale is created                                  | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                 |
+| `purchase_notification`     | A purchase order is created                        | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                                    |
+| `payment_notification`      | A payment is recorded                              | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                                    |
+| `payment_receipt_status`    | A customer's uploaded receipt is approved/rejected | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                                    |
+| `payment_receipt_upload`    | A customer uploads a payment receipt               | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                                    |
+| `quotation_notification`    | A quotation is created                             | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                                    |
+| `quotation_signed`          | A customer signs/approves a quotation              | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                                    |
+| `return_order_notification` | A return order is created                          | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                                    |
+| `transfer_notification`     | A stock transfer is created                        | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                                    |
+| `reservation_status`        | A table reservation is confirmed/cancelled         | <code v-pre>Hello! Here's an update on your reservation: {{1}} Reference: {{2}}. Scheduled for {{3}}. Thank you!</code> |
 
 The number and order of variables must match this table exactly (2 for every notification except
 `reservation_status`, which uses 3) — the app fills them in in order, but the static wording
@@ -163,9 +163,9 @@ around them is entirely defined by the template you register here, so feel free 
 phrasing as long as you keep the same variable count/order and don't reintroduce a variable at the
 start, end, or back-to-back with another.
 
-For every `{{1}}`/`{{2}}` placeholder Meta will ask for a **sample value** before it will submit
+For every <code v-pre>{{1}}</code>/<code v-pre>{{2}}</code> placeholder Meta will ask for a **sample value** before it will submit
 the template for review — any realistic example works, e.g. for `sale_notification`:
-`{{1}} = Jane Doe`, `{{2}} = Your sale from Acme Store is ready. View it here: https://example.com/sales/123`.
+<code v-pre>{{1}} = Jane Doe</code>, <code v-pre>{{2}} = Your sale from Acme Store is ready. View it here: https://example.com/sales/123</code>.
 
 After submitting, Meta reviews each template automatically — usually within minutes, occasionally
 up to 24 hours. You'll see the status change from **Pending** to **Approved** (or **Rejected**,
@@ -200,7 +200,7 @@ with a reason, if the content looks too promotional or doesn't match the categor
 | Error mentions the template name / "template not found"                             | The template name in Meta doesn't exactly match one of the names in the table above, or it's still **Pending** approval — approved templates only.                                                                                                      |
 | Error mentions the recipient phone number                                           | The number isn't in the WABA's allowed test-recipient list yet (Step 7.2), or isn't a valid WhatsApp number, or isn't in E.164 format on the customer/store/supplier record.                                                                            |
 | Template was **Rejected**                                                           | Meta's review flagged the wording as too promotional for the "Utility" category. Rephrase to sound like a status update about an existing transaction, not a sales pitch, and resubmit.                                                                 |
-| **"This template has too many variables for its length"** while creating a template | The body doesn't have enough static text around its variables, or a variable sits at the start/end or two are back-to-back. Use the exact body text from Step 6's table — don't trim the wrapping words around `{{1}}`/`{{2}}`.                         |
+| **"This template has too many variables for its length"** while creating a template | The body doesn't have enough static text around its variables, or a variable sits at the start/end or two are back-to-back. Use the exact body text from Step 6's table — don't trim the wrapping words around <code v-pre>{{1}}</code>/<code v-pre>{{2}}</code>.                         |
 | Everything is configured but nothing sends at all                                   | Confirm **Enable WhatsApp notifications** is actually turned on and saved on the Settings page (Step 5), and that the access token hasn't been set to expire (Step 3.5).                                                                                |
 
 ---
