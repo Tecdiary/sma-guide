@@ -1,5 +1,3 @@
-@ -0,0 +1,217 @@
-
 # WhatsApp Notifications — Setup Guide
 
 The application can send transactional notifications (sales, purchases, payments, quotations,
@@ -144,9 +142,9 @@ with:
 > has too many variables for its length... Variables can't be at the start or end of the
 > template"_ — every body below already has enough wrapping text to pass.
 
-| Template name               | Sent when…                                         | Body text                                                                                              |
-| --------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `sale_notification`         | A sale is created                                  | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                 |
+| Template name               | Sent when…                                         | Body text                                                                                                               |
+| --------------------------- | -------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `sale_notification`         | A sale is created                                  | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                                    |
 | `purchase_notification`     | A purchase order is created                        | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                                    |
 | `payment_notification`      | A payment is recorded                              | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                                    |
 | `payment_receipt_status`    | A customer's uploaded receipt is approved/rejected | <code v-pre>Hello {{1}}! Here's an update: {{2}} Thank you for your business!</code>                                    |
@@ -175,6 +173,38 @@ with a reason, if the content looks too promotional or doesn't match the categor
 > WhatsApp. Skipping one just means that particular notification quietly falls back to
 > email/Telegram/SMS only — nothing breaks.
 
+### Add a "Website" button to each template
+
+Every notification also sends a real, tappable **button** instead of burying a link inside the
+message text. In the template editor, after filling in the body:
+
+1. Scroll to **Buttons** and click **Add a button**.
+2. Choose button type **Visit website**.
+3. Set the URL type to **Dynamic**.
+4. In the URL field, enter **your own store's domain** followed by <code v-pre>/{{1}}</code> — for example, if the
+   store runs at `https://yourappurl.com`, enter [<code v-pre>https://yourappurl.com/{{1}}</code>](#). This must be your
+   actual domain (the same one your `APP_URL` environment variable points to), not the example
+   above.
+5. Set the button text from the table below (Meta limits this to 25 characters).
+
+| Template name               | Button text       |
+| --------------------------- | ----------------- |
+| `sale_notification`         | View Sale         |
+| `purchase_notification`     | View Purchase     |
+| `payment_notification`      | View Payment      |
+| `payment_receipt_status`    | View Payment      |
+| `payment_receipt_upload`    | Review Payment    |
+| `quotation_notification`    | View Quotation    |
+| `quotation_signed`          | View Quotation    |
+| `return_order_notification` | View Return Order |
+| `transfer_notification`     | View Transfer     |
+| `reservation_status`        | View Reservation  |
+
+Meta will ask for a sample value for the button's <code v-pre>{{1}}</code> too — anything realistic works, e.g.
+`sale/123?signature=abc123&expires=1700000000`. At send time the app fills this in automatically
+with the real record's relative link (path and query string), so there's nothing to configure on
+the app side beyond Step 5 — one button per template, no code changes needed.
+
 ---
 
 ## Step 7 — Test it
@@ -187,21 +217,22 @@ with a reason, if the content looks too promotional or doesn't match the categor
    API Setup → To → Manage phone number list**.
 3. Trigger a real notification through the app's normal flow — e.g. record a sale, create a
    quotation, or confirm a reservation for that customer.
-4. Check the recipient's WhatsApp for the message. If it doesn't arrive, see Troubleshooting
-   below.
+4. Check the recipient's WhatsApp for the message, including the button. If it doesn't arrive,
+   see Troubleshooting below.
 
 ---
 
 ## Troubleshooting
 
-| Symptom                                                                             | Likely cause                                                                                                                                                                                                                                            |
-| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Message never arrives, no error visible in the app                                  | Check Laravel's logs (`storage/logs/laravel.log`) — the notification system swallows delivery failures rather than breaking the request (same behavior as email/SMS/Telegram). Look for a `CouldNotSendNotification` entry with the raw Meta API error. |
-| Error mentions the template name / "template not found"                             | The template name in Meta doesn't exactly match one of the names in the table above, or it's still **Pending** approval — approved templates only.                                                                                                      |
-| Error mentions the recipient phone number                                           | The number isn't in the WABA's allowed test-recipient list yet (Step 7.2), or isn't a valid WhatsApp number, or isn't in E.164 format on the customer/store/supplier record.                                                                            |
-| Template was **Rejected**                                                           | Meta's review flagged the wording as too promotional for the "Utility" category. Rephrase to sound like a status update about an existing transaction, not a sales pitch, and resubmit.                                                                 |
-| **"This template has too many variables for its length"** while creating a template | The body doesn't have enough static text around its variables, or a variable sits at the start/end or two are back-to-back. Use the exact body text from Step 6's table — don't trim the wrapping words around <code v-pre>{{1}}</code>/<code v-pre>{{2}}</code>.                         |
-| Everything is configured but nothing sends at all                                   | Confirm **Enable WhatsApp notifications** is actually turned on and saved on the Settings page (Step 5), and that the access token hasn't been set to expire (Step 3.5).                                                                                |
+| Symptom                                                                             | Likely cause                                                                                                                                                                                                                                                      |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Message never arrives, no error visible in the app                                  | Check Laravel's logs (`storage/logs/laravel.log`) — the notification system swallows delivery failures rather than breaking the request (same behavior as email/SMS/Telegram). Look for a `CouldNotSendNotification` entry with the raw Meta API error.           |
+| Error mentions the template name / "template not found"                             | The template name in Meta doesn't exactly match one of the names in the table above, or it's still **Pending** approval — approved templates only.                                                                                                                |
+| Error mentions the recipient phone number                                           | The number isn't in the WABA's allowed test-recipient list yet (Step 7.2), or isn't a valid WhatsApp number, or isn't in E.164 format on the customer/store/supplier record.                                                                                      |
+| Template was **Rejected**                                                           | Meta's review flagged the wording as too promotional for the "Utility" category. Rephrase to sound like a status update about an existing transaction, not a sales pitch, and resubmit.                                                                           |
+| **"This template has too many variables for its length"** while creating a template | The body doesn't have enough static text around its variables, or a variable sits at the start/end or two are back-to-back. Use the exact body text from Step 6's table — don't trim the wrapping words around <code v-pre>{{1}}</code>/<code v-pre>{{2}}</code>. |
+| The button doesn't work, or Meta rejects the button URL                             | The dynamic URL must start with your store's actual domain (the same one `APP_URL` is set to) followed by `/{{1}}` — a mismatched or placeholder domain (like `yourappurl.com` from this guide) will send people to the wrong site or fail Meta's URL validation. |
+| Everything is configured but nothing sends at all                                   | Confirm **Enable WhatsApp notifications** is actually turned on and saved on the Settings page (Step 5), and that the access token hasn't been set to expire (Step 3.5).                                                                                          |
 
 ---
 
